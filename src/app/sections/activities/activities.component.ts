@@ -11,7 +11,9 @@ export class ActivitiesComponent implements OnInit {
 
     ngOnInit() {}
 
-    onSeeDetail() {
-        this.router.navigate(['/detail']);
+    onSeeDetail(sectionName) {
+        this.router.navigate(['/detail', sectionName]).then(() => {
+            window.location.reload();
+        });
     }
 }

@@ -7,7 +7,7 @@ import { ActivityDetailComponent } from './activity-detail/activity-detail.compo
 const routes: Routes = [
     { path: 'home', component: HomeComponent },
     { path: 'profile', component: ProfileComponent },
-    { path: 'detail', component: ActivityDetailComponent },
+    { path: 'detail/:sectionName', component: ActivityDetailComponent },
     { path: '', redirectTo: 'home', pathMatch: 'full' },
 ];
 
