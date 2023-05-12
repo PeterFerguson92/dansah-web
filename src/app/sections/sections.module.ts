@@ -5,6 +5,7 @@ import { HomeSliderComponent } from './home-slider/home-slider.component';
 import { IntroComponent } from './intro/intro.component';
 import { ActivitiesComponent } from './activities/activities.component';
 import { ActivityDetailSectionComponent } from './activity-detail-section/activity-detail-section.component';
+import { HomeEventsComponent } from './home-events/home-events.component';
 
 @NgModule({
     declarations: [
@@ -13,11 +14,13 @@ import { ActivityDetailSectionComponent } from './activity-detail-section/activi
         IntroComponent,
         ActivitiesComponent,
         ActivityDetailSectionComponent,
+        HomeEventsComponent,
     ],
     imports: [CommonModule],
     exports: [
         QuoteOfTheDayComponent,
         HomeSliderComponent,
+        HomeEventsComponent,
         IntroComponent,
         ActivitiesComponent,
         ActivityDetailSectionComponent,
