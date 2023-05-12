@@ -1,0 +1,48 @@
+<div class="main sermon">
+    <div class="sermon_background" style="background-image: url(../../../assets/images/sermon.png)"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="section_title_container">
+                    <div class="section_image"><img src="../../../assets/images/church_3.png" alt="" /></div>
+                    <div class="section_title">
+                        <h2>{{ title }}</h2>
+                    </div>
+                    <div class="section_subtitle">God loves us all</div>
+                </div>
+            </div>
+        </div>
+        <div class="row sermon_row">
+            <!-- Sermon Image -->
+            <div class="col-lg-6">
+                <div class="sermon_image"><img src="{{ imgPath }}" alt="" /></div>
+            </div>
+
+            <!-- Sermon Content -->
+            <div class="col-lg-6">
+                <div class="sermon_content">
+                    <div class="sermon_text">
+                        <p class="activity-description">
+                            {{ shortDescription }} <br />
+                            {{ fullDescritpion }}
+                        </p>
+                        <p class="activity-action">
+                            {{ actionText }}
+                        </p>
+                    </div>
+
+                    <!-- <div class="sermon_buttons">
+                      <ul>
+                          <li class="sermon_item"><img class="svg" src="images/sermon_1.svg" alt="" /></li>
+                          <li class="sermon_item"><img class="svg" src="images/sermon_2.svg" alt="" /></li>
+                          <li class="sermon_item"><img class="svg" src="images/sermon_3.svg" alt="" /></li>
+                          <li class="sermon_item"><img class="svg" src="images/sermon_4.svg" alt="" /></li>
+                          <li class="sermon_item"><img class="svg" src="images/sermon_5.svg" alt="" /></li>
+                          <li class="sermon_item"><img class="svg" src="images/sermon_6.svg" alt="" /></li>
+                      </ul>
+                  </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

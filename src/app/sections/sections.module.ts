@@ -4,10 +4,7 @@ import { QuoteOfTheDayComponent } from './quote-of-the-day/quote-of-the-day.comp
 import { HomeSliderComponent } from './home-slider/home-slider.component';
 import { IntroComponent } from './intro/intro.component';
 import { ActivitiesComponent } from './activities/activities.component';
-import { PrayerConnectComponent } from './prayer-connect/prayer-connect.component';
-import { PrayerCityComponent } from './prayer-city/prayer-city.component';
-import { LeadershipSchoolComponent } from './leadership-school/leadership-school.component';
-import { PowerLivingComponent } from './power-living/power-living.component';
+import { ActivityDetailSectionComponent } from './activity-detail-section/activity-detail-section.component';
 
 @NgModule({
     declarations: [
@@ -15,10 +12,7 @@ import { PowerLivingComponent } from './power-living/power-living.component';
         HomeSliderComponent,
         IntroComponent,
         ActivitiesComponent,
-        PrayerConnectComponent,
-        PrayerCityComponent,
-        LeadershipSchoolComponent,
-        PowerLivingComponent,
+        ActivityDetailSectionComponent,
     ],
     imports: [CommonModule],
     exports: [
@@ -26,10 +20,7 @@ import { PowerLivingComponent } from './power-living/power-living.component';
         HomeSliderComponent,
         IntroComponent,
         ActivitiesComponent,
-        PrayerConnectComponent,
-        PrayerCityComponent,
-        LeadershipSchoolComponent,
-        PowerLivingComponent,
+        ActivityDetailSectionComponent,
     ],
 })
 export class SectionsModule {}
