@@ -40,10 +40,10 @@ export class ActivityDetailComponent implements OnInit {
             isVisible: false,
         },
         {
-            alias: 'leadership-school',
-            title: 'Leadership School',
+            alias: 'leadership-institute',
+            title: 'Leadership institute',
             shortDescription:
-                'The Leadership School is the Leadership training arm of Daniel K Ansah International.',
+                'The Leadership institute is the Leadership training arm of Daniel K Ansah International.',
             fullDescription:
                 // tslint:disable-next-line:max-line-length
                 'The Leadership program is divinely designed to bring total transformation and supernatural encounters in the lives of all participants. Courses are both actual and virtual.',
