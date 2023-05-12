@@ -8,36 +8,48 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class ActivityDetailComponent implements OnInit {
     title;
+    showPowerLiving = false;
+    showPrayerConnect = false;
+    showLeadershipSchool = false;
+    showPrayerCity = true;
+    activities = [
+        {
+            alias: 'prayer-connect',
+            title: 'Prayer Connect',
+            isVisible: false,
+        },
+        {
+            alias: 'prayer-city',
+            title: 'Prayer City',
+            isVisible: false,
+        },
+        {
+            alias: 'leadership-school',
+            title: 'Leadership School',
+            isVisible: false,
+        },
+        {
+            alias: 'power-living',
+            title: 'Power Living',
+            isVisible: false,
+        },
+    ];
+
     constructor(private activatedRoute: ActivatedRoute) {}
 
     ngOnInit() {
         const snapshot = this.activatedRoute.snapshot;
-        const sectionName = snapshot.paramMap.get('sectionName');
-        this.setSectionDetailTitle(sectionName);
+        const activityName = snapshot.paramMap.get('activityName');
+        this.setActivityProperties(activityName);
     }
 
-    setSectionDetailTitle(sectionName) {
-        switch (sectionName) {
-            case 'prayer-connect': {
-                this.title = 'Prayer Connect';
-                break;
-            }
-            case 'prayer-city': {
-                this.title = 'Prayer City';
-                break;
-            }
-            case 'leadership-school': {
-                this.title = 'Leadership School';
-                break;
-            }
-            case 'power-living': {
-                this.title = 'Power Living';
-                break;
-            }
-            default: {
-                this.title = null;
-
-                break;
+    setActivityProperties(activityName) {
+        for (const activity of this.activities) {
+            if (activity.alias === activityName) {
+                activity.isVisible = true;
+                this.title = activity.title;
+            } else {
+                activity.isVisible = false;
             }
         }
     }

@@ -1,2 +1,6 @@
 <app-nav-bar></app-nav-bar>
 <app-page-title [title]="title"></app-page-title>
+<app-prayer-connect *ngIf="activities[0].isVisible"></app-prayer-connect>
+<app-prayer-city *ngIf="activities[1].isVisible"></app-prayer-city>
+<app-leadership-school *ngIf="activities[2].isVisible"></app-leadership-school>
+<app-power-living *ngIf="activities[3].isVisible"></app-power-living>
