@@ -7,9 +7,10 @@ import { SharedModule } from './shared/shared.module';
 import { HomeComponent } from './home/home.component';
 import { SectionsModule } from './sections/sections.module';
 import { ProfileComponent } from './profile/profile.component';
+import { ActivityDetailComponent } from './activity-detail/activity-detail.component';
 
 @NgModule({
-    declarations: [AppComponent, HomeComponent, ProfileComponent],
+    declarations: [AppComponent, HomeComponent, ProfileComponent, ActivityDetailComponent],
     imports: [BrowserModule, AppRoutingModule, SectionsModule, SharedModule],
     providers: [],
     bootstrap: [AppComponent],
