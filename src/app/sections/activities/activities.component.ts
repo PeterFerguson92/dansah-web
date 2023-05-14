@@ -15,7 +15,6 @@ export class ActivitiesComponent implements OnInit {
     varius ac`;
     homeActivitiesImgBackground = '../../../assets/images/services.jpg';
     homeActivitiesIconImg = '../../../assets/images/church_2.png';
-
     homeActivities = [
         {
             iconPath: '../../../assets/images/services_1.png',
