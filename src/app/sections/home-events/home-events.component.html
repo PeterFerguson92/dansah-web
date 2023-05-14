@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col">
                 <div class="section_title_container">
-                    <div class="section_image"><img src="{{ iconImg }}" alt="" /></div>
+                    <div class="section_image"><img src="{{ iconImgPath }}" alt="" /></div>
                     <div class="section_title">
                         <h2>{{ title }}</h2>
                     </div>
@@ -15,7 +15,7 @@
             <div class="col-lg-4 news_col" style="cursor: pointer" *ngFor="let event of events">
                 <div class="news_item">
                     <div class="news_image">
-                        <img src="{{ event.imgPath }}" alt="" />
+                        <img src="{{ event.iconImgPath }}" alt="" />
                         <div class="news_date d-flex flex-column align-items-center justify-content-center">
                             <div class="news_day">{{ event.detail1 }}</div>
                             <div class="news_month">{{ event.detail2 }}</div>

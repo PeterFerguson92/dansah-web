@@ -5,92 +5,37 @@
         <div class="row">
             <div class="col">
                 <div class="section_title_container">
-                    <div class="section_image"><img src="../../assets/images/church_2.png" alt="" /></div>
-                    <div class="section_title"><h2>Roles & Responsabilities</h2></div>
-                    <div class="section_subtitle">What I do</div>
+                    <div class="section_image"><img src="{{ iconImgPath }}" alt="" /></div>
+                    <div class="section_title">
+                        <h2>{{ title }}</h2>
+                    </div>
+                    <div class="section_subtitle">{{ subTitle }}</div>
                 </div>
             </div>
         </div>
         <div class="row">
             <div class="col">
                 <div class="services_text text-center">
-                    <p >
-                        Integer nec bibendum lacus. Suspendisse dictum enim sit amet libero malesuada feugiat. Praesent malesuada congue magna at
-                        finibus. In hac habi tasse platea dictumst. Curabitur rhoncus auctor eleifend. Fusce venenatis diam urna, eu pharetra arcu
-                        varius ac.
+                    <p>
+                        {{ text }}
                     </p>
                 </div>
             </div>
         </div>
         <div class="row services_row">
-            <!-- Services Item -->
-            <div class="col-lg-3 col-md-6 col-sm-12">
+            <div class="col-lg-3 col-md-6 col-sm-12" style="cursor: pointer" *ngFor="let role of roles">
                 <div class="services_item text-center">
-                    <div class="services_image"><img src="../../assets/images/services_1.png" alt="" /></div>
-                    <div class="services_title title">Evangelist</div>
+                    <div class="services_image"><img src="{{ role.iconImgPath }}" alt="" /></div>
+                    <div class="services_title title">{{ role.type }}</div>
                     <br />
                     <p class="description">
-                        Daniel K Ansah travels across the nations in crusades and camp meeting preaching salvation and bringing deliverance to the
-                        captives. His passion is to save the lost at any cost. He is the lead evangelist at Jesus Campaign Missions.
-                    </p>
-                </div>
-            </div>
-
-            <!-- Services Item -->
-            <div class="col-lg-3 col-md-6 col-sm-12">
-                <div class="services_item text-center">
-                    <div class="services_image"><img src="../../assets/images/services_2.png" alt="" /></div>
-                    <div class="services_title title">Pastor</div>
-                    <br />
-                    <p class="description">
-                        He is the lead pastor at Praise Palace Church, where he disciples the flock and raise an army for God. He is primarily called
-                        to the youth of this generation and has passion to bring transformation to the lives of these young people. He believes that
-                        there is no such thing as impossibility. No limitation. No barriers. Everybody can rise up to fulfil his or her destiny in
-                        Christ.
-                    </p>
-                </div>
-            </div>
-
-            <!-- Services Item -->
-            <div class="col-lg-3 col-md-6 col-sm-12">
-                <div class="services_item text-center">
-                    <div class="services_image"><img src="../../assets/images/services_3.png" alt="" /></div>
-                    <div class="services_title title">Business Executive</div>
-                    <br />
-                    <p class="description">
-                        He is an astute business professional, a Chartered Accountant and Business executive. Daniel serves as a finance professional
-                        in many international organizations. His mandate is to bring Christian excellence and dignity to the marketplace.
-                    </p>
-                </div>
-            </div>
-
-            <!-- Services Item -->
-            <div class="col-lg-3 col-md-6 col-sm-12">
-                <div class="services_item text-center">
-                    <div class="services_image"><img src="../../assets/images/services_4.png" alt="" /></div>
-                    <div class="services_title title">Author and Leader of Leaders</div>
-                    <br />
-                    <p class="description">
-                        Daniel K Ansah’s daily Power Living publications have a wide circulation across the nations. The daily devotional provides
-                        hope to the weak and strength to the feeble. Power Living Devotional has become a source of strength and hope to many homes.
-                        He also doubles up as the Lead Trainer at The Leadership School, TLS. This is both actual and virtually training platform
-                        where leaders are raised to influence the world for Jesus.
+                        {{ role.description }}
                     </p>
                 </div>
             </div>
         </div>
     </div>
 </div>
-<!-- <div class="row">
-    <div class="col">
-        <div class="services_text text-center">
-            <p style="color: black; margin-top: -3%">
-                Integer nec bibendum lacus. Suspendisse dictum enim sit amet libero malesuada feugiat. Praesent malesuada congue magna at finibus. In
-                hac habi tasse platea dictumst. Curabitur rhoncus auctor eleifend. Fusce venenatis diam urna, eu pharetra arcu varius ac.
-            </p>
-        </div>
-    </div>
-</div> -->
 <br />
 
 <app-footer></app-footer>

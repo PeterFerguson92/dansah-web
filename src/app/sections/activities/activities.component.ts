@@ -14,25 +14,25 @@ export class ActivitiesComponent implements OnInit {
     finibus. In hac habi tasse platea dictumst. Curabitur rhoncus auctor eleifend. Fusce venenatis diam urna, eu pharetra arcu
     varius ac`;
     imgBackground = '../../../assets/images/services.jpg';
-    iconImg = '../../../assets/images/church_2.png';
+    iconImgPath = '../../../assets/images/church_2.png';
     activities = [
         {
-            iconPath: '../../../assets/images/services_1.png',
+            iconImgPath: '../../../assets/images/services_1.png',
             title: 'Prayer Connect',
             alias: 'prayer-connect',
         },
         {
-            iconPath: '../../../assets/images/services_2.png',
+            iconImgPath: '../../../assets/images/services_2.png',
             title: 'Prayer City',
             alias: 'prayer-city',
         },
         {
-            iconPath: '../../../assets/images/services_3.png',
+            iconImgPath: '../../../assets/images/services_3.png',
             title: 'The Leadership Institute',
             alias: 'leadership-institute',
         },
         {
-            iconPath: '../../../assets/images/services_4.png',
+            iconImgPath: '../../../assets/images/services_4.png',
             title: 'Power Living',
             alias: 'power-living',
         },
