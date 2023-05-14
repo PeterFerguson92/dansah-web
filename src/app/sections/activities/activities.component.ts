@@ -7,15 +7,15 @@ import { Router } from '@angular/router';
     styleUrls: ['./activities.component.scss'],
 })
 export class ActivitiesComponent implements OnInit {
-    homeActivityTitle = 'Activities';
-    homeActivitySubTitle = 'God Love Us All';
-    homeActivityText = `Integer nec bibendum lacus.
+    title = 'Activities';
+    subTitle = 'God Love Us All';
+    text = `Integer nec bibendum lacus.
      Suspendisse dictum enim sit amet libero malesuada feugiat. Praesent malesuada congue magna at
     finibus. In hac habi tasse platea dictumst. Curabitur rhoncus auctor eleifend. Fusce venenatis diam urna, eu pharetra arcu
     varius ac`;
-    homeActivitiesImgBackground = '../../../assets/images/services.jpg';
-    homeActivitiesIconImg = '../../../assets/images/church_2.png';
-    homeActivities = [
+    imgBackground = '../../../assets/images/services.jpg';
+    iconImg = '../../../assets/images/church_2.png';
+    activities = [
         {
             iconPath: '../../../assets/images/services_1.png',
             title: 'Prayer Connect',

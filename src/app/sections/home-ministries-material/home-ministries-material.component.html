@@ -3,11 +3,11 @@
         <div class="row">
             <div class="col">
                 <div class="section_title_container">
-                    <div class="section_image"><img src="{{ homeMinistriesMaterialIconImg }}" alt="" /></div>
+                    <div class="section_image"><img src="{{ iconImg }}" alt="" /></div>
                     <div class="section_title">
-                        <h2>{{ homeMinistriesMaterialTitle }}</h2>
+                        <h2>{{ title }}</h2>
                     </div>
-                    <div class="section_subtitle">{{ homeMinistriesMaterialSubTitle }}</div>
+                    <div class="section_subtitle">{{ subTitle }}</div>
                 </div>
             </div>
         </div>
@@ -18,7 +18,7 @@
                         <div
                             class="owl-item text-center causes_item"
                             style="cursor: pointer"
-                            *ngFor="let material of homeMinistriesMaterials"
+                            *ngFor="let material of materials"
                             (click)="redirect(material.link)"
                         >
                             <div class="causes_item_image"><img src="{{ material.imgPath }}" alt="" /></div>

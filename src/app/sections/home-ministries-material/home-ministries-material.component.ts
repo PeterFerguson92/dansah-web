@@ -6,10 +6,10 @@ import { Component, OnInit } from '@angular/core';
     styleUrls: ['./home-ministries-material.component.scss'],
 })
 export class HomeMinistriesMaterialComponent implements OnInit {
-    homeMinistriesMaterialTitle = 'Ministries Material';
-    homeMinistriesMaterialSubTitle = 'God loves us all';
-    homeMinistriesMaterialIconImg = '../../../assets/images/church_4.png';
-    homeMinistriesMaterials = [
+    title = 'Ministries Material';
+    subTitle = 'God loves us all';
+    iconImg = '../../../assets/images/church_4.png';
+    materials = [
         {
             imgPath: 'https://m.media-amazon.com/images/I/31O1dYKtzpL._SX305_BO1,204,203,200_.jpg',
             title: 'Book 1',

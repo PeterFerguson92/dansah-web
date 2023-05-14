@@ -9,11 +9,11 @@
         <div class="row">
             <div class="col">
                 <div class="section_title_container">
-                    <div class="section_image"><img src="{{ homeActivitiesIconImg }}" alt="" /></div>
+                    <div class="section_image"><img src="{{ iconImg }}" alt="" /></div>
                     <div class="section_title">
-                        <h2>{{ homeActivityTitle }}</h2>
+                        <h2>{{ title }}</h2>
                     </div>
-                    <div class="section_subtitle">{{ homeActivitySubTitle }}</div>
+                    <div class="section_subtitle">{{ subTitle }}</div>
                 </div>
             </div>
         </div>
@@ -21,7 +21,7 @@
             <div class="col">
                 <div class="services_text text-center">
                     <p>
-                        {{ homeActivityText }}
+                        {{ text }}
                     </p>
                 </div>
             </div>
@@ -31,7 +31,7 @@
                 <div
                     class="col-lg-2 col-md-4 col-sm-6 center"
                     style="cursor: pointer"
-                    *ngFor="let activity of homeActivities"
+                    *ngFor="let activity of activities"
                     (click)="onSeeDetail(activity.alias)"
                 >
                     <div class="services_item text-center">

@@ -4,9 +4,11 @@
         <div class="row">
             <div class="col">
                 <div class="section_title_container">
-                    <div class="section_image"><img src="{{ quoteIconImg }}" alt="" /></div>
-                    <div class="section_title"><h2>Quote of the day</h2></div>
-                    <div class="section_subtitle">God loves us all</div>
+                    <div class="section_image"><img src="{{ iconImg }}" alt="" /></div>
+                    <div class="section_title">
+                        <h2>{{ title }}</h2>
+                    </div>
+                    <div class="section_subtitle">{{ subtitle }}</div>
                 </div>
             </div>
         </div>
@@ -14,9 +16,9 @@
             <div class="col text-center">
                 <div class="quote_char"><img src="../../../assets/images/quote_char.png" alt="" /></div>
                 <div class="quote_text">
-                    {{ quoteText }}
+                    {{ text }}
                 </div>
-                <div class="quote_source">{{ quoteSource }}</div>
+                <div class="quote_source">{{ source }}</div>
             </div>
         </div>
     </div>
