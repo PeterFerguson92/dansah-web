@@ -1,57 +1,43 @@
-<div class="causes">
+<div class="services">
+    <div
+        class="services_background parallax-window"
+        data-parallax="scroll"
+        data-image-src="../../../assets/images/services.jpg"
+        data-speed="0.8"
+    ></div>
     <div class="container">
         <div class="row">
             <div class="col">
                 <div class="section_title_container">
-                    <div class="section_image"><img src="../../../assets/images/church_4.png" alt="" /></div>
-                    <div class="section_title"><h2>Activities</h2></div>
-                    <div class="section_subtitle">God loves us all</div>
+                    <div class="section_image"><img src="{{ homeActivitiesIconImg }}" alt="" /></div>
+                    <div class="section_title">
+                        <h2>{{ homeActivityTitle }}</h2>
+                    </div>
+                    <div class="section_subtitle">{{ homeActivitySubTitle }}</div>
                 </div>
             </div>
         </div>
         <div class="row">
             <div class="col">
-                <div class="causes_slider_container">
-                    <div class="owl-carousel owl-theme causes_slider" >
-                        <div class="owl-item text-center causes_item" (click)="onSeeDetail('prayer-connect')">
-                            <div class="causes_item_image"><img src="../../../assets/images/causes_1.jpg" alt="" /></div>
-                            <div class="causes_item_title">PRAYER CONNECT</div>
-                            <div class="causes_item_text">
-                                <p>Prayer Connect is a global mission of networking the world with the power of prayer.</p>
-                            </div>
-                        </div>
-
-                        <div class="owl-item text-center causes_item" (click)="onSeeDetail('prayer-city')">
-                            <div class="causes_item_image"><img src="../../../assets/images/causes_2.jpg" alt="" /></div>
-                            <div class="causes_item_title">PRAYERCITY</div>
-                            <div class="causes_item_text">
-                                <p>A residential developing community located in the serene town of Apam designed for supernatural encounters.</p>
-                            </div>
-                        </div>
-
-                        <div class="owl-item text-center causes_item" (click)="onSeeDetail('leadership-institute')">
-                            <div class="causes_item_image"><img src="../../../assets/images/causes_3.jpg" alt="" /></div>
-                            <div class="causes_item_title">THE LEADERSHIP INSTITUTE</div>
-                            <div class="causes_item_text">
-                                <p>The Leadership Institute is the Leadership training arm of Daniel K Ansah International.</p>
-                            </div>
-                        </div>
-
-                        <div class="owl-item text-center causes_item" (click)="onSeeDetail('power-living')">
-                            <div class="causes_item_image"><img src="../../../assets/images/causes_3.jpg" alt="" /></div>
-                            <div class="causes_item_title">POWERLIVING</div>
-                            <div class="causes_item_text">
-                                <p>This is a daily publication to bring transformation , healing, deliverance and hope to the people of the world.</p>
-                            </div>
-                        </div>
+                <div class="services_text text-center">
+                    <p>
+                        {{ homeActivityText }}
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="row services_row">
+                <div
+                    class="col-lg-2 col-md-4 col-sm-6 center"
+                    style="cursor: pointer"
+                    *ngFor="let activity of homeActivities"
+                    (click)="onSeeDetail(activity.alias)"
+                >
+                    <div class="services_item text-center">
+                        <div class="services_image"><img src="{{ activity.iconPath }}" alt="" /></div>
+                        <div class="services_title">{{ activity.title }}</div>
                     </div>
-
-                    <!-- <div class="causes_slider_nav causes_slider_prev trans_200 d-flex flex-column align-items-center justify-content-center">
-                        <img src="../../../assets/images/arrow_l.png" alt="" />
-                    </div>
-                    <div class="causes_slider_nav causes_slider_next trans_200 d-flex flex-column align-items-center justify-content-center">
-                        <img src="../../../assets/images/arrow_r.png" alt="" />
-                    </div> -->
                 </div>
             </div>
         </div>
