@@ -31,7 +31,8 @@
                             "src/assets/plugins/OwlCarousel2-2.2.1/owl.carousel.js",
                             "src/assets/plugins/easing/easing.js",
                             "src/assets/plugins/parallax-js-master/parallax.min.js",
-                            "src/assets/js/custom.js"
+                            "src/assets/js/custom.js",
+                            "src/assets/js/blog_custom.js"
                         ],
                         "es5BrowserSupport": true
                     },
