@@ -5,6 +5,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { ActivityDetailComponent } from './activity-detail/activity-detail.component';
 import { EventsComponent } from './events/events.component';
 import { EventDetailComponent } from './event-detail/event-detail.component';
+import { PowerLivingComponent } from './power-living/power-living.component';
 
 const routes: Routes = [
     { path: 'home', component: HomeComponent },
@@ -12,6 +13,7 @@ const routes: Routes = [
     { path: 'events', component: EventsComponent },
     { path: 'detail/:activityName', component: ActivityDetailComponent },
     { path: 'eventDetail/:eventId', component: EventDetailComponent },
+    { path: 'powerLiving', component: PowerLivingComponent },
     { path: '', redirectTo: 'home', pathMatch: 'full' },
 ];
 
