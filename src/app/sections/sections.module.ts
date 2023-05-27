@@ -8,6 +8,7 @@ import { ActivityDetailSectionComponent } from './activity-detail-section/activi
 import { HomeEventsComponent } from './home-events/home-events.component';
 import { HomeMinistriesMaterialComponent } from './home-ministries-material/home-ministries-material.component';
 import { EventListComponent } from './event-list/event-list.component';
+import { EventDetailSectionComponent } from './event-detail-section/event-detail-section.component';
 
 @NgModule({
     declarations: [
@@ -19,6 +20,7 @@ import { EventListComponent } from './event-list/event-list.component';
         HomeEventsComponent,
         HomeMinistriesMaterialComponent,
         EventListComponent,
+        EventDetailSectionComponent,
     ],
     imports: [CommonModule],
     exports: [
@@ -30,6 +32,7 @@ import { EventListComponent } from './event-list/event-list.component';
         ActivitiesComponent,
         ActivityDetailSectionComponent,
         EventListComponent,
+        EventDetailSectionComponent,
     ],
 })
 export class SectionsModule {}

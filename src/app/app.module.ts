@@ -9,9 +9,10 @@ import { SectionsModule } from './sections/sections.module';
 import { ProfileComponent } from './profile/profile.component';
 import { ActivityDetailComponent } from './activity-detail/activity-detail.component';
 import { EventsComponent } from './events/events.component';
+import { EventDetailComponent } from './event-detail/event-detail.component';
 
 @NgModule({
-    declarations: [AppComponent, HomeComponent, ProfileComponent, ActivityDetailComponent, EventsComponent],
+    declarations: [AppComponent, HomeComponent, ProfileComponent, ActivityDetailComponent, EventsComponent, EventDetailComponent],
     imports: [BrowserModule, AppRoutingModule, SectionsModule, SharedModule],
     providers: [],
     bootstrap: [AppComponent],
