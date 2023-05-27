@@ -8,9 +8,10 @@ import { HomeComponent } from './home/home.component';
 import { SectionsModule } from './sections/sections.module';
 import { ProfileComponent } from './profile/profile.component';
 import { ActivityDetailComponent } from './activity-detail/activity-detail.component';
+import { EventsComponent } from './events/events.component';
 
 @NgModule({
-    declarations: [AppComponent, HomeComponent, ProfileComponent, ActivityDetailComponent],
+    declarations: [AppComponent, HomeComponent, ProfileComponent, ActivityDetailComponent, EventsComponent],
     imports: [BrowserModule, AppRoutingModule, SectionsModule, SharedModule],
     providers: [],
     bootstrap: [AppComponent],

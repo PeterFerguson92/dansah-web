@@ -58,8 +58,8 @@
                             <div class="header_nav_container ml-auto">
                                 <nav class="main_nav">
                                     <ul>
-                                        <li class="active"><a href="#">Home</a></li>
-                                        <li><a href="ministries.html">Events</a></li>
+                                        <li class="active"><a (click)="onRedirect('/home')" style="cursor: pointer">Home</a></li>
+                                        <li><a (click)="onRedirect('/events')" style="cursor: pointer">Events</a></li>
                                         <li><a href="sermons.html">Projects</a></li>
                                         <li><a href="blog.html">Power Living</a></li>
                                         <li><a href="blog.html">Prayer Connect</a></li>
@@ -169,8 +169,8 @@
             </form>
             <nav class="menu_nav">
                 <ul>
-                    <li class="active"><a href="#">Home</a></li>
-                    <li><a href="/home">Events</a></li>
+                    <li class="active"><a (click)="onRedirect('/home')" style="cursor: pointer">Home</a></li>
+                    <li><a (click)="onRedirect('/events')" style="cursor: pointer">Events</a></li>
                     <li><a href="/home">Projects</a></li>
                     <li><a href="/home">Power Living</a></li>
                     <li><a href="/home">Prayer Connect</a></li>
