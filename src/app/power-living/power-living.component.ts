@@ -13,62 +13,62 @@ export class PowerLivingComponent implements OnInit {
         {
             imgCover: '../../assets/images/plCover.jpg',
             title: 'January Power Living',
-            pdfPath: '',
+            pdfPath: '../../assets/powerLiv.pdf',
         },
         {
             imgCover: '../../assets/images/plCover.jpg',
             title: 'February Power Living',
-            pdfPath: '',
+            pdfPath: '../../assets/powerLiv.pdf',
         },
         {
             imgCover: '../../assets/images/plCover.jpg',
             title: 'March Power Living',
-            pdfPath: '',
+            pdfPath: '../../assets/powerLiv.pdf',
         },
         {
             imgCover: '../../assets/images/plCover.jpg',
             title: 'April Power Living',
-            pdfPath: '',
+            pdfPath: '../../assets/powerLiv.pdf',
         },
         {
             imgCover: '../../assets/images/plCover.jpg',
             title: 'May Power Living',
-            pdfPath: '',
+            pdfPath: '../../assets/powerLiv.pdf',
         },
         {
             imgCover: '../../assets/images/plCover.jpg',
             title: 'June Power Living',
-            pdfPath: '',
+            pdfPath: '../../assets/powerLiv.pdf',
         },
         {
             imgCover: '../../assets/images/plCover.jpg',
             title: 'July Power Living',
-            pdfPath: '',
+            pdfPath: '../../assets/powerLiv.pdf',
         },
         {
             imgCover: '../../assets/images/plCover.jpg',
             title: 'August Power Living',
-            pdfPath: '',
+            pdfPath: '../../assets/powerLiv.pdf',
         },
         {
             imgCover: '../../assets/images/plCover.jpg',
             title: 'September Power Living',
-            pdfPath: '',
+            pdfPath: '../../assets/powerLiv.pdf',
         },
         {
             imgCover: '../../assets/images/plCover.jpg',
             title: 'October Power Living',
-            pdfPath: '',
+            pdfPath: '../../assets/powerLiv.pdf',
         },
         {
             imgCover: '../../assets/images/plCover.jpg',
             title: 'November Power Living',
-            pdfPath: '',
+            pdfPath: '../../assets/powerLiv.pdf',
         },
         {
             imgCover: '../../assets/images/plCover.jpg',
             title: 'Dicember Power Living',
-            pdfPath: '',
+            pdfPath: '../../assets/powerLiv.pdf',
         },
     ];
     constructor() {}

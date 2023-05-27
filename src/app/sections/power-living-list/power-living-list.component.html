@@ -13,7 +13,7 @@
         </div>
         <div class="row ministries_row">
             <div class="col-xl-4 col-md-6" *ngFor="let item of powerLiving">
-                <div class="ministry">
+                <div class="ministry pointer" (click)="open(item.pdfPath)">
                     <div class="ministry_image"><img src="{{ item.imgCover }}" alt="https://unsplash.com/@davidbeale" /></div>
                     <div class="ministry_title">{{ item.title }}</div>
                     <div class="ministry_text">
@@ -22,12 +22,15 @@
                             venenatis diam urna, eu pharetra arcu varius ac. Etiam cursus turpis lectus, id iaculis risus tempor id.
                         </p>
                     </div>
-                    <div class="media_buttons ml-lg-auto">
+                    <div *ngIf="item.pdfPath" class="button ministry_button"><a (click)="open(item.pdfPath)">Read More</a></div>
+                    <!-- <div class="media_buttons ml-lg-auto">
                         <ul>
-                            <li class="sermon_item"><img class="svg" src="../../../assets/images/sermon_4.svg" alt="" /></li>
+                            <li (click)="open(item.pdfPath)" class="sermon_item">
+                                <img class="svg" src="../../../assets/images/sermon_4.svg" alt="" />
+                            </li>
                             <li class="sermon_item"><img class="svg" src="../../../assets/images/sermon_5.svg" alt="" /></li>
                         </ul>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>

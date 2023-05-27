@@ -52,11 +52,11 @@ export class HomeMinistriesMaterialComponent implements OnInit {
         },
     ];
 
-    constructor() {}
+  constructor() { }
+  
     ngOnInit() {}
 
     redirect(url) {
-        console.log(url);
         window.open(url, '_blank');
     }
 }
