@@ -166,12 +166,9 @@
             </form>
             <nav class="menu_nav">
                 <ul>
-                    <li class="active"><a (click)="onRedirect('/home')" style="cursor: pointer">Home</a></li>
-                    <li><a (click)="onRedirect('/events')" style="cursor: pointer">Events</a></li>
-                    <li><a href="/home">Projects</a></li>
-                    <li><a (click)="onRedirect('/powerLiving')">Power Living</a></li>
-                    <li><a href="/home">Prayer Connect</a></li>
-                    <li><a href="/home">Contacts</a></li>
+                    <li *ngFor="let event of items" class="active">
+                        <a (click)="onRedirect(event.redirect)" style="cursor: pointer">{{ event.name }}</a>
+                    </li>
                 </ul>
             </nav>
         </div>

@@ -26,6 +26,10 @@ export class NavBarComponent implements OnInit {
             redirect: '/media',
         },
         {
+            name: 'Donate',
+            redirect: '/donate',
+        },
+        {
             name: 'Contact',
             redirect: '/contact',
         },
@@ -33,8 +37,12 @@ export class NavBarComponent implements OnInit {
     ngOnInit() {}
 
     onRedirect(sectionName) {
-        this.router.navigate([sectionName]).then(() => {
-            window.location.reload();
-        });
+        if (sectionName === '/donate') {
+            window.open('https://www.paypal.com/paypalme/Ferguson434', '_blank');
+        } else {
+            this.router.navigate([sectionName]).then(() => {
+                window.location.reload();
+            });
+        }
     }
 }
