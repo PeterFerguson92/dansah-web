@@ -6,29 +6,30 @@
                 <div class="section_title_container">
                     <div class="section_image"><img src="../../../assets/images/church_3.png" alt="" /></div>
                     <div class="section_title">
-                        <h2>{{ title }}</h2>
+                        <h2>{{ activity.title }}</h2>
                     </div>
                     <div class="section_subtitle">God loves us all</div>
                 </div>
             </div>
         </div>
         <div class="row sermon_row">
-            <!-- Sermon Image -->
             <div class="col-lg-6">
-                <div class="sermon_image"><img src="{{ imgPath }}" alt="" /></div>
+                <div class="sermon_image"><img src="{{ activity.imgPath }}" alt="" /></div>
             </div>
 
-            <!-- Sermon Content -->
             <div class="col-lg-6">
                 <div class="sermon_content">
                     <div class="sermon_text">
                         <p class="activity-description">
-                            {{ shortDescription }} <br />
-                            {{ fullDescritpion }}
+                            {{ activity.shortDescription }} <br />
+                            {{ activity.fullDescription }}
                         </p>
                         <p class="activity-action">
-                            {{ actionText }}
+                            {{ activity.actionText }}
                         </p>
+                    </div>
+                    <div *ngIf="activity.alias === 'power-living'" class="button ministry_button">
+                        <a (click)="onRedirect('/powerLiving')">Read More</a>
                     </div>
 
                     <!-- <div class="sermon_buttons">

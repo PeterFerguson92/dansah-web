@@ -231,6 +231,8 @@ section {
     -o-transition: all 200ms ease;
     transition: all 200ms ease;
     text-align: center;
+    color: white;
+    font-size: 50px;
 }
 .button a {
     display: block;
@@ -1000,7 +1002,6 @@ section {
     font-style: italic;
     font-weight: 500;
 }
-
 
 /*********************************
 13. Footer

@@ -7,11 +7,7 @@ import { ActivatedRoute } from '@angular/router';
     styleUrls: ['./activity-detail.component.scss'],
 })
 export class ActivityDetailComponent implements OnInit {
-    title;
-    shortDescription;
-    fullDescription;
-    actionText;
-    imgPath;
+    activity;
     activities = [
         {
             alias: 'prayer-connect',
@@ -74,13 +70,8 @@ export class ActivityDetailComponent implements OnInit {
     }
 
     setActivityProperties(activityName) {
-        const activity = this.activities.filter((obj) => {
+        this.activity = this.activities.filter((obj) => {
             return obj.alias === activityName;
-        });
-        this.title = activity[0].title;
-        this.shortDescription = activity[0].shortDescription;
-        this.fullDescription = activity[0].fullDescription;
-        this.actionText = activity[0].actionText;
-        this.imgPath = activity[0].imgPath;
+        })[0];
     }
 }
