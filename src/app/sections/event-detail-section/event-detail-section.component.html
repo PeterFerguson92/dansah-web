@@ -2,13 +2,20 @@
     <div class="container">
         <div class="row">
             <div class="col">
+                <div class="sermon_image_small"><img src="{{ event.imgPath }}" alt="" /></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
                 <div class="sermon_title_container d-flex flex-lg-row flex-column align-items-start justify-content-start">
                     <div class="sermon_content">
                         <div class="sermon_title">{{ event.title }}</div>
                         <ul class="sermon_list">
-                            <li>Sermon by: <a>Test</a></li>
-                            <li>Categories: <a>Test</a>, <a href="#">Test</a></li>
-                            <li>Date: <a>Monday 11 March, 2018</a></li>
+                            <!-- <li>Sermon by: <a>Test</a></li>
+                            <li>Categories: <a>Test</a>, <a href="#">Test</a></li> -->
+                            <li>
+                                Date: <a>{{ event.detail1 }} {{ event.detail2 }}</a>
+                            </li>
                         </ul>
                     </div>
                     <!-- <div class="sermon_buttons ml-lg-auto">
@@ -28,10 +35,7 @@
             <div class="col-lg-6">
                 <div class="sermon_text">
                     <p>
-                        Praesent malesuada congue magna at finibus. In hac habitasse platea dictumst. Curabitur rhoncus auctor eleifend. Fusce
-                        venenatis diam urna, eu pharetra arcu varius ac. Etiam cursus turpis lectus, id iaculis risus tempor id. Phasellus fringilla
-                        nisl sed sem scelerisque, eget aliquam magna vehicula.nteger nec bibendum lacus. Praesent malesuada congue magna at finibus.
-                        In hac habitasse platea dictumst. Curabitur rhoncus auctor eleifend. Fusce venenatis diam urna, eu pharetra arcu varius ac.
+                        {{ event.description }}
                     </p>
                 </div>
             </div>
@@ -45,11 +49,6 @@
                         iaculis risus tempor.
                     </p>
                 </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                <div class="sermon_image_small"><img src="../../../assets/images/sermon_small.jpg" alt="" /></div>
             </div>
         </div>
         <!-- <div class="row">
