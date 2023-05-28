@@ -13,7 +13,7 @@ const routes: Routes = [
     { path: 'events', component: EventsComponent },
     { path: 'detail/:activityName', component: ActivityDetailComponent },
     { path: 'eventDetail/:eventId', component: EventDetailComponent },
-    { path: 'powerLiving', component: PowerLivingComponent },
+    { path: 'power-living', component: PowerLivingComponent },
     { path: '', redirectTo: 'home', pathMatch: 'full' },
 ];
 

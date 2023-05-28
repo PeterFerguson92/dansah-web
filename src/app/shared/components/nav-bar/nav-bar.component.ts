@@ -8,7 +8,28 @@ import { Router } from '@angular/router';
 })
 export class NavBarComponent implements OnInit {
     constructor(private router: Router) {}
-
+    items = [
+        {
+            name: 'Home',
+            redirect: '/home',
+        },
+        {
+            name: 'Events',
+            redirect: '/events',
+        },
+        {
+            name: 'Power Living',
+            redirect: '/power-living',
+        },
+        {
+            name: 'Media',
+            redirect: '/media',
+        },
+        {
+            name: 'Contact',
+            redirect: '/contact',
+        },
+    ];
     ngOnInit() {}
 
     onRedirect(sectionName) {

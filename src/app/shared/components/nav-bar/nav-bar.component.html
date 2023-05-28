@@ -58,12 +58,9 @@
                             <div class="header_nav_container ml-auto">
                                 <nav class="main_nav">
                                     <ul>
-                                        <li class="active"><a (click)="onRedirect('/home')" style="cursor: pointer">Home</a></li>
-                                        <li><a (click)="onRedirect('/events')">Events</a></li>
-                                        <li><a href="sermons.html">Projects</a></li>
-                                        <li><a (click)="onRedirect('/powerLiving')">Power Living</a></li>
-                                        <li><a href="blog.html">Prayer Connect</a></li>
-                                        <li><a href="contact.html">Contacts</a></li>
+                                        <li *ngFor="let event of items" class="active">
+                                            <a (click)="onRedirect(event.redirect)" style="cursor: pointer">{{ event.name }}</a>
+                                        </li>
                                     </ul>
                                 </nav>
                                 <div class="search">
