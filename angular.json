@@ -23,7 +23,10 @@
                         "polyfills": "src/polyfills.ts",
                         "tsConfig": "src/tsconfig.app.json",
                         "assets": ["src/favicon.ico", "src/assets"],
-                        "styles": ["src/styles.scss"],
+                        "styles": [
+                            "src/styles.scss",
+                            "node_modules/@fortawesome/fontawesome-free/css/all.min.css"
+                        ],
                         "scripts": [
                             "src/assets/js/jquery-3.2.1.min.js",
                             "src/app/shared/css/bootstrap4/popper.js",
@@ -32,7 +35,8 @@
                             "src/assets/plugins/easing/easing.js",
                             "src/assets/plugins/parallax-js-master/parallax.min.js",
                             "src/assets/js/custom.js",
-                            "src/assets/js/blog_custom.js"
+                            "src/assets/js/blog_custom.js",
+                            "node_modules/@fortawesome/fontawesome-free/js/all.min.js"
                         ],
                         "es5BrowserSupport": true
                     },
