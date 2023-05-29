@@ -31,7 +31,7 @@ export class NavBarComponent implements OnInit {
         },
         {
             name: 'Contact',
-            redirect: '/contact',
+            redirect: '/contact-us',
         },
     ];
     ngOnInit() {}

@@ -11,6 +11,7 @@ import { EventListComponent } from './event-list/event-list.component';
 import { EventDetailSectionComponent } from './event-detail-section/event-detail-section.component';
 import { PowerLivingListComponent } from './power-living-list/power-living-list.component';
 import { MediaSectionComponent } from './media-section/media-section.component';
+import { ContactUsSectionComponent } from './contact-us-section/contact-us-section.component';
 
 @NgModule({
     declarations: [
@@ -25,6 +26,7 @@ import { MediaSectionComponent } from './media-section/media-section.component';
         EventDetailSectionComponent,
         PowerLivingListComponent,
         MediaSectionComponent,
+        ContactUsSectionComponent,
     ],
     imports: [CommonModule],
     exports: [
@@ -39,6 +41,7 @@ import { MediaSectionComponent } from './media-section/media-section.component';
         EventDetailSectionComponent,
         PowerLivingListComponent,
         MediaSectionComponent,
+        ContactUsSectionComponent,
     ],
 })
 export class SectionsModule {}

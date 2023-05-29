@@ -12,9 +12,10 @@ import { EventsComponent } from './events/events.component';
 import { EventDetailComponent } from './event-detail/event-detail.component';
 import { PowerLivingComponent } from './power-living/power-living.component';
 import { MediaComponent } from './media/media.component';
+import { ContactUsComponent } from './contact-us/contact-us.component';
 
 @NgModule({
-    declarations: [AppComponent, HomeComponent, ProfileComponent, ActivityDetailComponent, EventsComponent, EventDetailComponent, PowerLivingComponent, MediaComponent],
+    declarations: [AppComponent, HomeComponent, ProfileComponent, ActivityDetailComponent, EventsComponent, EventDetailComponent, PowerLivingComponent, MediaComponent, ContactUsComponent],
     imports: [BrowserModule, AppRoutingModule, SectionsModule, SharedModule],
     providers: [],
     bootstrap: [AppComponent],

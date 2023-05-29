@@ -7,6 +7,7 @@ import { EventsComponent } from './events/events.component';
 import { EventDetailComponent } from './event-detail/event-detail.component';
 import { PowerLivingComponent } from './power-living/power-living.component';
 import { MediaComponent } from './media/media.component';
+import { ContactUsComponent } from './contact-us/contact-us.component';
 
 const routes: Routes = [
     { path: 'home', component: HomeComponent },
@@ -16,7 +17,7 @@ const routes: Routes = [
     { path: 'eventDetail/:eventId', component: EventDetailComponent },
     { path: 'power-living', component: PowerLivingComponent },
     { path: 'media', component: MediaComponent },
-
+    { path: 'contact-us', component: ContactUsComponent },
     { path: '', redirectTo: 'home', pathMatch: 'full' },
 ];
 
