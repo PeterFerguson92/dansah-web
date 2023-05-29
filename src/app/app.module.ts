@@ -11,9 +11,10 @@ import { ActivityDetailComponent } from './activity-detail/activity-detail.compo
 import { EventsComponent } from './events/events.component';
 import { EventDetailComponent } from './event-detail/event-detail.component';
 import { PowerLivingComponent } from './power-living/power-living.component';
+import { MediaComponent } from './media/media.component';
 
 @NgModule({
-    declarations: [AppComponent, HomeComponent, ProfileComponent, ActivityDetailComponent, EventsComponent, EventDetailComponent, PowerLivingComponent],
+    declarations: [AppComponent, HomeComponent, ProfileComponent, ActivityDetailComponent, EventsComponent, EventDetailComponent, PowerLivingComponent, MediaComponent],
     imports: [BrowserModule, AppRoutingModule, SectionsModule, SharedModule],
     providers: [],
     bootstrap: [AppComponent],
