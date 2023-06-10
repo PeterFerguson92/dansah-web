@@ -36,7 +36,6 @@
                             "src/assets/plugins/parallax-js-master/parallax.min.js",
                             "src/assets/js/custom.js",
                             "src/assets/js/blog_custom.js",
-                            "src/assets/js/contact_custom.js",
                             "node_modules/@fortawesome/fontawesome-free/js/all.min.js"
                         ],
                         "es5BrowserSupport": true

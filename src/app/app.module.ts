@@ -13,11 +13,22 @@ import { EventDetailComponent } from './event-detail/event-detail.component';
 import { PowerLivingComponent } from './power-living/power-living.component';
 import { MediaComponent } from './media/media.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
-    declarations: [AppComponent, HomeComponent, ProfileComponent, ActivityDetailComponent, EventsComponent, EventDetailComponent, PowerLivingComponent, MediaComponent, ContactUsComponent],
-    imports: [BrowserModule, AppRoutingModule, SectionsModule, SharedModule],
-    providers: [],
+    declarations: [
+        AppComponent,
+        HomeComponent,
+        ProfileComponent,
+        ActivityDetailComponent,
+        EventsComponent,
+        EventDetailComponent,
+        PowerLivingComponent,
+        MediaComponent,
+        ContactUsComponent,
+    ],
+    imports: [BrowserModule, AppRoutingModule, SectionsModule, SharedModule, HttpClientModule],
+    providers: [HttpClientModule],
     bootstrap: [AppComponent],
 })
 export class AppModule {}
