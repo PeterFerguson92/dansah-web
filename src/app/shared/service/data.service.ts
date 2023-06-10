@@ -12,4 +12,9 @@ export class DataService {
         const url = 'http://localhost:8000/api/quoteoftheday/';
         return this.http.get(url);
     }
+
+    getHomeMinistriesMaterial(): Observable<any> {
+        const url = 'http://localhost:8000/api/homeministriesmaterial/';
+        return this.http.get(url);
+    }
 }
