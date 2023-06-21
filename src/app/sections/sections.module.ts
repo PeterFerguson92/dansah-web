@@ -19,6 +19,8 @@ import { PrayerConnectCentersComponent } from './prayer-connect-details/prayer-c
 // tslint:disable-next-line:max-line-length
 import { LeadershipInstituteDescriptionComponent } from './leadership-institute-details/leadership-institute-description/leadership-institute-description.component';
 import { LeadershipInstituteDetailsComponent } from './leadership-institute-details/leadership-institute-details.component';
+// tslint:disable-next-line:max-line-length
+import { LeadershipCoursesCategoriesComponent } from './leadership-institute-details/leadership-courses-categories/leadership-courses-categories.component';
 
 @NgModule({
     declarations: [
@@ -39,6 +41,7 @@ import { LeadershipInstituteDetailsComponent } from './leadership-institute-deta
         PrayerConnectCentersComponent,
         LeadershipInstituteDetailsComponent,
         LeadershipInstituteDescriptionComponent,
+        LeadershipCoursesCategoriesComponent,
     ],
     imports: [CommonModule],
     exports: [
