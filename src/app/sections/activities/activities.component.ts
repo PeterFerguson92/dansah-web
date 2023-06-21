@@ -20,21 +20,25 @@ export class ActivitiesComponent implements OnInit {
             iconImgPath: '../../../assets/images/services_1.png',
             title: 'Prayer Connect',
             alias: 'prayer-connect',
+            redirectUrl: '/prayer-connect',
         },
         {
             iconImgPath: '../../../assets/images/services_2.png',
             title: 'Prayer City',
             alias: 'prayer-city',
+            redirectUrl: 'detail/prayer-city',
         },
         {
             iconImgPath: '../../../assets/images/services_3.png',
             title: 'The Leadership Institute',
             alias: 'leadership-institute',
+            redirectUrl: '/prayer-connect',
         },
         {
             iconImgPath: '../../../assets/images/services_4.png',
             title: 'Power Living',
             alias: 'power-living',
+            redirectUrl: '/prayer-connect',
         },
     ];
 
@@ -42,8 +46,8 @@ export class ActivitiesComponent implements OnInit {
 
     ngOnInit() {}
 
-    onSeeDetail(sectionName) {
-        this.router.navigate(['/detail', sectionName]).then(() => {
+    onSeeDetail(redirectUrl) {
+        this.router.navigate([redirectUrl]).then(() => {
             window.location.reload();
         });
     }

@@ -32,7 +32,7 @@
                     class="col-lg-2 col-md-4 col-sm-6 center"
                     style="cursor: pointer"
                     *ngFor="let activity of activities"
-                    (click)="onSeeDetail(activity.alias)"
+                    (click)="onSeeDetail(activity.redirectUrl)"
                 >
                     <div class="services_item text-center">
                         <div class="services_image"><img src="{{ activity.iconImgPath }}" alt="" /></div>

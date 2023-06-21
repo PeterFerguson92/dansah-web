@@ -13,22 +13,22 @@ export class NavBarComponent implements OnInit {
             name: 'Home',
             redirect: '/home',
         },
-        {
-            name: 'Prayer Connect',
-            redirect: '/prayer-connect',
-        },
-        {
-            name: 'Leadership Institute',
-            redirect: '/detail/leadership-institute',
-        },
-        {
-            name: 'Events',
-            redirect: '/events',
-        },
-        {
-            name: 'Power Living',
-            redirect: '/power-living',
-        },
+        // {
+        //     name: 'Prayer Connect',
+        //     redirect: '/prayer-connect',
+        // },
+        // {
+        //     name: 'Leadership Institute',
+        //     redirect: '/detail/leadership-institute',
+        // },
+        // {
+        //     name: 'Events',
+        //     redirect: '/events',
+        // },
+        // {
+        //     name: 'Power Living',
+        //     redirect: '/power-living',
+        // },
         {
             name: 'Media',
             redirect: '/media',
