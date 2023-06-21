@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../shared/service/data.service';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-prayer-connect',
@@ -9,17 +10,30 @@ import { DataService } from '../shared/service/data.service';
 export class PrayerConnectComponent implements OnInit {
     title = 'Prayer Connect';
     data;
+    showLoader = false;
+    message: string;
+    showNotification: boolean;
 
-    constructor(private service: DataService) {}
+    constructor(private router: Router, private service: DataService) {}
 
     ngOnInit() {
+        this.showLoader = true;
         this.service.getPowerConnect().subscribe(
             (data) => {
-                console.log(data);
-                this.data = data.result[0];
+                if (data.result && data.result.length === 1) {
+                    this.data = data.result[0];
+                } else {
+                    this.message = 'Prayer connect information not available';
+                    this.showNotification = true;
+                }
+                this.showLoader = false;
             },
             (error) => {
+                this.showLoader = false;
                 console.log(error);
+                this.router.navigate(['/error']).then(() => {
+                    window.location.reload();
+                });
             }
         );
     }

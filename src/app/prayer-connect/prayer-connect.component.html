@@ -1,4 +1,6 @@
 <app-nav-bar></app-nav-bar>
 <app-page-title [title]="title"></app-page-title>
+<app-loader *ngIf="showLoader"></app-loader>
 <app-prayer-connect-details *ngIf="data" [data]="data"></app-prayer-connect-details>
+<app-notification [showNotification]="showNotification" [message]="message"></app-notification>
 <app-footer></app-footer>
