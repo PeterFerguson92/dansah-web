@@ -16,6 +16,9 @@ import { PrayerConnectDetailsComponent } from './prayer-connect-details/prayer-c
 // tslint:disable-next-line:max-line-length
 import { PrayerConnectDescriptionComponent } from './prayer-connect-details/prayer-connect-description/prayer-connect-description.component';
 import { PrayerConnectCentersComponent } from './prayer-connect-details/prayer-connect-centers/prayer-connect-centers.component';
+// tslint:disable-next-line:max-line-length
+import { LeadershipInstituteDescriptionComponent } from './leadership-institute-details/leadership-institute-description/leadership-institute-description.component';
+import { LeadershipInstituteDetailsComponent } from './leadership-institute-details/leadership-institute-details.component';
 
 @NgModule({
     declarations: [
@@ -34,6 +37,8 @@ import { PrayerConnectCentersComponent } from './prayer-connect-details/prayer-c
         PrayerConnectDetailsComponent,
         PrayerConnectDescriptionComponent,
         PrayerConnectCentersComponent,
+        LeadershipInstituteDetailsComponent,
+        LeadershipInstituteDescriptionComponent,
     ],
     imports: [CommonModule],
     exports: [
@@ -51,6 +56,8 @@ import { PrayerConnectCentersComponent } from './prayer-connect-details/prayer-c
         ContactUsSectionComponent,
         PrayerConnectDetailsComponent,
         PrayerConnectCentersComponent,
+        LeadershipInstituteDetailsComponent,
+        LeadershipInstituteDescriptionComponent,
     ],
 })
 export class SectionsModule {}

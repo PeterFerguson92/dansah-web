@@ -10,6 +10,7 @@ import { MediaComponent } from './media/media.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { PrayerConnectComponent } from './prayer-connect/prayer-connect.component';
 import { ErrorPageComponent } from './shared/components/error-page/error-page.component';
+import { LeadershipInstituteComponent } from './leadership-institute/leadership-institute.component';
 
 const routes: Routes = [
     { path: 'home', component: HomeComponent },
@@ -19,6 +20,7 @@ const routes: Routes = [
     { path: 'eventDetail/:eventId', component: EventDetailComponent },
     { path: 'prayer-connect', component: PrayerConnectComponent },
     { path: 'power-living', component: PowerLivingComponent },
+    { path: 'leadership-institute', component: LeadershipInstituteComponent },
     { path: 'media', component: MediaComponent },
     { path: 'contact-us', component: ContactUsComponent },
     { path: 'error', component: ErrorPageComponent },

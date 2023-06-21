@@ -15,6 +15,7 @@ import { MediaComponent } from './media/media.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PrayerConnectComponent } from './prayer-connect/prayer-connect.component';
+import { LeadershipInstituteComponent } from './leadership-institute/leadership-institute.component';
 
 @NgModule({
     declarations: [
@@ -28,6 +29,7 @@ import { PrayerConnectComponent } from './prayer-connect/prayer-connect.componen
         MediaComponent,
         ContactUsComponent,
         PrayerConnectComponent,
+        LeadershipInstituteComponent,
     ],
     imports: [BrowserModule, AppRoutingModule, SectionsModule, SharedModule, HttpClientModule],
     providers: [HttpClientModule],

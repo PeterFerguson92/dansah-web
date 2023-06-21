@@ -32,7 +32,7 @@ export class ActivitiesComponent implements OnInit {
             iconImgPath: '../../../assets/images/services_3.png',
             title: 'The Leadership Institute',
             alias: 'leadership-institute',
-            redirectUrl: '/prayer-connect',
+            redirectUrl: '/leadership-institute',
         },
         {
             iconImgPath: '../../../assets/images/services_4.png',
