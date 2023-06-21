@@ -12,9 +12,8 @@ export class PrayerConnectDetailsComponent implements OnInit {
     constructor() {}
 
     ngOnInit() {
-        this.prayerConnectCenters = this.data.prayerConnectCenters;
+        this.prayerConnectCenters = this.data.centers;
         this.prayerConnectDescription = this.data;
-        delete this.prayerConnectDescription.prayerConnectCenters;
-        // this.prayerConnectDescription = this.prayerConnectDescription;
+        delete this.prayerConnectDescription.centers;
     }
 }

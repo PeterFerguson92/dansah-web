@@ -8,6 +8,7 @@ import { environment } from 'src/environments/environment';
 })
 export class DataService {
     baseUrl = environment.apiUrl + '/api/';
+
     constructor(private http: HttpClient) {}
 
     getQuoteOfTheDay(): Observable<any> {
@@ -17,6 +18,11 @@ export class DataService {
 
     getHomeMinistriesMaterial(): Observable<any> {
         const url = `${this.baseUrl}/homeministriesmaterial/`;
+        return this.http.get(url);
+    }
+
+    getPowerConnect(): Observable<any> {
+        const url = `${this.baseUrl}prayerconnect/`;
         return this.http.get(url);
     }
 }
