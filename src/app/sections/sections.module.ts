@@ -12,6 +12,10 @@ import { EventDetailSectionComponent } from './event-detail-section/event-detail
 import { PowerLivingListComponent } from './power-living-list/power-living-list.component';
 import { MediaSectionComponent } from './media-section/media-section.component';
 import { ContactUsSectionComponent } from './contact-us-section/contact-us-section.component';
+import { PrayerConnectDetailsComponent } from './prayer-connect-details/prayer-connect-details.component';
+// tslint:disable-next-line:max-line-length
+import { PrayerConnectDescriptionComponent } from './prayer-connect-details/prayer-connect-description/prayer-connect-description.component';
+import { PrayerConnectCentersComponent } from './prayer-connect-details/prayer-connect-centers/prayer-connect-centers.component';
 
 @NgModule({
     declarations: [
@@ -27,6 +31,9 @@ import { ContactUsSectionComponent } from './contact-us-section/contact-us-secti
         PowerLivingListComponent,
         MediaSectionComponent,
         ContactUsSectionComponent,
+        PrayerConnectDetailsComponent,
+        PrayerConnectDescriptionComponent,
+        PrayerConnectCentersComponent,
     ],
     imports: [CommonModule],
     exports: [
@@ -42,6 +49,8 @@ import { ContactUsSectionComponent } from './contact-us-section/contact-us-secti
         PowerLivingListComponent,
         MediaSectionComponent,
         ContactUsSectionComponent,
+        PrayerConnectDetailsComponent,
+        PrayerConnectCentersComponent,
     ],
 })
 export class SectionsModule {}

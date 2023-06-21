@@ -14,6 +14,14 @@ export class NavBarComponent implements OnInit {
             redirect: '/home',
         },
         {
+            name: 'Prayer Connect',
+            redirect: '/prayer-connect',
+        },
+        {
+            name: 'Leadership Institute',
+            redirect: '/detail/leadership-institute',
+        },
+        {
             name: 'Events',
             redirect: '/events',
         },

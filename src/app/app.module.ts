@@ -14,6 +14,7 @@ import { PowerLivingComponent } from './power-living/power-living.component';
 import { MediaComponent } from './media/media.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { HttpClientModule } from '@angular/common/http';
+import { PrayerConnectComponent } from './prayer-connect/prayer-connect.component';
 
 @NgModule({
     declarations: [
@@ -26,6 +27,7 @@ import { HttpClientModule } from '@angular/common/http';
         PowerLivingComponent,
         MediaComponent,
         ContactUsComponent,
+        PrayerConnectComponent,
     ],
     imports: [BrowserModule, AppRoutingModule, SectionsModule, SharedModule, HttpClientModule],
     providers: [HttpClientModule],

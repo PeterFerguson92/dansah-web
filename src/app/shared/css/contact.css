@@ -1,205 +1,176 @@
 @charset "utf-8";
 
-
 @import url('https://fonts.googleapis.com/css?family=Bilbo|Montserrat:300,400,500,600,700,800,900');
-
-
-
 
 /*********************************
 6. Contact Map
 *********************************/
 
-.contact_map
-{
-	width: 100%;
+.contact_map {
+    width: 100%;
 }
-.map
-{
-	width: 100%;
+.map {
+    width: 100%;
 }
-.google_map
-{
-	width: 100%;
-	height: 561px;
+.google_map {
+    width: 100%;
+    height: 561px;
 }
-.map_container
-{
-	width: 100%;
-	height: 100%;
-	overflow: hidden;
+.map_container {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
 }
-#map
-{
-	width: 100%;
-	height: calc(100% + 30px);
+#map {
+    width: 100%;
+    height: calc(100% + 30px);
 }
 
 /*********************************
 7. Contact Info
 *********************************/
 
-.contact_info
-{
-	width: 100%;
-	background: #FFFFFF;
-	padding-top: 97px;
-	padding-bottom: 98px;
+.contact_info {
+    width: 100%;
+    background: #ffffff;
+    padding-top: 97px;
+    padding-bottom: 98px;
 }
-.contact_title
-{
-	font-size: 24px;
-	color: #000000;
-	line-height: 0.75;
-	font-weight: 500;
+.contact_title {
+    font-size: 24px;
+    color: #000000;
+    line-height: 0.75;
+    font-weight: 500;
 }
-.contact_info_content
-{
-	width: 100%;
+.contact_info_content {
+    width: 100%;
 }
-.contact_info_col
-{
+.contact_info_col {
+}
+.contact_info_image {
+    width: 100%;
+}
+.contact_info_image img {
+    max-width: 100%;
+}
+.contact_info_location {
+    width: 100%;
+}
+.contact_info_title {
+    display: inline-block;
+    font-size: 18px;
+    color: #000000;
+    font-weight: 500;
+    line-height: 1.4;
 
+    border-bottom: solid 2px #eb4141;
 }
-.contact_info_image
-{
-	width: 100%;
+.contact_info_list {
+    margin-top: 2px;
 }
-.contact_info_image img
-{
-	max-width: 100%;
+.contact_info_list li {
+    font-size: 14px;
+    color: #6b6b6b;
+    font-weight: 500;
+    line-height: 1.71;
 }
-.contact_info_location
-{
-	width: 100%;
+.contact_info_list li:not(:last-child) {
+    margin-bottom: 6px;
 }
-.contact_info_title
-{
-	display: inline-block;
-	font-size: 18px;
-	color: #000000;
-	font-weight: 500;
-	line-height: 1.4;
-	border-bottom: solid 2px #eb4141;
+
+.contact_info_list :last-child {
+    margin-bottom: 56px;
 }
-.contact_info_list
-{
-	margin-top: 40px;
-}
-.contact_info_list li
-{
-	font-size: 14px;
-	color: #6b6b6b;
-	font-weight: 500;
-	line-height: 1.71;
-}
-.contact_info_list li:not(:last-child)
-{
-	margin-bottom: 16px;
-}
-.contact_info_list li span
-{
-	color: #eb4141;
+.contact_info_list li span {
+    color: #eb4141;
 }
 
 /*********************************
 8. Contact Form
 *********************************/
 
-.contact_form_section
-{
-	padding-bottom: 98px;
+.contact_form_section {
+    padding-bottom: 98px;
 }
-.contact_form
-{
-	margin-top: 57px;
+.contact_form {
+    margin-top: 57px;
 }
-.contact_input
-{
-	width: 100%;
-	height: 52px;
-	background: #ededed;
-	border: none;
-	outline: none;
-	padding-left: 25px;
+.contact_input {
+    width: 100%;
+    height: 52px;
+    background: #ededed;
+    border: none;
+    outline: none;
+    padding-left: 25px;
 }
-.contact_text
-{
-	width: 100%;
-	height: 186px;
-	background: #ededed;
-	border: none;
-	outline: none;
-	padding-left: 25px;
-	margin-top: 28px;
-	padding-top: 20px;
+.contact_text {
+    width: 100%;
+    height: 186px;
+    background: #ededed;
+    border: none;
+    outline: none;
+    padding-left: 25px;
+    margin-top: 28px;
+    padding-top: 20px;
 }
 .contact_input::-webkit-input-placeholder,
-.contact_text::-webkit-input-placeholder
-{
-	font-size: 12px !important;
-	font-weight: 500 !important;
-	font-style: italic;
-	color: #a4a4a4 !important;
+.contact_text::-webkit-input-placeholder {
+    font-size: 12px !important;
+    font-weight: 500 !important;
+    font-style: italic;
+    color: #a4a4a4 !important;
 }
 .contact_input:-moz-placeholder,
-.contact_text:-moz-placeholder
-{
-	font-size: 12px !important;
-	font-weight: 500 !important;
-	font-style: italic;
-	color: #a4a4a4 !important;
+.contact_text:-moz-placeholder {
+    font-size: 12px !important;
+    font-weight: 500 !important;
+    font-style: italic;
+    color: #a4a4a4 !important;
 }
 .contact_input::-moz-placeholder,
-.contact_text::-moz-placeholder
-{
-	font-size: 12px !important;
-	font-weight: 500 !important;
-	font-style: italic;
-	color: #a4a4a4 !important;
+.contact_text::-moz-placeholder {
+    font-size: 12px !important;
+    font-weight: 500 !important;
+    font-style: italic;
+    color: #a4a4a4 !important;
 }
 .contact_input:-ms-input-placeholder,
-.contact_text:-ms-input-placeholder
-{
-	font-size: 12px !important;
-	font-weight: 500 !important;
-	font-style: italic;
-	color: #a4a4a4 !important;
+.contact_text:-ms-input-placeholder {
+    font-size: 12px !important;
+    font-weight: 500 !important;
+    font-style: italic;
+    color: #a4a4a4 !important;
 }
 .contact_input::input-placeholder,
-.contact_text::input-placeholder
-{
-	font-size: 12px !important;
-	font-weight: 500 !important;
-	font-style: italic;
-	color: #a4a4a4 !important;
+.contact_text::input-placeholder {
+    font-size: 12px !important;
+    font-weight: 500 !important;
+    font-style: italic;
+    color: #a4a4a4 !important;
 }
-.contact_button
-{
-	position: relative;
-	width: 157px;
-	height: 54px;
-	border: none;
-	outline: none;
-	background: rgba(235,65,65,1);
-	font-size: 14px;
-	font-weight: 500;
-	color: #FFFFFF;
-	cursor: pointer;
-	margin-top: 23px;
+.contact_button {
+    position: relative;
+    width: 157px;
+    height: 54px;
+    border: none;
+    outline: none;
+    background: rgba(235, 65, 65, 1);
+    font-size: 14px;
+    font-weight: 500;
+    color: #ffffff;
+    cursor: pointer;
+    margin-top: 23px;
 }
-.contact_button:hover
-{
-	background: rgba(235,65,65,0.75);
+.contact_button:hover {
+    background: rgba(235, 65, 65, 0.75);
 }
-.contact_button::after
-{
-	display: block;
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	width: 100%;
-	height: 2px;
-	background: #ffd600;
-	content: '';
+.contact_button::after {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #ffd600;
+    content: '';
 }
