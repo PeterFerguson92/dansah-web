@@ -11,6 +11,8 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
 import { PrayerConnectComponent } from './prayer-connect/prayer-connect.component';
 import { ErrorPageComponent } from './shared/components/error-page/error-page.component';
 import { LeadershipInstituteComponent } from './leadership-institute/leadership-institute.component';
+// tslint:disable-next-line:max-line-length
+import { LeadershipInstituteCoursesComponent } from './leadership-institute-courses/leadership-institute-courses.component';
 
 const routes: Routes = [
     { path: 'home', component: HomeComponent },
@@ -21,6 +23,7 @@ const routes: Routes = [
     { path: 'prayer-connect', component: PrayerConnectComponent },
     { path: 'power-living', component: PowerLivingComponent },
     { path: 'leadership-institute', component: LeadershipInstituteComponent },
+    { path: 'course/:level', component: LeadershipInstituteCoursesComponent },
     { path: 'media', component: MediaComponent },
     { path: 'contact-us', component: ContactUsComponent },
     { path: 'error', component: ErrorPageComponent },

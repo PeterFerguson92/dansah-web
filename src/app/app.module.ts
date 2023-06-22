@@ -16,6 +16,7 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PrayerConnectComponent } from './prayer-connect/prayer-connect.component';
 import { LeadershipInstituteComponent } from './leadership-institute/leadership-institute.component';
+import { LeadershipInstituteCoursesComponent } from './leadership-institute-courses/leadership-institute-courses.component';
 
 @NgModule({
     declarations: [
@@ -30,6 +31,7 @@ import { LeadershipInstituteComponent } from './leadership-institute/leadership-
         ContactUsComponent,
         PrayerConnectComponent,
         LeadershipInstituteComponent,
+        LeadershipInstituteCoursesComponent,
     ],
     imports: [BrowserModule, AppRoutingModule, SectionsModule, SharedModule, HttpClientModule],
     providers: [HttpClientModule],

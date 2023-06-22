@@ -1,0 +1,14 @@
+<div class="main">
+    <ul class="cards">
+        <li class="cards_item" *ngFor="let item of courses">
+            <div class="card">
+                <div class="card_image"><img src="https://picsum.photos/500/300/?image=10" /></div>
+                <div class="card_content">
+                    <h2 class="card_title">{{ item.name }}</h2>
+                    <p class="card_text">{{ item.description }}</p>
+                    <button class="btn card_btn">Read More</button>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
