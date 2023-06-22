@@ -12,9 +12,7 @@ export class LeadershipCoursesCategoriesComponent implements OnInit {
 
     constructor(private router: Router) {}
 
-    ngOnInit() {
-        console.log(this.courses);
-    }
+    ngOnInit() {}
 
     open(level) {
         this.router.navigate(['course/' + level]).then(() => {

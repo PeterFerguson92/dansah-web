@@ -6,7 +6,7 @@
                 <div class="card_content">
                     <h2 class="card_title">{{ item.name }}</h2>
                     <p class="card_text">{{ item.description }}</p>
-                    <button class="btn card_btn">Read More</button>
+                    <button class="btn card_btn" (click)="viewDetail(item.id)">Read More</button>
                 </div>
             </div>
         </li>

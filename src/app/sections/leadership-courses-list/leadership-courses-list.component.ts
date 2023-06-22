@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-leadership-courses-list',
@@ -7,9 +8,13 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class LeadershipCoursesListComponent implements OnInit {
     @Input() courses;
-    constructor() {}
+    constructor(private router: Router) {}
 
     ngOnInit() {
         console.log(this.courses);
+    }
+
+    viewDetail(id) {
+        this.router.navigate(['course-detail/' + id]);
     }
 }

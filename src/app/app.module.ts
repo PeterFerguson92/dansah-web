@@ -17,6 +17,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { PrayerConnectComponent } from './prayer-connect/prayer-connect.component';
 import { LeadershipInstituteComponent } from './leadership-institute/leadership-institute.component';
 import { LeadershipInstituteCoursesComponent } from './leadership-institute-courses/leadership-institute-courses.component';
+// tslint:disable-next-line:max-line-length
+import { LeadershipInstituteSingleCourseComponent } from './leadership-institute-single-course/leadership-institute-single-course.component';
 
 @NgModule({
     declarations: [
@@ -32,6 +34,7 @@ import { LeadershipInstituteCoursesComponent } from './leadership-institute-cour
         PrayerConnectComponent,
         LeadershipInstituteComponent,
         LeadershipInstituteCoursesComponent,
+        LeadershipInstituteSingleCourseComponent,
     ],
     imports: [BrowserModule, AppRoutingModule, SectionsModule, SharedModule, HttpClientModule],
     providers: [HttpClientModule],

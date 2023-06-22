@@ -13,6 +13,8 @@ import { ErrorPageComponent } from './shared/components/error-page/error-page.co
 import { LeadershipInstituteComponent } from './leadership-institute/leadership-institute.component';
 // tslint:disable-next-line:max-line-length
 import { LeadershipInstituteCoursesComponent } from './leadership-institute-courses/leadership-institute-courses.component';
+// tslint:disable-next-line:max-line-length
+import { LeadershipInstituteSingleCourseComponent } from './leadership-institute-single-course/leadership-institute-single-course.component';
 
 const routes: Routes = [
     { path: 'home', component: HomeComponent },
@@ -24,6 +26,7 @@ const routes: Routes = [
     { path: 'power-living', component: PowerLivingComponent },
     { path: 'leadership-institute', component: LeadershipInstituteComponent },
     { path: 'course/:level', component: LeadershipInstituteCoursesComponent },
+    { path: 'course-detail/:id', component: LeadershipInstituteSingleCourseComponent },
     { path: 'media', component: MediaComponent },
     { path: 'contact-us', component: ContactUsComponent },
     { path: 'error', component: ErrorPageComponent },

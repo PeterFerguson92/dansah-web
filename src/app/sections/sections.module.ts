@@ -22,6 +22,8 @@ import { LeadershipInstituteDetailsComponent } from './leadership-institute-deta
 // tslint:disable-next-line:max-line-length
 import { LeadershipCoursesCategoriesComponent } from './leadership-institute-details/leadership-courses-categories/leadership-courses-categories.component';
 import { LeadershipCoursesListComponent } from './leadership-courses-list/leadership-courses-list.component';
+import { LeadershipSingleCourseDetailsComponent } from './leadership-single-course-details/leadership-single-course-details.component';
+import { LeadershipSingleCourseDescriptionComponent } from './leadership-single-course-details/leadership-single-course-description/leadership-single-course-description.component';
 
 @NgModule({
     declarations: [
@@ -44,6 +46,8 @@ import { LeadershipCoursesListComponent } from './leadership-courses-list/leader
         LeadershipInstituteDescriptionComponent,
         LeadershipCoursesCategoriesComponent,
         LeadershipCoursesListComponent,
+        LeadershipSingleCourseDetailsComponent,
+        LeadershipSingleCourseDescriptionComponent,
     ],
     imports: [CommonModule],
     exports: [
@@ -64,6 +68,8 @@ import { LeadershipCoursesListComponent } from './leadership-courses-list/leader
         LeadershipInstituteDetailsComponent,
         LeadershipInstituteDescriptionComponent,
         LeadershipCoursesListComponent,
+        LeadershipSingleCourseDetailsComponent,
+        LeadershipSingleCourseDescriptionComponent,
     ],
 })
 export class SectionsModule {}
