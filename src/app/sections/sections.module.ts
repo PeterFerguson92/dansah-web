@@ -25,6 +25,7 @@ import { LeadershipCoursesListComponent } from './leadership-courses-list/leader
 import { LeadershipSingleCourseDetailsComponent } from './leadership-single-course-details/leadership-single-course-details.component';
 import { LeadershipSingleCourseDescriptionComponent } from './leadership-single-course-details/leadership-single-course-description/leadership-single-course-description.component';
 import { CourseMaterialComponent } from './leadership-single-course-details/course-material/course-material.component';
+import { VideoclipsComponent } from './leadership-single-course-details/course-material/videoclips/videoclips.component';
 
 @NgModule({
     declarations: [
@@ -50,6 +51,7 @@ import { CourseMaterialComponent } from './leadership-single-course-details/cour
         LeadershipSingleCourseDetailsComponent,
         LeadershipSingleCourseDescriptionComponent,
         CourseMaterialComponent,
+        VideoclipsComponent,
     ],
     imports: [CommonModule],
     exports: [
@@ -73,6 +75,7 @@ import { CourseMaterialComponent } from './leadership-single-course-details/cour
         LeadershipSingleCourseDetailsComponent,
         LeadershipSingleCourseDescriptionComponent,
         CourseMaterialComponent,
+        VideoclipsComponent,
     ],
 })
 export class SectionsModule {}
