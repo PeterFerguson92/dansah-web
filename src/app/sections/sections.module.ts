@@ -24,6 +24,7 @@ import { LeadershipCoursesCategoriesComponent } from './leadership-institute-det
 import { LeadershipCoursesListComponent } from './leadership-courses-list/leadership-courses-list.component';
 import { LeadershipSingleCourseDetailsComponent } from './leadership-single-course-details/leadership-single-course-details.component';
 import { LeadershipSingleCourseDescriptionComponent } from './leadership-single-course-details/leadership-single-course-description/leadership-single-course-description.component';
+import { CourseMaterialComponent } from './leadership-single-course-details/course-material/course-material.component';
 
 @NgModule({
     declarations: [
@@ -48,6 +49,7 @@ import { LeadershipSingleCourseDescriptionComponent } from './leadership-single-
         LeadershipCoursesListComponent,
         LeadershipSingleCourseDetailsComponent,
         LeadershipSingleCourseDescriptionComponent,
+        CourseMaterialComponent,
     ],
     imports: [CommonModule],
     exports: [
@@ -70,6 +72,7 @@ import { LeadershipSingleCourseDescriptionComponent } from './leadership-single-
         LeadershipCoursesListComponent,
         LeadershipSingleCourseDetailsComponent,
         LeadershipSingleCourseDescriptionComponent,
+        CourseMaterialComponent,
     ],
 })
 export class SectionsModule {}
