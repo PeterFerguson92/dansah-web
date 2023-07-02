@@ -20,21 +20,21 @@ export class LeadershipInstituteComponent implements OnInit {
             // tslint:disable-next-line:max-line-length
             'The Leadership program is divinely designed to bring total transformation and supernatural encounters in the lives of all participants. Courses are both actual and virtual.',
         action_text: 'Call to ENROLL TODAY',
-        img_path: '../../../assets/images/sermon_image.jpg',
+        img_path: '../../assets/leadership/logo.jpeg',
         courses: [
             {
                 level: 'Basic',
-                coverImg: '../../assets/images/plCover.jpg',
+                coverImg: '../../assets/leadership/adavanced.png',
                 description: 'Basic Level Course Description',
             },
             {
                 level: 'Intermediate',
-                coverImg: '../../assets/images/plCover.jpg',
+                coverImg: '../../assets/leadership/adavanced.png',
                 description: 'Intermediate Level Course Description',
             },
             {
                 level: 'Advanced',
-                coverImg: '../../assets/images/plCover.jpg',
+                coverImg: '../../assets/leadership/adavanced.png',
                 description: 'Advanced Level Course Description',
             },
         ],
