@@ -11,13 +11,12 @@ export class LeadershipSingleCourseDescriptionComponent implements OnInit {
     constructor() {}
 
     ngOnInit() {
-        console.log(this.course);
         this.data = {
             title: this.course.name,
-            shortDescription: this.course.description,
-            fullDescription: null,
+            shortDescription: this.course.shortDescription,
+            fullDescription: this.course.fullDescription,
             actionText: null,
-            imgPath: '../../../assets/images/sermon_image.jpg',
+            imgPath: this.course.imgPath,
         };
     }
 }

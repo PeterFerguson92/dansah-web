@@ -9,7 +9,5 @@ export class CourseMaterialComponent implements OnInit {
     @Input() materials;
     constructor() {}
 
-    ngOnInit() {
-        console.log(this.materials);
-    }
+    ngOnInit() {}
 }

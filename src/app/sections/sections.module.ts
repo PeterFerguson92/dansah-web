@@ -26,6 +26,7 @@ import { LeadershipSingleCourseDetailsComponent } from './leadership-single-cour
 import { LeadershipSingleCourseDescriptionComponent } from './leadership-single-course-details/leadership-single-course-description/leadership-single-course-description.component';
 import { CourseMaterialComponent } from './leadership-single-course-details/course-material/course-material.component';
 import { VideoclipsComponent } from './leadership-single-course-details/course-material/videoclips/videoclips.component';
+import { ReadingComponent } from './leadership-single-course-details/course-material/reading/reading.component';
 
 @NgModule({
     declarations: [
@@ -52,6 +53,7 @@ import { VideoclipsComponent } from './leadership-single-course-details/course-m
         LeadershipSingleCourseDescriptionComponent,
         CourseMaterialComponent,
         VideoclipsComponent,
+        ReadingComponent,
     ],
     imports: [CommonModule],
     exports: [

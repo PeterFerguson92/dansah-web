@@ -2,15 +2,13 @@
     <input type="radio" name="tabs" id="tabone" checked="checked" />
     <label for="tabone">Reading Materials</label>
     <div class="tab">
-        <h1>Reading Materials Content</h1>
-        <app-videoclips [videos]="materials.videos"></app-videoclips>
+        <app-reading [materials]="materials.reading"></app-reading>
     </div>
 
     <input type="radio" name="tabs" id="tabtwo" />
     <label for="tabtwo">Video Clips</label>
     <div class="tab">
-        <h1>Video Clips Content</h1>
-        <!-- <app-videoclips></app-videoclips> -->
+        <app-videoclips [videos]="materials.videos"></app-videoclips>
     </div>
 
     <input type="radio" name="tabs" id="tabthree" />
