@@ -12,6 +12,7 @@ export class LeadershipInstituteDetailsComponent implements OnInit {
     constructor() {}
 
     ngOnInit() {
+        console.log(this.data);
         this.leadershipDetailsDescription = this.data;
         this.leadershipDetailsCourses = this.data.courses;
         delete this.leadershipDetailsDescription.courses;

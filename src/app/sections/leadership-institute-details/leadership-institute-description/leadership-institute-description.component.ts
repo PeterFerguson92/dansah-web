@@ -12,12 +12,14 @@ export class LeadershipInstituteDescriptionComponent implements OnInit {
     constructor() {}
 
     ngOnInit() {
+        console.log(this.data);
         this.data = {
             title: this.data.title,
             shortDescription: this.data.short_description,
             fullDescription: this.data.full_description,
             actionText: this.data.action_text,
-            imgPath: `${environment.apiUrl}${this.data.image_path}`,
+            // imgPath: `${environment.apiUrl}${this.data.image_path}`,
+            imgPath: this.data.img_path,
         };
     }
 }
