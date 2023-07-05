@@ -18,7 +18,7 @@ export class PrayerConnectComponent implements OnInit {
 
     ngOnInit() {
         this.showLoader = true;
-        this.service.getPowerConnect().subscribe(
+        this.service.getPrayerConnect().subscribe(
             (data) => {
                 if (data.result && data.result.length === 1) {
                     this.data = data.result[0];
@@ -31,9 +31,11 @@ export class PrayerConnectComponent implements OnInit {
             (error) => {
                 this.showLoader = false;
                 console.log(error);
-                this.router.navigate(['/error']).then(() => {
-                    window.location.reload();
-                });
+                this.message = 'Prayer connect information not available';
+                this.showNotification = true;
+                // this.router.navigate(['/error']).then(() => {
+                //     window.location.reload();
+                // });
             }
         );
     }

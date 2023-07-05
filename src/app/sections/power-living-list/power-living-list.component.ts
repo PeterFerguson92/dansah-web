@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { environment } from 'src/environments/environment';
 
 @Component({
     selector: 'app-power-living-list',
@@ -6,16 +7,19 @@ import { Component, Input, OnInit } from '@angular/core';
     styleUrls: ['./power-living-list.component.scss'],
 })
 export class PowerLivingListComponent implements OnInit {
-    @Input() title;
-    @Input() subTitle;
-    @Input() iconImgPath;
-    @Input() powerLiving;
+    @Input() data;
 
     constructor() {}
 
-    ngOnInit() {}
+    ngOnInit() {
+        console.log(this.data);
+    }
 
     open(url) {
-        window.open(url, '_blank');
+        window.open(`${environment.apiUrl}${url}`, '_blank');
+    }
+
+    getImgCoverPath(imgCover) {
+        return `${environment.apiUrl}${imgCover}`;
     }
 }

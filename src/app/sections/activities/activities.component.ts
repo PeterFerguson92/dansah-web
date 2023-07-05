@@ -38,7 +38,7 @@ export class ActivitiesComponent implements OnInit {
             iconImgPath: '../../../assets/images/services_4.png',
             title: 'Power Living',
             alias: 'power-living',
-            redirectUrl: '/prayer-connect',
+            redirectUrl: '/power-living',
         },
     ];
 

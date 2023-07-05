@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../shared/service/data.service';
 
 @Component({
     selector: 'app-power-living',
@@ -7,71 +8,32 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PowerLivingComponent implements OnInit {
     title = 'Power Living';
-    subTitle = 'God loves us all';
-    iconImgPath = '../../../assets/images/church_1.png';
-    powerLivingData = [
-        {
-            imgCover: '../../assets/images/plCover.jpg',
-            title: 'January Power Living',
-            pdfPath: '../../assets/powerLiv.pdf',
-        },
-        {
-            imgCover: '../../assets/images/plCover.jpg',
-            title: 'February Power Living',
-            pdfPath: '../../assets/powerLiv.pdf',
-        },
-        {
-            imgCover: '../../assets/images/plCover.jpg',
-            title: 'March Power Living',
-            pdfPath: '../../assets/powerLiv.pdf',
-        },
-        {
-            imgCover: '../../assets/images/plCover.jpg',
-            title: 'April Power Living',
-            pdfPath: '../../assets/powerLiv.pdf',
-        },
-        {
-            imgCover: '../../assets/images/plCover.jpg',
-            title: 'May Power Living',
-            pdfPath: '../../assets/powerLiv.pdf',
-        },
-        {
-            imgCover: '../../assets/images/plCover.jpg',
-            title: 'June Power Living',
-            pdfPath: '../../assets/powerLiv.pdf',
-        },
-        {
-            imgCover: '../../assets/images/plCover.jpg',
-            title: 'July Power Living',
-            pdfPath: '../../assets/powerLiv.pdf',
-        },
-        {
-            imgCover: '../../assets/images/plCover.jpg',
-            title: 'August Power Living',
-            pdfPath: '../../assets/powerLiv.pdf',
-        },
-        {
-            imgCover: '../../assets/images/plCover.jpg',
-            title: 'September Power Living',
-            pdfPath: '../../assets/powerLiv.pdf',
-        },
-        {
-            imgCover: '../../assets/images/plCover.jpg',
-            title: 'October Power Living',
-            pdfPath: '../../assets/powerLiv.pdf',
-        },
-        {
-            imgCover: '../../assets/images/plCover.jpg',
-            title: 'November Power Living',
-            pdfPath: '../../assets/powerLiv.pdf',
-        },
-        {
-            imgCover: '../../assets/images/plCover.jpg',
-            title: 'Dicember Power Living',
-            pdfPath: '../../assets/powerLiv.pdf',
-        },
-    ];
-    constructor() {}
+    data;
+    showLoader = false;
+    message: string;
+  showNotification: boolean;
 
-    ngOnInit() {}
+    constructor(private service: DataService) {}
+
+    ngOnInit() {
+        this.showLoader = true;
+        this.service.getPowerLiving().subscribe(
+            (data) => {
+                if (data.result && data.result.length === 1) {
+                    this.data = data.result[0];
+                } else {
+                    this.message = 'Power Living information not available';
+                    this.showNotification = true;
+                }
+                this.showLoader = false;
+            },
+            (error) => {
+                this.showLoader = false;
+                console.log(error);
+                this.message = 'Prayer connect information not available';
+                this.showNotification = true;
+
+            }
+        );
+    }
 }

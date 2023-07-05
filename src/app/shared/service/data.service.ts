@@ -21,8 +21,13 @@ export class DataService {
         return this.http.get(url);
     }
 
-    getPowerConnect(): Observable<any> {
+    getPrayerConnect(): Observable<any> {
         const url = `${this.baseUrl}prayerconnect/`;
+        return this.http.get(url);
+    }
+
+    getPowerLiving(): Observable<any> {
+        const url = `${this.baseUrl}powerliving/`;
         return this.http.get(url);
     }
 }

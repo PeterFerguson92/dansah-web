@@ -1,4 +1,4 @@
 <app-nav-bar></app-nav-bar>
 <app-page-title [title]="title"></app-page-title>
-<app-power-living-list [iconImgPath]="iconImgPath" [subTitle]="subTitle" [title]="title" [powerLiving]="powerLivingData"></app-power-living-list>
+<app-power-living-list *ngIf="data" [data]="data"></app-power-living-list>
 <app-footer></app-footer>
