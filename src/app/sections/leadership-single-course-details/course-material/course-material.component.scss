@@ -11,9 +11,10 @@
     padding: 1rem 2rem;
     margin-right: 0.2rem;
     cursor: pointer;
-    background: #90caf9;
+    background: rgba(235, 65, 65, 1);
     font-weight: bold;
     transition: background ease 0.2s;
+    color: white;
 }
 .tabs .tab {
     order: 99; // Put the tabs last
@@ -27,7 +28,8 @@
     display: none;
 }
 .tabs input[type='radio']:checked + label {
-    background: #fff;
+    background: red;
+    color: white;
 }
 .tabs input[type='radio']:checked + label + .tab {
     display: block;

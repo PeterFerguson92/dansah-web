@@ -46,7 +46,7 @@ export class NavBarComponent implements OnInit {
 
     onRedirect(sectionName) {
         if (sectionName === '/donate') {
-            window.open('https://www.paypal.com/paypalme/Ferguson434', '_blank');
+            window.open('https://buy.stripe.com/14k6pW2r95mg2oEaEF', '_blank');
         } else {
             this.router.navigate([sectionName]).then(() => {
                 window.location.reload();
