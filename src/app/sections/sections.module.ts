@@ -27,6 +27,7 @@ import { LeadershipSingleCourseDescriptionComponent } from './leadership-single-
 import { CourseMaterialComponent } from './leadership-single-course-details/course-material/course-material.component';
 import { VideoclipsComponent } from './leadership-single-course-details/course-material/videoclips/videoclips.component';
 import { ReadingComponent } from './leadership-single-course-details/course-material/reading/reading.component';
+import { PrayerCityDetailsComponent } from './prayer-city-details/prayer-city-details.component';
 
 @NgModule({
     declarations: [
@@ -54,6 +55,7 @@ import { ReadingComponent } from './leadership-single-course-details/course-mate
         CourseMaterialComponent,
         VideoclipsComponent,
         ReadingComponent,
+        PrayerCityDetailsComponent,
     ],
     imports: [CommonModule],
     exports: [
@@ -78,6 +80,7 @@ import { ReadingComponent } from './leadership-single-course-details/course-mate
         LeadershipSingleCourseDescriptionComponent,
         CourseMaterialComponent,
         VideoclipsComponent,
+        PrayerCityDetailsComponent,
     ],
 })
 export class SectionsModule {}

@@ -15,6 +15,7 @@ import { LeadershipInstituteComponent } from './leadership-institute/leadership-
 import { LeadershipInstituteCoursesComponent } from './leadership-institute-courses/leadership-institute-courses.component';
 // tslint:disable-next-line:max-line-length
 import { LeadershipInstituteSingleCourseComponent } from './leadership-institute-single-course/leadership-institute-single-course.component';
+import { PrayerCityComponent } from './prayer-city/prayer-city.component';
 
 const routes: Routes = [
     { path: 'home', component: HomeComponent },
@@ -22,6 +23,7 @@ const routes: Routes = [
     { path: 'events', component: EventsComponent },
     { path: 'detail/:activityName', component: ActivityDetailComponent },
     { path: 'eventDetail/:eventId', component: EventDetailComponent },
+    { path: 'prayer-city', component: PrayerCityComponent },
     { path: 'prayer-connect', component: PrayerConnectComponent },
     { path: 'power-living', component: PowerLivingComponent },
     { path: 'leadership-institute', component: LeadershipInstituteComponent },

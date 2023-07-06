@@ -2,27 +2,27 @@ import { Component, OnInit } from '@angular/core';
 import { DataService } from '../shared/service/data.service';
 
 @Component({
-    selector: 'app-prayer-connect',
-    templateUrl: './prayer-connect.component.html',
-    styleUrls: ['./prayer-connect.component.scss'],
+    selector: 'app-prayer-city',
+    templateUrl: './prayer-city.component.html',
+    styleUrls: ['./prayer-city.component.scss'],
 })
-export class PrayerConnectComponent implements OnInit {
-    title = 'Prayer Connect';
+export class PrayerCityComponent implements OnInit {
+    title = 'Prayer City';
     data;
     showLoader = false;
     message: string;
     showNotification: boolean;
-
     constructor(private service: DataService) {}
 
     ngOnInit() {
         this.showLoader = true;
-        this.service.getPrayerConnect().subscribe(
+        this.service.getPrayerCity().subscribe(
             (data) => {
+                console.log(data);
                 if (data.result && data.result.length === 1) {
                     this.data = data.result[0];
                 } else {
-                    this.message = 'Prayer connect information not available';
+                    this.message = 'Prayer city information not available';
                     this.showNotification = true;
                 }
                 this.showLoader = false;
@@ -30,7 +30,7 @@ export class PrayerConnectComponent implements OnInit {
             (error) => {
                 this.showLoader = false;
                 console.log(error);
-                this.message = 'Prayer connect information not available';
+                this.message = 'Prayer city information not available';
                 this.showNotification = true;
                 // this.router.navigate(['/error']).then(() => {
                 //     window.location.reload();

@@ -19,6 +19,7 @@ import { LeadershipInstituteComponent } from './leadership-institute/leadership-
 import { LeadershipInstituteCoursesComponent } from './leadership-institute-courses/leadership-institute-courses.component';
 // tslint:disable-next-line:max-line-length
 import { LeadershipInstituteSingleCourseComponent } from './leadership-institute-single-course/leadership-institute-single-course.component';
+import { PrayerCityComponent } from './prayer-city/prayer-city.component';
 
 @NgModule({
     declarations: [
@@ -35,6 +36,7 @@ import { LeadershipInstituteSingleCourseComponent } from './leadership-institute
         LeadershipInstituteComponent,
         LeadershipInstituteCoursesComponent,
         LeadershipInstituteSingleCourseComponent,
+        PrayerCityComponent,
     ],
     imports: [BrowserModule, AppRoutingModule, SectionsModule, SharedModule, HttpClientModule],
     providers: [HttpClientModule],

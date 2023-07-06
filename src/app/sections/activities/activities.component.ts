@@ -26,7 +26,7 @@ export class ActivitiesComponent implements OnInit {
             iconImgPath: '../../../assets/images/services_2.png',
             title: 'Prayer City',
             alias: 'prayer-city',
-            redirectUrl: 'detail/prayer-city',
+            redirectUrl: 'prayer-city',
         },
         {
             iconImgPath: '../../../assets/images/services_3.png',
