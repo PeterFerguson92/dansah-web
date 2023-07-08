@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { environment } from 'src/environments/environment';
+import { CommonService } from 'src/app/shared/service/common.service';
 
 @Component({
     selector: 'app-leadership-courses-categories',
@@ -11,12 +11,12 @@ export class LeadershipCoursesCategoriesComponent implements OnInit {
     @Input() categories;
     title = 'Available Courses';
 
-    constructor(private router: Router) {}
+    constructor(private router: Router, private commonService: CommonService) {}
 
     ngOnInit() {}
 
     getImgCoverPath(imgCover) {
-        return `${environment.apiUrl}${imgCover}`;
+        return this.commonService.getAssetUrl(imgCover);
     }
 
     open(level) {

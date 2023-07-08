@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { environment } from 'src/environments/environment';
+import { CommonService } from 'src/app/shared/service/common.service';
 
 @Component({
     selector: 'app-leadership-institute-description',
@@ -9,16 +9,15 @@ import { environment } from 'src/environments/environment';
 export class LeadershipInstituteDescriptionComponent implements OnInit {
     @Input() data;
 
-    constructor() {}
+    constructor(private commonService: CommonService) {}
 
     ngOnInit() {
-        console.log(this.data);
         this.data = {
             title: this.data.title,
             shortDescription: this.data.short_description,
             fullDescription: this.data.full_description,
             actionText: this.data.action_text,
-            imgPath: `${environment.apiUrl}${this.data.cover_image_path}`,
+            imgPath: this.commonService.getAssetUrl(this.data.cover_image_path),
         };
     }
 }
