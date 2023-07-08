@@ -1,2 +1,2 @@
 <app-leadership-single-course-description [course]="course"></app-leadership-single-course-description>
-<app-course-material [materials]="course.materials"></app-course-material>
+<app-course-material *ngIf="course.materials" [materials]="course.materials"></app-course-material>

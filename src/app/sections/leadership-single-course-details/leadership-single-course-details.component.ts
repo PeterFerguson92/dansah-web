@@ -9,7 +9,5 @@ export class LeadershipSingleCourseDetailsComponent implements OnInit {
     @Input() course;
     constructor() {}
 
-    ngOnInit() {
-        console.log(this.course);
-    }
+    ngOnInit() {}
 }

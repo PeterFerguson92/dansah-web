@@ -45,4 +45,9 @@ export class DataService {
         const url = `${this.baseUrl}leadershipinstitute/course/${id}`;
         return this.http.get(url);
     }
+
+    getLeadershipCoursesByLevel(level): Observable<any> {
+        const url = `${this.baseUrl}leadershipinstitute/courses/category?level=${level}`;
+        return this.http.get(url);
+    }
 }

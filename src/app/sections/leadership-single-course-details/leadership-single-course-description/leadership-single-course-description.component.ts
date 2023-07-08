@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { CommonService } from 'src/app/shared/service/common.service';
 
 @Component({
     selector: 'app-leadership-single-course-description',
@@ -8,15 +9,15 @@ import { Component, Input, OnInit } from '@angular/core';
 export class LeadershipSingleCourseDescriptionComponent implements OnInit {
     @Input() course;
     data;
-    constructor() {}
+    constructor(private commonService: CommonService) {}
 
     ngOnInit() {
         this.data = {
             title: this.course.name,
-            shortDescription: this.course.shortDescription,
-            fullDescription: this.course.fullDescription,
+            shortDescription: this.course.short_description,
+            fullDescription: this.course.full_description,
             actionText: null,
-            imgPath: this.course.imgPath,
+            imgPath: this.commonService.getAssetUrl(this.course.cover_image_path),
         };
     }
 }

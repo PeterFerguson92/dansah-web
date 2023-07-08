@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { CommonService } from 'src/app/shared/service/common.service';
 
 @Component({
     selector: 'app-leadership-courses-list',
@@ -8,10 +9,12 @@ import { Router } from '@angular/router';
 })
 export class LeadershipCoursesListComponent implements OnInit {
     @Input() courses;
-    constructor(private router: Router) {}
+    constructor(private router: Router, private commonService: CommonService) {}
 
-    ngOnInit() {
-        console.log(this.courses);
+    ngOnInit() {}
+
+    getImgCoverPath(imgCover) {
+        return this.commonService.getAssetUrl(imgCover);
     }
 
     viewDetail(id) {

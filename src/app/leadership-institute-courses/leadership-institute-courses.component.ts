@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { DataService } from '../shared/service/data.service';
 
 @Component({
     selector: 'app-leadership-institute-courses',
@@ -8,40 +9,35 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class LeadershipInstituteCoursesComponent implements OnInit {
     message;
+    data;
     title = 'Courses';
     showLoader = false;
     showNotification = false;
-    courses = [
-        {
-            id: 1,
-            name: 'Course 1',
-            description: 'is simply dummy text of the printing and typesetting industry.',
-            imgPath: '../../assets/leadership/course56.jpeg',
-        },
-        {
-            id: 1,
-            name: 'Course 32',
-            description: 'is simply dummy text of the printing and typesetting industry.',
-            imgPath: '../../assets/leadership/course56.jpeg',
-        },
-        {
-            id: 1,
-            name: 'Course 113',
-            description: 'is simply dummy text of the printing and typesetting industry.',
-            imgPath: '../../assets/leadership/course56.jpeg',
-        },
-        {
-            id: 1,
-            name: 'Course 456',
-            description: 'is simply dummy text of the printing and typesetting industry.',
-            imgPath: '../../assets/leadership/course56.jpeg',
-        },
-    ];
-    constructor(private activatedRoute: ActivatedRoute) {}
+    courses;
+    constructor(private activatedRoute: ActivatedRoute, private service: DataService) {}
 
     ngOnInit() {
         const snapshot = this.activatedRoute.snapshot;
         const courseLevel = snapshot.paramMap.get('level');
         this.title = courseLevel + ' courses';
+
+        this.showLoader = true;
+        this.service.getLeadershipCoursesByLevel(courseLevel).subscribe(
+            (data) => {
+                console.log(data);
+                if (data.result && data.result.length > 0) {
+                    this.courses = data.result;
+                } else {
+                    // TODO handle empty
+                }
+                this.showLoader = false;
+            },
+            (error) => {
+                this.showLoader = false;
+                console.log(error);
+                this.message = 'Leadership Institute information not available';
+                this.showNotification = true;
+            }
+        );
     }
 }

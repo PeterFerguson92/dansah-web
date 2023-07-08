@@ -1,6 +1,7 @@
 <app-nav-bar></app-nav-bar>
 <!-- <app-page-title [title]="title"></app-page-title> -->
+<br /><br />
 <app-loader *ngIf="showLoader"></app-loader>
-<app-leadership-single-course-details [course]="course"></app-leadership-single-course-details>
+<app-leadership-single-course-details *ngIf="course" [course]="course"></app-leadership-single-course-details>
 <app-notification [showNotification]="showNotification" [message]="message"></app-notification>
 <app-footer></app-footer>
