@@ -12,10 +12,12 @@
             </div>
         </div>
         <div class="row ministries_row">
-            <div class="col-xl-4 col-md-6" *ngFor="let item of courses">
-                <div class="ministry pointer" (click)="open(item.level)">
-                    <div class="ministry_image"><img src="{{ item.coverImg }}" alt="https://unsplash.com/@davidbeale" /></div>
-                    <div class="ministry_title">{{ item.level }}</div>
+            <div class="col-xl-4 col-md-6" *ngFor="let item of categories">
+                <div class="ministry pointer" (click)="open(item.name)">
+                    <div class="ministry_image">
+                        <img src="{{ getImgCoverPath(item.cover_image_path) }}" alt="https://unsplash.com/@davidbeale" />
+                    </div>
+                    <div class="ministry_title">{{ item.name }}</div>
                     <div class="ministry_text">
                         <p>
                             {{ item.description }}

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../shared/service/data.service';
 
 @Component({
     selector: 'app-leadership-institute',
@@ -10,36 +11,28 @@ export class LeadershipInstituteComponent implements OnInit {
     showLoader = false;
     message: string;
     showNotification: boolean;
+    data;
+    constructor(private service: DataService) {}
 
-    data = {
-        alias: 'leadership-institute',
-        title: 'Leadership institute',
-        short_description:
-            'The Leadership institute is the Leadership training arm of Daniel K Ansah International.',
-        full_description:
-            // tslint:disable-next-line:max-line-length
-            'The Leadership program is divinely designed to bring total transformation and supernatural encounters in the lives of all participants. Courses are both actual and virtual.',
-        action_text: 'Call to ENROLL TODAY',
-        img_path: '../../assets/leadership/logo.jpeg',
-        courses: [
-            {
-                level: 'Basic',
-                coverImg: '../../assets/leadership/adavanced.png',
-                description: 'Basic Level Course Description',
+    ngOnInit() {
+        this.showLoader = true;
+        this.service.getLeadershipInstitute().subscribe(
+            (data) => {
+                console.log(data);
+                if (data.result && data.result.length === 1) {
+                    this.data = data.result[0];
+                } else {
+                    this.message = 'Leadership Institute information not available';
+                    this.showNotification = true;
+                }
+                this.showLoader = false;
             },
-            {
-                level: 'Intermediate',
-                coverImg: '../../assets/leadership/adavanced.png',
-                description: 'Intermediate Level Course Description',
-            },
-            {
-                level: 'Advanced',
-                coverImg: '../../assets/leadership/adavanced.png',
-                description: 'Advanced Level Course Description',
-            },
-        ],
-    };
-    constructor() {}
-
-    ngOnInit() {}
+            (error) => {
+                this.showLoader = false;
+                console.log(error);
+                this.message = 'Leadership Institute information not available';
+                this.showNotification = true;
+            }
+        );
+    }
 }

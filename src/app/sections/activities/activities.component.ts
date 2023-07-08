@@ -48,7 +48,7 @@ export class ActivitiesComponent implements OnInit {
 
     onSeeDetail(redirectUrl) {
         this.router.navigate([redirectUrl]).then(() => {
-            window.location.reload();
+            // window.location.reload();
         });
     }
 }

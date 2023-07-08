@@ -8,13 +8,12 @@ import { Component, Input, OnInit } from '@angular/core';
 export class LeadershipInstituteDetailsComponent implements OnInit {
     @Input() data;
     leadershipDetailsDescription;
-    leadershipDetailsCourses;
+    leadershipDetailsCategories;
     constructor() {}
 
     ngOnInit() {
-        console.log(this.data);
         this.leadershipDetailsDescription = this.data;
-        this.leadershipDetailsCourses = this.data.courses;
+        this.leadershipDetailsCategories = this.data.categories;
         delete this.leadershipDetailsDescription.courses;
     }
 }

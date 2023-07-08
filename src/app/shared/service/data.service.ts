@@ -35,4 +35,14 @@ export class DataService {
         const url = `${this.baseUrl}prayercity/`;
         return this.http.get(url);
     }
+
+    getLeadershipInstitute(): Observable<any> {
+        const url = `${this.baseUrl}leadershipinstitute/`;
+        return this.http.get(url);
+    }
+
+    getLeadershipCourse(id): Observable<any> {
+        const url = `${this.baseUrl}leadershipinstitute/course/${id}`;
+        return this.http.get(url);
+    }
 }
