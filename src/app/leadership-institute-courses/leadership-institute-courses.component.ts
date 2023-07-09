@@ -24,7 +24,6 @@ export class LeadershipInstituteCoursesComponent implements OnInit {
         this.showLoader = true;
         this.service.getLeadershipCoursesByLevel(courseLevel).subscribe(
             (data) => {
-                console.log(data);
                 if (data.result && data.result.length > 0) {
                     this.courses = data.result;
                 } else {

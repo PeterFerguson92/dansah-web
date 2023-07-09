@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { CommonService } from 'src/app/shared/service/common.service';
 
 @Component({
     selector: 'app-reading',
@@ -6,12 +7,19 @@ import { Component, Input, OnInit } from '@angular/core';
     styleUrls: ['./reading.component.scss'],
 })
 export class ReadingComponent implements OnInit {
-    @Input() materials;
-    constructor() {}
+    @Input() readings;
+    constructor(private commonService: CommonService) {}
 
-    ngOnInit() {}
+    ngOnInit() {
+        console.log(this.readings);
+    }
 
-    open(url) {
+    getImgCoverPath(imgCover) {
+        return this.commonService.getAssetUrl(imgCover);
+    }
+
+    open(documentPath) {
+        const url = this.commonService.getAssetUrl(documentPath);
         window.open(url, '_blank');
     }
 }
