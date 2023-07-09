@@ -1,0 +1,17 @@
+<!-- <h1>Backer Rewards</h1>
+
+<p class="disclosure">
+    <small
+        >Download speed estimates are based on the average reported <abbr title="Internet Service Provider">ISP</abbr> speeds for your general
+        area.</small
+    >
+</p> -->
+
+<section class="rewards" aria-label="Rewards" *ngFor="let item of assesments">
+    <div class="download">
+        <p>
+            <a download (click)="open(item.document)">{{ item.title }}</a>
+        </p>
+        <p class="download__instructions" style="margin-left: 0%">{{ item.description }}</p>
+    </div>
+</section>

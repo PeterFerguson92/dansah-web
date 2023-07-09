@@ -2,18 +2,16 @@ import { Component, Input, OnInit } from '@angular/core';
 import { CommonService } from 'src/app/shared/service/common.service';
 
 @Component({
-    selector: 'app-reading',
-    templateUrl: './reading.component.html',
-    styleUrls: ['./reading.component.scss'],
+    selector: 'app-assesment',
+    templateUrl: './assesment.component.html',
+    styleUrls: ['./assesment.component.scss'],
 })
-export class ReadingComponent implements OnInit {
-    @Input() readings;
+export class AssesmentComponent implements OnInit {
+    @Input() assesments;
     constructor(private commonService: CommonService) {}
 
-    ngOnInit() {}
-
-    getImgCoverPath(imgCover) {
-        return this.commonService.getAssetUrl(imgCover);
+    ngOnInit() {
+        console.log(this.assesments);
     }
 
     open(documentPath) {

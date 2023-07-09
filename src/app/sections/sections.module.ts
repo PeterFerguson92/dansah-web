@@ -28,6 +28,7 @@ import { CourseMaterialComponent } from './leadership-single-course-details/cour
 import { VideoclipsComponent } from './leadership-single-course-details/course-material/videoclips/videoclips.component';
 import { ReadingComponent } from './leadership-single-course-details/course-material/reading/reading.component';
 import { PrayerCityDetailsComponent } from './prayer-city-details/prayer-city-details.component';
+import { AssesmentComponent } from './leadership-single-course-details/course-material/assesment/assesment.component';
 
 @NgModule({
     declarations: [
@@ -56,6 +57,7 @@ import { PrayerCityDetailsComponent } from './prayer-city-details/prayer-city-de
         VideoclipsComponent,
         ReadingComponent,
         PrayerCityDetailsComponent,
+        AssesmentComponent,
     ],
     imports: [CommonModule],
     exports: [
@@ -81,6 +83,7 @@ import { PrayerCityDetailsComponent } from './prayer-city-details/prayer-city-de
         CourseMaterialComponent,
         VideoclipsComponent,
         PrayerCityDetailsComponent,
+        AssesmentComponent,
     ],
 })
 export class SectionsModule {}
