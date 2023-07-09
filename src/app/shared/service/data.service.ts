@@ -50,4 +50,10 @@ export class DataService {
         const url = `${this.baseUrl}leadershipinstitute/courses/category?level=${level}`;
         return this.http.get(url);
     }
+
+    uploadFile(fileToUpload: File): Observable<any> {
+        const formData: FormData = new FormData();
+        formData.append('fileKey', fileToUpload, fileToUpload.name);
+        return this.http.post(this.baseUrl, formData);
+    }
 }
