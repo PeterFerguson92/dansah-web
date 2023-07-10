@@ -51,6 +51,11 @@ export class DataService {
         return this.http.get(url);
     }
 
+    getSocialMedia(): Observable<any> {
+        const url = `${this.baseUrl}socialmedia/`;
+        return this.http.get(url);
+    }
+
     uploadFile(fileToUpload: File): Observable<any> {
         const formData: FormData = new FormData();
         formData.append('fileKey', fileToUpload, fileToUpload.name);

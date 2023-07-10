@@ -17,27 +17,29 @@
         <div class="row vertical_content_manage mt-5">
             <div class="col-lg-6">
                 <div class="about_header_main mt-3">
-                    <h4 class="about_heading text-capitalize font-weight-bold mt-4">{{ paragraphTitle }}</h4>
+                    <h4 class="about_heading text-capitalize font-weight-bold mt-4">{{ data.title }}</h4>
                     <p class="text-muted mt-3">
-                        {{ description1 }}
-                    </p>
-                    <p class="text-muted mt-3">
-                        {{ description2 }}
+                        {{ data.description }}
                     </p>
                 </div>
             </div>
             <div class="col-lg-6">
-                <div class="img_about mt-3">
-                    <img src="https://i.ibb.co/qpz1hvM/About-us.jpg" alt="" class="img-fluid mx-auto d-block" />
-                </div>
+                <div class="img_about mt-3"><img src="{{ getImgCoverPath(data.cover_image_path) }}" alt="" class="img-fluid mx-auto d-block" /></div>
             </div>
         </div>
 
         <div class="row mt-3">
-            <div class="col-lg-4" *ngFor="let item of socialMediaData">
+            <div class="col-lg-4" *ngFor="let item of data.social_media">
                 <div class="about_content_box_all mt-3">
                     <div class="about_detail text-center">
-                        <div (click)="redirect(item.redirectLink)" class="about_icon pointer"><i [ngClass]="getClass(item.iconName)"></i></div>
+                        <!-- <div (click)="redirect(item.link)" class="about_icon pointer"><i [ngClass]="getClass(item.iconName)"></i></div> -->
+                        <img
+                            (click)="redirect(item.link)"
+                            src="{{ getImgCoverPath(item.logo_image_path) }}"
+                            class="socil"
+                            alt="Avatar"
+                            style="width: 200px"
+                        />
                         <h5 class="text-dark text-capitalize mt-3 font-weight-bold">{{ item.title }}</h5>
                         <p class="edu_desc mt-3 mb-0 text-muted">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                     </div>

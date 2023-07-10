@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { CommonService } from 'src/app/shared/service/common.service';
 
 @Component({
     selector: 'app-media-section',
@@ -6,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
     styleUrls: ['./media-section.component.scss'],
 })
 export class MediaSectionComponent implements OnInit {
+    @Input() data;
     title = 'Media title';
     subtitle = 'Media Subtitle';
     paragraphTitle = 'Lorem Ipsum Is Simply Dummy Text Of The Printing Industry.';
@@ -43,15 +45,18 @@ export class MediaSectionComponent implements OnInit {
         },
     ];
 
-    constructor() {}
+    constructor(private commonService: CommonService) {}
 
-    ngOnInit() {}
-
-    getClass(iconName) {
-        return iconName + ' fa-3x';
+    ngOnInit() {
+        console.log(this.data);
     }
 
     redirect(link) {
+        console.log(link);
         window.open(link, '_blank');
+    }
+
+    getImgCoverPath(imgCover) {
+        return this.commonService.getAssetUrl(imgCover);
     }
 }

@@ -1,6 +1,10 @@
 <p>
     <app-nav-bar></app-nav-bar>
-    <app-page-title [title]="'Media'"></app-page-title>
-    <app-media-section></app-media-section>
+    <!-- <app-page-title [title]="'Media'"></app-page-title> -->
+    <app-loader *ngIf="showLoader"></app-loader>
+
+    <app-media-section *ngIf="data" [data]="data"></app-media-section>
+    <app-notification [showNotification]="showNotification" [message]="message"></app-notification>
+
     <app-footer></app-footer>
 </p>
