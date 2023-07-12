@@ -27,7 +27,7 @@ export class DataService {
     }
 
     getHomeMinistriesMaterial(): Observable<any> {
-        const url = `${this.baseUrl}/homeministriesmaterial/`;
+        const url = `${this.baseUrl}homeministriesmaterial/`;
         return this.http.get(url);
     }
 
