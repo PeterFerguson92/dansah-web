@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { CommonService } from 'src/app/shared/service/common.service';
+import { DataService } from 'src/app/shared/service/data.service';
 
 @Component({
     selector: 'app-home-slider',
@@ -6,11 +8,40 @@ import { Component, OnInit } from '@angular/core';
     styleUrls: ['./home-slider.component.scss'],
 })
 export class HomeSliderComponent implements OnInit {
-    title = 'Winning Souls and Improving Lives……';
-    imgPath1 = '../../../../assets/images/cross_1.png';
-    imgPath2 = '../../../../assets/images/cross_1.png';
-    imgPath3 = '../../../../assets/images/cross_1.png';
-    constructor() {}
+    title;
+    imgPath1;
+    imgPath2;
+    imgPath3;
 
-    ngOnInit() {}
+    @Output()
+    isDataRetrieved = new EventEmitter<boolean>();
+    constructor(
+        private service: DataService,
+        private commonService: CommonService,
+    ) {}
+
+    ngOnInit() {
+        this.service.getHomeSlider().subscribe(
+            (data) => {
+                if (data.status === 'success') {
+                    this.isDataRetrieved.emit(true);
+                    const result = data.result[0];
+                    this.title = result.title;
+                    this.imgPath1 = this.getImgCoverPath(result.image1);
+                    this.imgPath2 = this.getImgCoverPath(result.image2);
+                    this.imgPath3 = this.getImgCoverPath(result.image3);
+                } else {
+                    this.isDataRetrieved.emit(false);
+                }
+            },
+            (error) => {
+                console.log(error);
+                this.isDataRetrieved.emit(false);
+            }
+        );
+    }
+
+    getImgCoverPath(imgCover) {
+        return this.commonService.getAssetUrl(imgCover);
+    }
 }

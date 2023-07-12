@@ -21,6 +21,11 @@ export class DataService {
         return this.http.get(url);
     }
 
+    getHomeSlider(): Observable<any> {
+        const url = `${this.baseUrl}homeslider/`;
+        return this.http.get(url);
+    }
+
     getHomeMinistriesMaterial(): Observable<any> {
         const url = `${this.baseUrl}/homeministriesmaterial/`;
         return this.http.get(url);
