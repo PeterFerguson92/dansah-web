@@ -16,6 +16,11 @@ export class DataService {
         return this.http.get(url);
     }
 
+    getDailyQuoteOfTheDay(date): Observable<any> {
+        const url = `${this.baseUrl}quoteoftheday/daily/date?day=${date}`;
+        return this.http.get(url);
+    }
+
     getHomeMinistriesMaterial(): Observable<any> {
         const url = `${this.baseUrl}/homeministriesmaterial/`;
         return this.http.get(url);
@@ -57,9 +62,9 @@ export class DataService {
     }
 
     getContacts(): Observable<any> {
-      const url = `${this.baseUrl}contact/`;
-      return this.http.get(url);
-  }
+        const url = `${this.baseUrl}contact/`;
+        return this.http.get(url);
+    }
 
     uploadFile(fileToUpload: File): Observable<any> {
         const formData: FormData = new FormData();

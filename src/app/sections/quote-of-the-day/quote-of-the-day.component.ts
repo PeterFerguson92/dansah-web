@@ -19,15 +19,21 @@ export class QuoteOfTheDayComponent implements OnInit {
     constructor(private service: DataService) {}
 
     ngOnInit() {
-        this.service.getQuoteOfTheDay().subscribe(
+        const currentDate = new Date().toISOString().split('T')[0];
+        this.service.getDailyQuoteOfTheDay(currentDate).subscribe(
             (data) => {
-                this.isDataRetrieved.emit(true);
-                this.title = data.quote_of_the_day[0].title;
-                this.subtitle = data.quote_of_the_day[0].sub_title;
-                this.backgroundImage = `${environment.apiUrl}${data.quote_of_the_day[0].background_icon_image_path}`;
-                this.iconImgPath = `${environment.apiUrl}${data.quote_of_the_day[0].icon_image_path}`;
-                this.text = data.quote_of_the_day[0].text;
-                this.source = data.quote_of_the_day[0].source;
+                if (data.status === 'success') {
+                    const result = data.result;
+                    this.isDataRetrieved.emit(true);
+                    this.title = result.title;
+                    this.subtitle = result.sub_title;
+                    this.backgroundImage = `${environment.apiUrl}${result.background_icon_image_path}`;
+                    this.iconImgPath = `${environment.apiUrl}${result.icon_image_path}`;
+                    this.text = result.text;
+                    this.source = result.source;
+                } else {
+                    this.isDataRetrieved.emit(false);
+                }
             },
             (error) => {
                 console.log(error);
