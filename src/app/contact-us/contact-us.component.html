@@ -1,5 +1,7 @@
 <app-nav-bar></app-nav-bar>
-<app-page-title [title]="title"></app-page-title>
 <br />
-<app-contact-us-section></app-contact-us-section>
+<app-loader *ngIf="showLoader"></app-loader>
+
+<app-contact-us-section *ngIf="data" [data]="data"></app-contact-us-section>
+<app-notification [showNotification]="showNotification" [message]="message"></app-notification>
 <app-footer></app-footer>

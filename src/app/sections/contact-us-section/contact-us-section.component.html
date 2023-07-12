@@ -3,39 +3,20 @@
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <div class="contact_title">Contact Info</div>
+                    <div class="contact_title">{{ data.title }}</div>
                 </div>
             </div>
             <div class="row contact_info_row row-eq-height">
                 <!-- Contact Info Content -->
                 <div class="col-lg-6 d-flex flex-column align-items-start justify-content-end">
                     <div class="row">
-                        <div class="col-lg-6 contact_info_col">
-                            <div class="contact_info_title">Los Angeles Church</div>
+                        <div class="col-lg-6 contact_info_col" *ngFor="let item of data.locations">
+                            <div class="contact_info_title">{{ item.name }}</div>
                             <ul class="contact_info_list">
-                                <li><span>Address: </span>1481 Creekside Lane Avila Beach, CA 93424</li>
-                                <li class="footer_contact_phone">
-                                    <span>Phone: </span>
-                                    <div>
-                                        <div>+53 345 7953 32453</div>
-                                        <div>+53 345 7557 822112</div>
-                                    </div>
+                                <li>{{ item.address }}</li>
+                                <li>
+                                    {{ item.phone_number }}
                                 </li>
-                                <li><span>Email: </span>yourmail@gmail.com</li>
-                            </ul>
-                        </div>
-                        <div class="col-lg-6 contact_info_col">
-                            <div class="contact_info_title">San Francisco Church</div>
-                            <ul class="contact_info_list">
-                                <li><span>Address: </span>1481 Creekside Lane Avila Beach, CA 93424</li>
-                                <li class="footer_contact_phone">
-                                    <span>Phone: </span>
-                                    <div>
-                                        <div>+53 345 7953 32453</div>
-                                        <div>+53 345 7557 822112</div>
-                                    </div>
-                                </li>
-                                <li><span>Email: </span>yourmail@gmail.com</li>
                             </ul>
                         </div>
                     </div>
@@ -43,12 +24,12 @@
 
                 <!-- Contact Info Image -->
                 <div class="col-lg-6">
-                    <div class="contact_info_image"><img src="../../../assets/images/contact_image.jpg" alt="" /></div>
+                    <div class="contact_info_image"><img src="{{ getImgCoverPath(data.cover_image_path) }}" alt="" /></div>
                 </div>
             </div>
         </div>
         <br />
-        <div class="contact_form_section">
+        <!-- <div class="contact_form_section">
             <div class="container">
                 <div class="row">
                     <div class="col">
@@ -69,6 +50,6 @@
                 </div>
                 <div class="row"></div>
             </div>
-        </div>
+        </div> -->
     </div>
 </div>

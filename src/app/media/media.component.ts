@@ -12,13 +12,11 @@ export class MediaComponent implements OnInit {
     title;
     showLoader = false;
     showNotification = false;
-    course;
     constructor(private service: DataService) {}
 
     ngOnInit() {
         this.service.getSocialMedia().subscribe(
             (data) => {
-                console.log(data);
                 if (data.status === 'success') {
                     this.data = data.result[0];
                 } else {

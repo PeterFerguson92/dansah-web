@@ -56,6 +56,11 @@ export class DataService {
         return this.http.get(url);
     }
 
+    getContacts(): Observable<any> {
+      const url = `${this.baseUrl}contact/`;
+      return this.http.get(url);
+  }
+
     uploadFile(fileToUpload: File): Observable<any> {
         const formData: FormData = new FormData();
         formData.append('fileKey', fileToUpload, fileToUpload.name);
