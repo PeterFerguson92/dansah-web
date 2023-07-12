@@ -1,10 +1,4 @@
-<div class="services">
-    <div
-        class="services_background parallax-window"
-        data-parallax="scroll"
-        data-image-src="../../../assets/images/services.jpg"
-        data-speed="0.8"
-    ></div>
+<div class="services" [ngStyle]="{ 'background-image': 'url(' + imgBackground + ')' }">
     <div class="container">
         <div class="row">
             <div class="col">
@@ -13,7 +7,7 @@
                     <div class="section_title">
                         <h2>{{ title }}</h2>
                     </div>
-                    <div class="section_subtitle">{{ subTitle }}</div>
+                    <!-- <div class="section_subtitle">{{ subTitle }}</div> -->
                 </div>
             </div>
         </div>

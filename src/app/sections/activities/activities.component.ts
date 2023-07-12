@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
+import { CommonService } from 'src/app/shared/service/common.service';
+import { DataService } from 'src/app/shared/service/data.service';
 
 @Component({
     selector: 'app-activities',
@@ -7,14 +9,11 @@ import { Router } from '@angular/router';
     styleUrls: ['./activities.component.scss'],
 })
 export class ActivitiesComponent implements OnInit {
-    title = 'Activities';
-    subTitle = 'God Love Us All';
-    text = `Integer nec bibendum lacus.
-     Suspendisse dictum enim sit amet libero malesuada feugiat. Praesent malesuada congue magna at
-    finibus. In hac habi tasse platea dictumst. Curabitur rhoncus auctor eleifend. Fusce venenatis diam urna, eu pharetra arcu
-    varius ac`;
-    imgBackground = '../../../assets/images/services.jpg';
-    iconImgPath = '../../../assets/images/church_2.png';
+    title;
+    subTitle;
+    text;
+    imgBackground;
+    iconImgPath;
     activities = [
         {
             iconImgPath: '../../../assets/images/services_1.png',
@@ -41,10 +40,34 @@ export class ActivitiesComponent implements OnInit {
             redirectUrl: '/power-living',
         },
     ];
+    @Output()
+    isDataRetrieved = new EventEmitter<boolean>();
 
-    constructor(private router: Router) {}
+    constructor(private router: Router, private service: DataService, private commonService: CommonService) {}
 
-    ngOnInit() {}
+    ngOnInit() {
+        this.service.getHomeActivities().subscribe(
+            (data) => {
+                if (data.status === 'success') {
+                    this.isDataRetrieved.emit(true);
+                    const result = data.result[0];
+                    this.title = result.title;
+                    this.text = result.description;
+                    this.imgBackground = this.getImgCoverPath(result.background_image_path);
+                } else {
+                    this.isDataRetrieved.emit(false);
+                }
+            },
+            (error) => {
+                console.log(error);
+                this.isDataRetrieved.emit(false);
+            }
+        );
+    }
+
+    getImgCoverPath(imgCover) {
+        return this.commonService.getAssetUrl(imgCover);
+    }
 
     onSeeDetail(redirectUrl) {
         this.router.navigate([redirectUrl]).then(() => {
