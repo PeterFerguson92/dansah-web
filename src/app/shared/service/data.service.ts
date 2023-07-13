@@ -46,6 +46,11 @@ export class DataService {
         return this.http.get(url);
     }
 
+    getEvent(id): Observable<any> {
+        const url = `${this.baseUrl}homeevents/event/${id}`;
+        return this.http.get(url);
+    }
+
     getPrayerConnect(): Observable<any> {
         const url = `${this.baseUrl}prayerconnect/`;
         return this.http.get(url);

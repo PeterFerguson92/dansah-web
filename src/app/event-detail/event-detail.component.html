@@ -1,4 +1,6 @@
 <app-nav-bar></app-nav-bar>
-<app-page-title [title]="title"></app-page-title>
-<app-event-detail-section [event]="event"></app-event-detail-section>
+<!-- <app-page-title [title]="title"></app-page-title> -->
+<app-loader *ngIf="showLoader"></app-loader>
+<app-notification [showNotification]="showNotification" [message]="message"></app-notification>
+<app-event-detail-section *ngIf="event" [event]="event"></app-event-detail-section>
 <app-footer></app-footer>
