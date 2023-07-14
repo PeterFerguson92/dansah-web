@@ -26,6 +26,11 @@ export class DataService {
         return this.http.get(url);
     }
 
+    getAboutMe(): Observable<any> {
+        const url = `${this.baseUrl}homeslider/intro`;
+        return this.http.get(url);
+    }
+
     getHomeMinistriesMaterial(): Observable<any> {
         const url = `${this.baseUrl}homeministriesmaterial/`;
         return this.http.get(url);
