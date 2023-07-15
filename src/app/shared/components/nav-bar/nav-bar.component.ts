@@ -1,5 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { CommonService } from '../../service/common.service';
+import { DataService } from '../../service/data.service';
 
 @Component({
     selector: 'app-nav-bar',
@@ -7,30 +9,14 @@ import { Router } from '@angular/router';
     styleUrls: ['./nav-bar.component.scss'],
 })
 export class NavBarComponent implements OnInit {
-    @Input() logo;
+    logo;
 
-    constructor(private router: Router) {}
+    constructor(private router: Router, private service: DataService, private commonService: CommonService) {}
     items = [
         {
             name: 'Home',
             redirect: '/home',
         },
-        // {
-        //     name: 'Prayer Connect',
-        //     redirect: '/prayer-connect',
-        // },
-        // {
-        //     name: 'Leadership Institute',
-        //     redirect: '/detail/leadership-institute',
-        // },
-        // {
-        //     name: 'Events',
-        //     redirect: '/events',
-        // },
-        // {
-        //     name: 'Power Living',
-        //     redirect: '/power-living',
-        // },
         {
             name: 'Media',
             redirect: '/media',
@@ -44,7 +30,19 @@ export class NavBarComponent implements OnInit {
             redirect: '/contact-us',
         },
     ];
-    ngOnInit() {}
+    ngOnInit() {
+        this.service.getHome().subscribe(
+            (data) => {
+                if (data.status === 'success') {
+                    const result = data.result[0];
+                    // this.logo = this.getImgCoverPath(result.top_logo_image_path);
+                }
+            },
+            (error) => {
+                console.log(error);
+            }
+        );
+    }
 
     onRedirect(sectionName) {
         if (sectionName === '/donate') {
@@ -54,5 +52,9 @@ export class NavBarComponent implements OnInit {
                 window.location.reload();
             });
         }
+    }
+
+    getImgCoverPath(imgCover) {
+        return this.commonService.getAssetUrl(imgCover);
     }
 }

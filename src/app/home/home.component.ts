@@ -20,26 +20,9 @@ export class HomeComponent implements OnInit {
         },
     ];
 
-    constructor(private service: DataService, private commonService: CommonService) {}
+    constructor() {}
 
-    ngOnInit() {
-        this.service.getHome().subscribe(
-            (data) => {
-                if (data.status === 'success') {
-                    const result = data.result[0];
-                    console.log(result);
-                    // this.logo = this.getImgCoverPath(result.top_logo_image_path);
-                    this.footerLogo = this.getImgCoverPath(result.footer_logo_image_path);
-                    this.footerEmail = result.footer_email;
-                    this.footerAddress = result.footer_address;
-                    this.footerPhone = result.footer_phone;
-                }
-            },
-            (error) => {
-                console.log(error);
-            }
-        );
-    }
+    ngOnInit() {}
 
     isSectionVisible(componentName) {
         const section = this.getSectionByName(componentName);
@@ -56,9 +39,5 @@ export class HomeComponent implements OnInit {
 
     getSectionByName(componentName) {
         return this.sections.find((o) => o.name === componentName);
-    }
-
-    getImgCoverPath(imgCover) {
-        return this.commonService.getAssetUrl(imgCover);
     }
 }
