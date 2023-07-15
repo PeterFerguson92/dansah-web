@@ -1,4 +1,4 @@
-<app-nav-bar></app-nav-bar>
+<app-nav-bar [logo]="logo"></app-nav-bar>
 <app-home-slider></app-home-slider>
 <app-intro></app-intro>
 <app-activities></app-activities>
@@ -6,4 +6,4 @@
 <app-quote-of-the-day *ngIf="isSectionVisible('quoteOfTheDay')" (isDataRetrieved)="showSection($event, 'quoteOfTheDay')"></app-quote-of-the-day>
 <app-home-events></app-home-events>
 <br />
-<app-footer></app-footer>
+<app-footer [footerAddress]="footerAddress" [footerEmail]="footerEmail" [footerPhone]="footerPhone" [footerLogo]="footerLogo"></app-footer>

@@ -22,7 +22,6 @@ export class IntroComponent implements OnInit {
     ngOnInit() {
         this.service.getAboutMe().subscribe(
             (data) => {
-                console.log(data);
                 if (data.status === 'success') {
                     this.title = data.result[0].title;
                     this.description = data.result[0].description;

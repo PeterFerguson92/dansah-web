@@ -10,7 +10,7 @@
                     <div class="logo">
                         <a href="#">
                             <span>Test</span>
-                            <img src="../../../../assets/images/logo_large.jpg" alt="" />
+                            <img src="{{ footerLogo }}" alt="" />
                         </a>
                     </div>
                     <div class="logo_subtitle">Clean template</div>
@@ -56,15 +56,14 @@
                 <div class="footer_contact">
                     <div class="footer_title">Contact Us</div>
                     <ul>
-                        <li><span>Address: </span>1481 Creekside Lane Avila Beach, CA 93424</li>
+                        <li><span>Address: </span>{{ footerAddress }}</li>
                         <li class="footer_contact_phone">
                             <span>Phone: </span>
                             <div>
-                                <div>+53 345 7953 32453</div>
-                                <div>+53 345 7557 822112</div>
+                                <div>{{ footerPhone }}</div>
                             </div>
                         </li>
-                        <li><span>Email: </span>yourmail@gmail.com</li>
+                        <li><span>Email: </span>{{ footerEmail }}</li>
                     </ul>
                 </div>
             </div>
