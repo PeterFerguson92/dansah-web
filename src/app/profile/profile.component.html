@@ -1,15 +1,16 @@
-<app-nav-bar></app-nav-bar><br /><br /><br /><br /><br /><br />
+<app-nav-bar></app-nav-bar><br /><br /><br /><br />
+<app-loader *ngIf="showLoader"></app-loader>
+<app-notification [showNotification]="showNotification" [message]="message"></app-notification>
+
 <div class="services">
     <div class="services_background parallax-window" data-parallax="scroll" data-image-src="../../assets/images/services.jpg" data-speed="0.8"></div>
     <div class="container">
         <div class="row">
             <div class="col">
                 <div class="section_title_container">
-                    <div class="section_image"><img src="{{ iconImgPath }}" alt="" /></div>
                     <div class="section_title">
                         <h2>{{ title }}</h2>
                     </div>
-                    <div class="section_subtitle">{{ subTitle }}</div>
                 </div>
             </div>
         </div>
@@ -25,7 +26,6 @@
         <div class="row services_row">
             <div class="col-lg-3 col-md-6 col-sm-12" style="cursor: pointer" *ngFor="let role of roles">
                 <div class="services_item text-center">
-                    <div class="services_image"><img src="{{ role.iconImgPath }}" alt="" /></div>
                     <div class="services_title title">{{ role.type }}</div>
                     <br />
                     <p class="description">

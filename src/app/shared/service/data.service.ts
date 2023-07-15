@@ -76,6 +76,11 @@ export class DataService {
         return this.http.get(url);
     }
 
+    getProfile(): Observable<any> {
+        const url = `${this.baseUrl}profiles/`;
+        return this.http.get(url);
+    }
+
     getLeadershipInstitute(): Observable<any> {
         const url = `${this.baseUrl}leadershipinstitute/`;
         return this.http.get(url);
