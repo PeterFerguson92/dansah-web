@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { CommonService } from 'src/app/shared/service/common.service';
 import { DataService } from 'src/app/shared/service/data.service';
 
@@ -14,7 +14,7 @@ export class IntroComponent implements OnInit {
     imgPath;
     coverImage;
     data;
-    isDataRetrieved = new EventEmitter<boolean>();
+    @Output() isDataRetrieved = new EventEmitter<boolean>();
 
     constructor(private commonService: CommonService, private service: DataService) {}
 

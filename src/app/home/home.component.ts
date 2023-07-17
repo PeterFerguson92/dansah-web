@@ -15,7 +15,32 @@ export class HomeComponent implements OnInit {
     footerPhone;
     sections = [
         {
-            name: 'quoteOfTheDay',
+            name: 'home-slider',
+            isVisible: true,
+        },
+        {
+            name: 'intro',
+            isVisible: true,
+        },
+        {
+            name: 'activities',
+            isVisible: true,
+        },
+
+        {
+            name: 'ministries-material',
+            isVisible: true,
+        },
+        {
+            name: 'quote-of-the-day',
+            isVisible: true,
+        },
+        {
+            name: 'events',
+            isVisible: true,
+        },
+        {
+            name: 'footer',
             isVisible: true,
         },
     ];

@@ -48,7 +48,7 @@ export class ActivitiesComponent implements OnInit {
     ngOnInit() {
         this.service.getHomeActivities().subscribe(
             (data) => {
-                if (data.status === 'success') {
+                if (data && data.status === 'success') {
                     this.isDataRetrieved.emit(true);
                     const result = data.result[0];
                     this.title = result.title;
