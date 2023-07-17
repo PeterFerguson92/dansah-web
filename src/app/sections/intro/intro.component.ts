@@ -9,11 +9,10 @@ import { DataService } from 'src/app/shared/service/data.service';
 })
 export class IntroComponent implements OnInit {
     title;
-    subTitle = 'A brief introduction of me';
-    description = `Daniel K Ansah’s life is dedicated to touching lives and bringing hope to the hopeless.
-    His mission is to establish the Kingdom of God on earth through soulwinning and practical demonstration of the Word of God`;
-    imgPath = '../../../../assets/images/intro.jpg';
-    coverImage = '../../../../assets/images/church_1.png';
+    subTitle;
+    description;
+    imgPath;
+    coverImage;
     data;
     isDataRetrieved = new EventEmitter<boolean>();
 
