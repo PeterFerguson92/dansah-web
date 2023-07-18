@@ -1,39 +1,46 @@
-<div class="services" [ngStyle]="{ 'background-image': 'url(' + imgBackground + ')' }">
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <div class="section_title_container">
-                    <div class="section_image"><img src="{{ iconImgPath }}" alt="" /></div>
-                    <div class="section_title">
-                        <h2>{{ title }}</h2>
-                    </div>
-                    <!-- <div class="section_subtitle">{{ subTitle }}</div> -->
-                </div>
-            </div>
+<section class="s-connect">
+    <div class="row connect-content">
+        <div class="column large-half tab-full">
+            <h3 class="display-1">Volunteer With Us.</h3>
+            <p>
+                Delectus distinctio fuga commodi quod temporibus consequatur. Voluptatem dolor vel impedit. Totam ut vel nihil ab. Nostrum ipsa
+                necessitatibus. Iste voluptatibus qui velit et voluptatem laudantium et explicabo. Dignissimos ut voluptatum laboriosam nisi fugiat.
+                Nulla dolores voluptate sit unde in doloribus est. Eveniet qui et quia pariatur consequatur officia facere aut.
+            </p>
+
+            <a href="volunteer.html" class="btn btn--primary h-full-width">I'm Interested</a>
         </div>
-        <div class="row">
-            <div class="col">
-                <div class="services_text text-center">
-                    <p>
-                        {{ text }}
-                    </p>
-                </div>
-            </div>
+        <div class="column large-half tab-full">
+            <h3 class="display-1">Join a Connect Group.</h3>
+            <p>
+                Officia earum at quia recusandae. Tempora beatae est aliquam fugiat sed et. Exercitationem vitae molestiae officia eos aut id ad. Et
+                exercitationem quae perspiciatis mollitia. Laborum quasi inventore eaque quia non. Ipsa dignissimos ipsum nisi qui eos et iste magnam.
+                Aut dolorum mollitia illum. Iste iure similique nobis fuga est amet.
+            </p>
+
+            <a href="connect-group.html" class="btn btn--primary h-full-width">Learn More</a>
         </div>
-        <div>
-            <div class="row services_row">
-                <div
-                    class="col-lg-2 col-md-4 col-sm-6 center"
-                    style="cursor: pointer"
-                    *ngFor="let activity of activities"
-                    (click)="onSeeDetail(activity.redirectUrl)"
-                >
-                    <div class="services_item text-center">
-                        <div class="services_image"><img src="{{ activity.iconImgPath }}" alt="" /></div>
-                        <div class="services_title">{{ activity.title }}</div>
-                    </div>
-                </div>
-            </div>
+        <div class="column large-half tab-full">
+            <h3 class="display-1">Join a Connect Group.</h3>
+            <p>
+                Officia earum at quia recusandae. Tempora beatae est aliquam fugiat sed et. Exercitationem vitae molestiae officia eos aut id ad. Et
+                exercitationem quae perspiciatis mollitia. Laborum quasi inventore eaque quia non. Ipsa dignissimos ipsum nisi qui eos et iste magnam.
+                Aut dolorum mollitia illum. Iste iure similique nobis fuga est amet.
+            </p>
+
+            <a href="connect-group.html" class="btn btn--primary h-full-width">Learn More</a>
+        </div>
+        <div class="column large-half tab-full">
+            <h3 class="display-1">Join a Connect Group.</h3>
+            <p>
+                Officia earum at quia recusandae. Tempora beatae est aliquam fugiat sed et. Exercitationem vitae molestiae officia eos aut id ad. Et
+                exercitationem quae perspiciatis mollitia. Laborum quasi inventore eaque quia non. Ipsa dignissimos ipsum nisi qui eos et iste magnam.
+                Aut dolorum mollitia illum. Iste iure similique nobis fuga est amet.
+            </p>
+
+            <a href="connect-group.html" class="btn btn--primary h-full-width">Learn More</a>
         </div>
     </div>
-</div>
+    <!-- end connect-content  -->
+</section>
+<!-- end s-connect -->

@@ -1,85 +1,60 @@
-<!-- Footer -->
-<app-loader *ngIf="showLoader"></app-loader>
-
-<footer class="footer" *ngIf="result">
-    <div class="container">
-        <div class="row">
-            <!-- Footer Column -->
-            <div class="col-lg-4 footer_col">
-                <!-- Logo -->
-                <div class="logo_container">
-                    <div class="logo">
-                        <a href="#">
-                            <span>Test</span>
-                            <img src="{{ footerLogo }}" alt="" />
-                        </a>
-                    </div>
-                    <div class="logo_subtitle">Clean template</div>
-                </div>
-                <div class="footer_social">
-                    <ul>
-                        <li>
-                            <a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                        </li>
-                    </ul>
-                </div>
+<footer class="s-footer">
+    <div class="row footer-top">
+        <div class="column large-4 medium-5 tab-full">
+            <div class="footer-logo">
+                <a class="site-footer-logo" href="index.html">
+                    <img src="images/logo.svg" alt="Homepage" />
+                </a>
             </div>
+            <!-- footer-logo -->
+            <p>
+                Laborum ad explicabo. Molestiae voluptates est. Quisquam labore tenetur et assumenda voluptatibus a beatae. Rerum odio ducimus
+                reprehenderit sit animi laborum nostrum dolorum animi voluptates est voluptatibus a beatae.
+            </p>
+        </div>
+        <div class="column large-half tab-full">
+            <div class="row">
+                <div class="column large-7 medium-full">
+                    <h4 class="h6">Our Location</h4>
+                    <p>
+                        1600 Amphitheatre Parkway <br />
+                        Mountain View, California <br />
+                        94043 US
+                    </p>
 
-            <!-- Footer Column -->
-            <div class="col-lg-4 footer_col">
-                <div class="footer_links">
-                    <div class="footer_title">Useful Links</div>
-                    <ul>
+                    <p>
+                        <a href="https://goo.gl/maps/bc7C7eYtSmnNs6216" target="_blank" class="btn btn--footer">Get Direction</a>
+                    </p>
+                </div>
+                <div class="column large-5 medium-full">
+                    <h4 class="h6">Quick Links</h4>
+                    <ul class="footer-list">
                         <li><a href="index.html">Home</a></li>
-                        <li><a href="#">section</a></li>
-                        <li><a href="#">section</a></li>
-                        <li><a href="#">section</a></li>
-                        <li><a href="#">section</a></li>
-                        <li><a href="#">section</a></li>
-                        <li><a href="#">section</a></li>
-                        <li><a href="#">section</a></li>
-                        <li><a href="#">section</a></li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Footer Column -->
-            <div class="col-lg-3 footer_col">
-                <div class="footer_contact">
-                    <div class="footer_title">Contact Us</div>
-                    <ul>
-                        <li><span>Address: </span>{{ footerAddress }}</li>
-                        <li class="footer_contact_phone">
-                            <span>Phone: </span>
-                            <div>
-                                <div>{{ footerPhone }}</div>
-                            </div>
-                        </li>
-                        <li><span>Email: </span>{{ footerEmail }}</li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="volunteer.html">Volunteer</a></li>
+                        <li><a href="connect-group.html">Connect Groups</a></li>
+                        <li><a href="events.html">Upcoming Events</a></li>
+                        <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
             </div>
         </div>
     </div>
+    <!-- end footer-top -->
 
-    <!-- Copyright -->
-    <div class="copyright text-center">
-        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-        Copyright &copy;
-        <script>
-            document.write(new Date().getFullYear());
-        </script>
-        All rights reserved | Powered with <i class="fa fa-heart-o" aria-hidden="true"></i> by
-        <a href="/" target="_blank">Clean Software</a>
-        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+    <div class="row footer-bottom">
+        <div class="column ss-copyright">
+            <span>© Copyright Hesed 2019</span>
+            <span>Design by <a href="https://www.styleshout.com/">StyleShout</a></span>
+        </div>
     </div>
+    <!-- footer-bottom -->
+
+    <div class="ss-go-top">
+        <a class="smoothscroll" title="Back to Top" href="#top">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 0l8 9h-6v15h-4v-15h-6z" /></svg>
+        </a>
+    </div>
+    <!-- ss-go-top -->
 </footer>
+<!-- end s-footer -->

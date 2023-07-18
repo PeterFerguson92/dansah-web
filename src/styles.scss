@@ -1,39 +1,41 @@
-/* You can add global styles to this file, and also import other style files */
-@import url('../src/app/shared/css/main_styles.css');
-@import url('../src/app/shared/css/responsive.css');
-@import url('../src/app/shared/css/bootstrap4/bootstrap.min.css');
-@import url('../src/app/shared/plugins/OwlCarousel2-2.2.1/owl.carousel.css');
-@import url('../src/app/shared/plugins/OwlCarousel2-2.2.1/owl.theme.default.css');
-@import url('../src/app/shared/plugins/OwlCarousel2-2.2.1/animate.css');
-@import '~font-awesome/css/font-awesome.css';
-a {
-    cursor: pointer;
-}
+// /* You can add global styles to this file, and also import other style files */
+// @import url('../src/app/shared/css/main_styles.css');
+// @import url('../src/app/shared/css/responsive.css');
+// @import url('../src/app/shared/css/bootstrap4/bootstrap.min.css');
+// @import url('../src/app/shared/plugins/OwlCarousel2-2.2.1/owl.carousel.css');
+// @import url('../src/app/shared/plugins/OwlCarousel2-2.2.1/owl.theme.default.css');
+// @import url('../src/app/shared/plugins/OwlCarousel2-2.2.1/animate.css');
+// @import '~font-awesome/css/font-awesome.css';
+// a {
+//     cursor: pointer;
+// }
 
-.media_buttons ul li {
-    display: inline-block;
-    margin-right: 18px;
-    cursor: pointer;
-}
-.media_buttons ul li img,
-.media_buttons ul li svg {
-    width: 27px;
-    height: 27px;
-}
-.media_buttons ul li img svg {
-    max-width: 100%;
-}
-.svg path,
-.svg rect,
-.svg polygon {
-    fill: #c4c4c5;
-    -webkit-transition: all 200ms ease;
-    -moz-transition: all 200ms ease;
-    -ms-transition: all 200ms ease;
-    -o-transition: all 200ms ease;
-    transition: all 200ms ease;
-}
+// .media_buttons ul li {
+//     display: inline-block;
+//     margin-right: 18px;
+//     cursor: pointer;
+// }
+// .media_buttons ul li img,
+// .media_buttons ul li svg {
+//     width: 27px;
+//     height: 27px;
+// }
+// .media_buttons ul li img svg {
+//     max-width: 100%;
+// }
+// .svg path,
+// .svg rect,
+// .svg polygon {
+//     fill: #c4c4c5;
+//     -webkit-transition: all 200ms ease;
+//     -moz-transition: all 200ms ease;
+//     -ms-transition: all 200ms ease;
+//     -o-transition: all 200ms ease;
+//     transition: all 200ms ease;
+// }
 
-.pointer {
-    cursor: pointer;
-}
+// .pointer {
+//     cursor: pointer;
+// }
+@import url('../src/assets/hesed/css/base.css');
+@import url('../src/assets/hesed/css/main.css');
