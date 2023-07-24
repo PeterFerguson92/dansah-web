@@ -1,41 +1,29 @@
-<div class="sermon">
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <div class="sermon_image_small"><img src="{{ getImgCoverPath(event.cover_image_path) }}" alt="" /></div>
+<section class="page-header page-header--events class"></section>
+<section class="page-content">
+    <div class="row">
+        <div class="column">
+            <div class="media-wrap event-thumb">
+                <img src="{{ getImgCoverPath(event.cover_image_path) }}" alt="" />
             </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                <div class="sermon_title_container d-flex flex-lg-row flex-column align-items-start justify-content-start">
-                    <div class="sermon_content">
-                        <div class="sermon_title">{{ event.title }}</div>
-                        <ul class="sermon_list">
-                            <!-- <li>Sermon by: <a>Test</a></li>
-                            <li>Categories: <a>Test</a>, <a href="#">Test</a></li> -->
-                            <li>
-                                Date: <a>{{ event.date_detail_1 }} {{ event.date_detail_2 }}</a>
-                            </li>
-                        </ul>
-                    </div>
+            <div class="event-content">
+                <div class="event-title">
+                    <h2 class="display-1">{{ event.title }}</h2>
                 </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-6">
-                <div class="sermon_text">
-                    <p>
-                        {{ event.description_1 }}
-                    </p>
-                </div>
-            </div>
-            <div class="col-lg-6">
-                <div class="sermon_text">
-                    <p>
-                        {{ event.description_2 }}
-                    </p>
-                </div>
+
+                <p>
+                    {{ event.description_1 }}
+                </p>
+
+                <p>
+                    {{ event.description_2 }}
+                </p>
+
+                <ul class="event-meta">
+                    <li><strong>Date</strong>{{ event.date }}</li>
+                    <li><strong>Time</strong>{{ event.time }}</li>
+                    <li><strong>Location</strong>{{ event.location }}</li>
+                </ul>
             </div>
         </div>
     </div>
-</div>
+</section>

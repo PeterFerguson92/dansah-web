@@ -1,6 +1,6 @@
 <app-nav-bar></app-nav-bar>
 <app-home-slider></app-home-slider>
-<app-quote-of-the-day></app-quote-of-the-day>
+<app-quote-of-the-day *ngIf="isSectionVisible('quote-of-the-day')" (isDataRetrieved)="showSection($event, 'quote-of-the-day')"></app-quote-of-the-day>
 <app-intro></app-intro>
 <app-activities></app-activities>
 <app-home-events></app-home-events>

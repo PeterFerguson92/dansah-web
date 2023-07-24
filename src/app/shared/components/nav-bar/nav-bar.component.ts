@@ -39,7 +39,7 @@ export class NavBarComponent implements OnInit {
                 }
             },
             (error) => {
-              console.log(error);
+                console.log(error);
             }
         );
     }
@@ -56,5 +56,9 @@ export class NavBarComponent implements OnInit {
 
     getImgCoverPath(imgCover) {
         return this.commonService.getAssetUrl(imgCover);
+    }
+
+    onSeeDetail(redirectUrl) {
+        this.router.navigate([redirectUrl]);
     }
 }
