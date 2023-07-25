@@ -8,14 +8,12 @@ import { Router } from '@angular/router';
 })
 export class EventListComponent implements OnInit {
     @Input() events;
-    constructor(private router: Router) {
-        console.log(this.events);
-    }
+
+    constructor(private router: Router) {}
 
     ngOnInit() {}
 
     onSeeDetail(id) {
-        console.log(id);
         this.router.navigate(['/eventDetail', id]);
     }
 }

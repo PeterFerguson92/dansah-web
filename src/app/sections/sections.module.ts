@@ -30,6 +30,7 @@ import { ReadingComponent } from './leadership-single-course-details/course-mate
 import { PrayerCityDetailsComponent } from './prayer-city-details/prayer-city-details.component';
 import { AssesmentComponent } from './leadership-single-course-details/course-material/assesment/assesment.component';
 import { AssignmentComponent } from './leadership-single-course-details/course-material/assignment/assignment.component';
+import { ProfileDetailsComponent } from './profile-details/profile-details.component';
 
 @NgModule({
     declarations: [
@@ -60,6 +61,7 @@ import { AssignmentComponent } from './leadership-single-course-details/course-m
         PrayerCityDetailsComponent,
         AssesmentComponent,
         AssignmentComponent,
+        ProfileDetailsComponent,
     ],
     imports: [CommonModule],
     exports: [
@@ -87,6 +89,7 @@ import { AssignmentComponent } from './leadership-single-course-details/course-m
         PrayerCityDetailsComponent,
         AssesmentComponent,
         AssignmentComponent,
+        ProfileDetailsComponent,
     ],
 })
 export class SectionsModule {}
