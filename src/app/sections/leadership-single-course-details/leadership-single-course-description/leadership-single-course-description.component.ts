@@ -20,4 +20,8 @@ export class LeadershipSingleCourseDescriptionComponent implements OnInit {
             imgPath: this.commonService.getAssetUrl(this.course.cover_image_path),
         };
     }
+
+    getImgCoverPath(imgCover) {
+        return this.commonService.getAssetUrl(imgCover);
+    }
 }
