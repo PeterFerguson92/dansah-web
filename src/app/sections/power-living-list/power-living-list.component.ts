@@ -11,9 +11,7 @@ export class PowerLivingListComponent implements OnInit {
 
     constructor() {}
 
-    ngOnInit() {
-        console.log(this.data);
-    }
+    ngOnInit() {}
 
     open(url) {
         window.open(`${environment.apiUrl}${url}`, '_blank');

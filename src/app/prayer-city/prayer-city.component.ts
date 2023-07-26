@@ -18,7 +18,6 @@ export class PrayerCityComponent implements OnInit {
         this.showLoader = true;
         this.service.getPrayerCity().subscribe(
             (data) => {
-                console.log(data);
                 if (data.result && data.result.length === 1) {
                     this.data = data.result[0];
                 } else {
@@ -32,9 +31,6 @@ export class PrayerCityComponent implements OnInit {
                 console.log(error);
                 this.message = 'Prayer city information not available';
                 this.showNotification = true;
-                // this.router.navigate(['/error']).then(() => {
-                //     window.location.reload();
-                // });
             }
         );
     }
