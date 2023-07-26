@@ -14,32 +14,7 @@ export class ActivitiesComponent implements OnInit {
     text;
     imgBackground;
     iconImgPath;
-    activities = [
-        {
-            iconImgPath: '../../../assets/images/services_1.png',
-            title: 'Prayer Connect',
-            alias: 'prayer-connect',
-            redirectUrl: '/prayer-connect',
-        },
-        {
-            iconImgPath: '../../../assets/images/services_2.png',
-            title: 'Prayer City',
-            alias: 'prayer-city',
-            redirectUrl: 'prayer-city',
-        },
-        {
-            iconImgPath: '../../../assets/images/services_3.png',
-            title: 'The Leadership Institute',
-            alias: 'leadership-institute',
-            redirectUrl: '/leadership-institute',
-        },
-        {
-            iconImgPath: '../../../assets/images/services_4.png',
-            title: 'Power Living',
-            alias: 'power-living',
-            redirectUrl: '/power-living',
-        },
-    ];
+    activities = [];
     @Output()
     isDataRetrieved = new EventEmitter<boolean>();
 
@@ -49,11 +24,10 @@ export class ActivitiesComponent implements OnInit {
         this.service.getHomeActivities().subscribe(
             (data) => {
                 if (data && data.status === 'success') {
-                    this.isDataRetrieved.emit(true);
-                    const result = data.result[0];
-                    this.title = result.title;
-                    this.text = result.description;
-                    this.imgBackground = this.getImgCoverPath(result.background_image_path);
+                    this.activities.push(data.result[0].leadership_institute);
+                    this.activities.push(data.result[0].prayer_city);
+                    this.activities.push(data.result[0].prayer_connect);
+                    this.activities.push(data.result[0].power_living);
                 } else {
                     this.isDataRetrieved.emit(false);
                 }
@@ -69,9 +43,8 @@ export class ActivitiesComponent implements OnInit {
         return this.commonService.getAssetUrl(imgCover);
     }
 
-    onSeeDetail(redirectUrl) {
-        this.router.navigate([redirectUrl]).then(() => {
-            // window.location.reload();
-        });
+    onRedirect(alias) {
+        const url = '/' + alias;
+        this.router.navigate([url]);
     }
 }
