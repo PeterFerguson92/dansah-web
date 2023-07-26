@@ -32,9 +32,6 @@ export class PrayerConnectComponent implements OnInit {
                 console.log(error);
                 this.message = 'Prayer connect information not available';
                 this.showNotification = true;
-                // this.router.navigate(['/error']).then(() => {
-                //     window.location.reload();
-                // });
             }
         );
     }

@@ -1,2 +1,30 @@
-<app-prayer-connect-description [data]="prayerConnectDescription"></app-prayer-connect-description>
-<app-prayer-connect-centers [centers]="prayerConnectCenters"></app-prayer-connect-centers>
+<section class="page-header page-header--volunteer">
+    <div class="gradient-overlay"></div>
+</section>
+<br /><br />
+<section class="page-content">
+    <div class="row">
+        <div class="column">
+            <p class="lead drop-cap">
+                {{ data.short_description }}
+            </p>
+
+            <p>
+                {{ data.full_description }}
+            </p>
+
+            <br />
+
+            <h2>Prayer Connect Centers</h2>
+
+            <div class="row block-large-1-2 block-1000-full block-list">
+                <div class="column block-list__item" *ngFor="let item of prayerConnectCenters">
+                    <h4 class="block-list__title-with-num">{{ item.region }}</h4>
+                    <ul *ngFor="let dir of item.directors">
+                        <li>{{ dir.name }}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

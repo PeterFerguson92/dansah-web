@@ -14,9 +14,6 @@ import { MediaSectionComponent } from './media-section/media-section.component';
 import { ContactUsSectionComponent } from './contact-us-section/contact-us-section.component';
 import { PrayerConnectDetailsComponent } from './prayer-connect-details/prayer-connect-details.component';
 // tslint:disable-next-line:max-line-length
-import { PrayerConnectDescriptionComponent } from './prayer-connect-details/prayer-connect-description/prayer-connect-description.component';
-import { PrayerConnectCentersComponent } from './prayer-connect-details/prayer-connect-centers/prayer-connect-centers.component';
-// tslint:disable-next-line:max-line-length
 import { LeadershipInstituteDescriptionComponent } from './leadership-institute-details/leadership-institute-description/leadership-institute-description.component';
 import { LeadershipInstituteDetailsComponent } from './leadership-institute-details/leadership-institute-details.component';
 // tslint:disable-next-line:max-line-length
@@ -47,8 +44,6 @@ import { ProfileDetailsComponent } from './profile-details/profile-details.compo
         MediaSectionComponent,
         ContactUsSectionComponent,
         PrayerConnectDetailsComponent,
-        PrayerConnectDescriptionComponent,
-        PrayerConnectCentersComponent,
         LeadershipInstituteDetailsComponent,
         LeadershipInstituteDescriptionComponent,
         LeadershipCoursesCategoriesComponent,
@@ -78,7 +73,6 @@ import { ProfileDetailsComponent } from './profile-details/profile-details.compo
         MediaSectionComponent,
         ContactUsSectionComponent,
         PrayerConnectDetailsComponent,
-        PrayerConnectCentersComponent,
         LeadershipInstituteDetailsComponent,
         LeadershipInstituteDescriptionComponent,
         LeadershipCoursesListComponent,
