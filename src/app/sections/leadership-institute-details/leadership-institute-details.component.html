@@ -1,2 +1,20 @@
-<app-leadership-institute-description [data]="leadershipDetailsDescription"></app-leadership-institute-description>
-<app-leadership-courses-categories [categories]="leadershipDetailsCategories"></app-leadership-courses-categories>
+<section class="page-header page-header--volunteer">
+    <div class="gradient-overlay"></div>
+</section>
+<br /><br />
+<section class="page-content">
+    <div class="row">
+        <div class="column">
+            <p class="lead drop-cap">
+                {{ data.short_description }}
+            </p>
+
+            <p>
+                {{ data.full_description }}
+            </p>
+
+            <br />
+
+            <h2>Courses</h2>
+
+            <app-leadership-courses-categories [categories]="leadershipDetailsCategories"></app-leadership-courses-categories>
