@@ -1,23 +1,18 @@
-<!-- <div *ngIf="showNotification" class="{{ notificationClass }}" role="alert">{{ message }}</div> -->
-<!-- <div class="jumbotron" *ngIf="showNotification">
-    <h1 class="display-4">{{ message }}</h1>
-    <p class="lead">Unfortunately we were not able to retrieve the request data</p>
-    <hr class="my-4" />
-    <p>Please contact 0495959595 for support</p>
-</div> -->
-<section class="page-header page-header--about">
-    <div class="gradient-overlay"></div>
-</section>
+<div *ngIf="showNotification">
+    <section class="page-header page-header--about">
+        <div class="gradient-overlay"></div>
+    </section>
 
-<section class="page-content">
-    <div class="row">
-        <div class="column">
-            <p class="lead drop-cap">{{ message }}</p>
-            <p>Please contact 0495959595 for support</p>
-            <br />
+    <section class="page-content">
+        <div class="row">
+            <div class="column">
+                <p class="lead drop-cap">{{ message }}</p>
+                <p>Please contact 0495959595 for support</p>
+                <br />
 
-            <br />
-            <br />
+                <br />
+                <br />
+            </div>
         </div>
-    </div>
-</section>
+    </section>
+</div>
