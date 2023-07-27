@@ -1,6 +1,11 @@
-<section class="page-header page-header--about">
-    <div class="gradient-overlay"></div>
-</section>
+<section
+    class="page-header page-header--about"
+    [ngStyle]="{
+        'background-repeat': 'no-repeat',
+        'background-size': 'cover',
+        'background-image': 'url(' + path + ')'
+    }"
+></section>
 
 <br />
 <section class="page-content">

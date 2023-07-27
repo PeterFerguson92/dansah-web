@@ -9,6 +9,8 @@ export class PrayerConnectDetailsComponent implements OnInit {
     @Input() data;
     prayerConnectDescription;
     prayerConnectCenters;
+    path = '../../../assets/images/wallpa.png';
+
     constructor() {}
 
     ngOnInit() {

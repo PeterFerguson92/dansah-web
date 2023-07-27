@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
 })
 export class EventListComponent implements OnInit {
     @Input() events;
-
+    path = '../../../assets/images/wallpa.png';
     constructor(private router: Router) {}
 
     ngOnInit() {}

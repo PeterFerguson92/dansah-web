@@ -9,6 +9,7 @@ import { CommonService } from 'src/app/shared/service/common.service';
 export class LeadershipSingleCourseDescriptionComponent implements OnInit {
     @Input() course;
     data;
+
     constructor(private commonService: CommonService) {}
 
     ngOnInit() {

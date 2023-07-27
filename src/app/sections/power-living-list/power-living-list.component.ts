@@ -8,6 +8,7 @@ import { environment } from 'src/environments/environment';
 })
 export class PowerLivingListComponent implements OnInit {
     @Input() data;
+    path = '../../../assets/images/wallpa.png';
 
     constructor() {}
 

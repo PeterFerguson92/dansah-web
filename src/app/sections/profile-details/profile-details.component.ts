@@ -7,6 +7,8 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class ProfileDetailsComponent implements OnInit {
     @Input() data;
+    path = '../../../assets/images/wallpa.png';
+
     constructor() {}
 
     ngOnInit() {}
