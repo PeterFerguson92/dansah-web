@@ -1,14 +1,7 @@
-<!-- <h1>Backer Rewards</h1>
-
-<p class="disclosure">
-    <small
-        >Download speed estimates are based on the average reported <abbr title="Internet Service Provider">ISP</abbr> speeds for your general
-        area.</small
-    >
-</p> -->
-
-<ul class="fa-ul">
-    <li *ngFor="let item of assesments">
-        <a (click)="open(item.document)" class="fa-li"><i class="fa-solid fa-file-text-o"></i></a>{{ item.title }}
-    </li>
-</ul>
+<section class="section">
+    <div class="grid">
+        <div (click)="open(item.document)" class="card" *ngFor="let item of assesments">
+            <div class="card__details">{{ item.title }}</div>
+        </div>
+    </div>
+</section>

@@ -1,5 +1,7 @@
-<ul class="fa-ul">
-    <li *ngFor="let item of assignments">
-        <a (click)="open(item.document)" class="fa-li"><i class="fa-solid fa-file-text-o"></i></a>{{ item.title }}
-    </li>
-</ul>
+<section class="section">
+  <div class="grid">
+      <div (click)="open(item.document)" class="card" *ngFor="let item of assignments">
+          <div class="card__details">{{ item.title }}</div>
+      </div>
+  </div>
+</section>
