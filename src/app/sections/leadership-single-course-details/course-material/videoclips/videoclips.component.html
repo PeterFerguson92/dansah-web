@@ -1,25 +1,3 @@
-<div class="row ministries_row">
-    <div class="col-xl-4 col-md-6" *ngFor="let item of videos">
-        <div class="ministry pointer">
-            <div class="ministry_image">
-                <div class="responsive-video">
-                    <iframe
-                        [src]="getLink(item)"
-                        width="600"
-                        height="338"
-                        frameborder="0"
-                        webkitAllowFullScreen
-                        mozallowfullscreen
-                        allowFullScreen
-                    ></iframe>
-                </div>
-                <div class="ministry_title">{{ item.title }}</div>
-                <div class="ministry_text">
-                    <p>
-                        {{ item.description }}
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
+<div class="video-gallery" *ngFor="let item of videos">
+    <iframe [src]="getLink(item)" width="600" height="338" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
 </div>
