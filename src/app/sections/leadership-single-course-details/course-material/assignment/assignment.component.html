@@ -1,18 +1,5 @@
-<section class="rewards" aria-label="Rewards" *ngFor="let item of assignments">
-    <div class="download">
-        <p>
-            <a download (click)="open(item.document)">{{ item.title }}</a>
-        </p>
-        <p class="download__instructions" style="margin-left: 0%">{{ item.description }}</p>
-    </div>
-</section>
-<div class="form-group">
-    <label for="file">Choose File</label>
-    <input
-        type="file"
-        id="file"
-        accept=".doc,.docx,.xml,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
-        (change)="handleFileInput($event.target.files)"
-    />
-    <div class="button ministry_button"><a (click)="uploadFileToActivity()">Upload</a></div>
-</div>
+<ul class="fa-ul">
+    <li *ngFor="let item of assignments">
+        <a (click)="open(item.document)" class="fa-li"><i class="fa-solid fa-file-text-o"></i></a>{{ item.title }}
+    </li>
+</ul>

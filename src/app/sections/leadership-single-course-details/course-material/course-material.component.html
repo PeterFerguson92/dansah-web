@@ -6,10 +6,10 @@
     <label for="tab2"><i class="fa fa-video-camera"></i><span>Video</span></label>
 
     <input id="tab3" type="radio" name="tabs" />
-    <label for="tab3"><i class="fa fa-pencil-square-o"></i><span>Assignements</span></label>
+    <label for="tab3"><i class="fa fa-pencil-square-o"></i><span>Assesments</span></label>
 
     <input id="tab4" type="radio" name="tabs" style="width: 100%" />
-    <label for="tab4"><i class="fa fa-book"></i><span>Assesments</span></label>
+    <label for="tab4"><i class="fa fa-book"></i><span>Assigments</span></label>
 
     <section id="content1" class="tab-content">
         <h3>Reading Materials</h3>
@@ -22,33 +22,13 @@
     </section>
 
     <section id="content3" class="tab-content">
-        <h3>Headline 3</h3>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-            minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-            voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-            deserunt mollit anim id est laborum.
-        </p>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-            minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-            voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-            deserunt mollit anim id est laborum.
-        </p>
+        <h3>Assesments</h3>
+        <app-assesment [assesments]="materials.assesments"></app-assesment>
     </section>
 
     <section id="content4" class="tab-content">
         <h3>Headline 4</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-            minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-            voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-        </p>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-            minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        </p>
+        <app-assignment [assignments]="materials.assignments"></app-assignment>
     </section>
 </div>
 <br />
