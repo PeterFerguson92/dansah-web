@@ -1,39 +1,20 @@
-.page-id-2029 {
-    .content-container {
-        max-width: none;
-        .content-box .content {
-            margin-top: 70px;
-        }
-    }
+body {
+    min-height: 1000px;
+    font-family: sans-serif;
+    line-height: 150%;
 }
 
-.video-gallery {
-    display: flex;
-    margin: 15px 0;
-    @media only screen and (max-width: 800px) {
-        flex-direction: column;
-    }
-    a {
-        margin: 0 15px;
-        position: relative;
-        &:after {
-            display: flex;
-            background-color: rgba(33, 33, 33, 0.8);
-            padding: 29px 19px;
-            content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADMAAAAzCAYAAAA6oTAqAAADj0lEQVRoge2azYocVRiGn7cYpHElIq6yzjWIhFm7ciG5AhdegPeQhQwiQwghJkbjxIyCBunFLCbBhYshBMlCW0lglEEGCUMYIjahHcbzuqhuLduq6vo51TUOvrXp7tN9+nv6fH/nVMuY06KkbwNi6lTBrBQNOPi8pDPAl8DPiLA8sxrKRZf9nVP9aPst22dCCEnh+0/AVQbzaArjEMJvIYQ7tt8IIaz0bXQrmAzUr7a/sL1q+/m+jZ+/ZApSs3kEnC3wzkPgGrBpe6REx90EQU3VWZk5/W77e9tv2x70vSqmppvlKYTwxzRZvGn75T5hmrpZnia2h5I+BL5CHEVwnFoqLZp2rVZnAJwHbti+4uCzDn6ujXF1FXNl/v6ojaRfgOvAhu1dJeq86HYCk9ExcB+4AdxCjFvOV6rKvZntQrcreX3F9qvAOnAH8xrmhSaGVlFlGElIKhybaQY2dbXZ2AB4BfgMuIRZxcV9YVNFdbMZQAXt2r4NvKdEj+t8R5m6jpl/T/tP4APgAjAkQme+dJgcTUiTxBVg2CZJxKwzlZQz5wBYtX0R2HDwOcygydy9rkzW5TKPnwHvA5vAA0TlJvbEwMw9PwZ2gQ3gGuKgynyVYWbukZetirLY7PW88RKQrI5sP5R0kXT7fliWJKKvTBnA/PhfRhSAZuYItoekncSWEuU2sVFPZ7IAiwps0fsKfoxE0uuSLgPnir4/KkyVglk1Q+ZAjoEHkn4q+kz0lmKRskbmwefEUQBGktZtb5V1DKUwNdqTylo0ZzajSXoMXAU+BRZuI0phYoPMz1lQZwD2bW8B60r0Q9W5l+5mRZoG/TFwF3hX0r26rU1lmI7rzDPb35JC3EU8rUyQUWWYMpfLc52iND0HEYAR6T7netvtQFQ3q1lnxrZvSVonDe7WpzlRYRYljCnsE9vbkt4BRjHvLiwtAdgOkrZJm8chYiziZstl1JkjYG9a9D6X9KSrY6cu60wA9oCbwFXEfuyVmFdXbjYBPgY+AXbqbLDaKGqdsf0UuAesSdpBTGIZWkWx6swRaUd7mTS4GxW9torhZofAmu3bknb7vJHbGMb2nqQhsLaM4K6iJjBj29vAJds7SrTUuChTnTozsT2SdEHS14jD7s2rpzKYkDlM+EbSJvBRX8FdRWUw+8CLwE1JH9h+uIwbRm1UdtT0ku2BpIM+7k82UTHMf1Cn6l9N/8OcVP0JQ+YPsHo7zAoAAAAASUVORK5CYII=');
-            position: absolute;
-            font-size: 44px;
-            align-items: center;
-            text-indent: 5px;
-            color: #000;
-            z-index: 3;
-            top: 50%;
-            left: 50%;
-            margin-right: -50%;
-            transform: translate(-50%, -50%) scale(1, 0.86);
-        }
-        img {
-            width: 100%;
-        }
-    }
+.grid {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(350px, 1fr)
+    ); /* Umbrechen, sobald die Box 300 Pixel Breite hat */
+}
+
+.grid div {
+    border: 2px solid #1d606d;
+    color: white;
+    margin: 1em;
+    padding: 1em;
 }
