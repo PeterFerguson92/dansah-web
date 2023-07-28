@@ -1,7 +1,8 @@
 <header class="s-header">
     <div class="header-logo">
-        <a class="site-logo" href="index.html">
-            <img src="../../../assets/hesed/images/logo.svg" alt="Homepage" />
+        <a class="site-logo" (click)="onSeeDetail('home')">
+            <!-- <img src="../../../../assets/hesed/images/logo2.svg" alt="Homepage" /> -->
+            <i class="fa fa-home" aria-hidden="true"></i>
         </a>
     </div>
 
@@ -10,9 +11,9 @@
             <li class="current"><a (click)="onSeeDetail('home')" title="Home">Home</a></li>
             <li><a (click)="onSeeDetail('profile')" title="About">About</a></li>
             <li><a (click)="onSeeDetail('events')" title="Services">Events</a></li>
-            <li><a (click)="onSeeDetail('contact')" title="Contact us">Contact</a></li>
+            <li><a (click)="onSeeDetail('contact-us')" title="Contact us">Contact</a></li>
         </ul>
     </nav>
 
-    <a class="header-menu-toggle" href="#0"><span>Menu</span></a>
+    <a class="header-menu-toggle"><span>Menu</span></a>
 </header>

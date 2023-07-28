@@ -28,6 +28,7 @@ export class ContactUsComponent implements OnInit {
                 this.showLoader = false;
             },
             (error) => {
+                this.showLoader = false;
                 this.displayError(error);
             }
         );
@@ -36,7 +37,7 @@ export class ContactUsComponent implements OnInit {
     displayError(error) {
         this.showLoader = false;
         console.log(error);
-        this.message = 'Course information not available';
+        this.message = 'Social Media information not found';
         this.showNotification = true;
     }
 }
