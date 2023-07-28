@@ -1,19 +1,23 @@
-<header class="s-header">
-    <div class="header-logo">
-        <a class="site-logo" (click)="onSeeDetail('home')">
-            <!-- <img src="../../../../assets/hesed/images/logo2.svg" alt="Homepage" /> -->
-            <i class="fa fa-home" aria-hidden="true"></i>
-        </a>
-    </div>
-
-    <nav class="header-nav-wrap">
-        <ul class="header-nav">
-            <li class="current"><a (click)="onSeeDetail('home')" title="Home">Home</a></li>
-            <li><a (click)="onSeeDetail('profile')" title="About">About</a></li>
-            <li><a (click)="onSeeDetail('events')" title="Services">Events</a></li>
-            <li><a (click)="onSeeDetail('contact-us')" title="Contact us">Contact</a></li>
-        </ul>
-    </nav>
-
-    <a class="header-menu-toggle"><span>Menu</span></a>
+<!--This webpage is all about Soccer. It is divided into 5 parts.-->
+<!--The header tag is for the responsive nav bar-->
+<header class="header">
+    <a (click)="onSeeDetail('home')" class="logo">
+        <img
+            src="../../../../assets/hesed/images/logo2.png"
+            alt="Almere logo"
+        />
+    </a>
+    <input class="menu-btn" type="checkbox" id="menu-btn" />
+    <label class="menu-lines" for="menu-btn">
+        <span class="nav-lines"></span>
+    </label>
+    <ul class="menu">
+        <li class="current"><a (click)="onSeeDetail('home')" title="Home">Home</a></li>
+        <li><a (click)="onSeeDetail('profile')" title="About">About</a></li>
+        <li><a (click)="onSeeDetail('events')" title="Services">Events</a></li>
+        <li><a (click)="onSeeDetail('contact-us')" title="Contact us">Contact</a></li>
+    </ul>
 </header>
+
+<!--End of header-->
+<!--starting body part-->
