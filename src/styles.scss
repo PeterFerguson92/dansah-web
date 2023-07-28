@@ -34,8 +34,12 @@
 //     transition: all 200ms ease;
 // }
 
-// .pointer {
-//     cursor: pointer;
-// }
+.pointer {
+    cursor: pointer;
+}
+
+a {
+    cursor: pointer;
+}
 @import url('../src/assets/hesed/css/base.css');
 @import url('../src/assets/hesed/css/main.css');

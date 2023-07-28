@@ -6,6 +6,7 @@ import { PageTitleComponent } from './components/page-title/page-title.component
 import { ErrorPageComponent } from './components/error-page/error-page.component';
 import { LoaderComponent } from './components/loader/loader.component';
 import { NotificationComponent } from './components/notification/notification.component';
+import { SocialBannerComponent } from './components/social-banner/social-banner.component';
 
 @NgModule({
     declarations: [
@@ -15,8 +16,16 @@ import { NotificationComponent } from './components/notification/notification.co
         ErrorPageComponent,
         LoaderComponent,
         NotificationComponent,
+        SocialBannerComponent,
     ],
     imports: [CommonModule],
-    exports: [NavBarComponent, FooterComponent, PageTitleComponent, LoaderComponent, NotificationComponent],
+    exports: [
+        NavBarComponent,
+        FooterComponent,
+        PageTitleComponent,
+        LoaderComponent,
+        NotificationComponent,
+        SocialBannerComponent,
+    ],
 })
 export class SharedModule {}

@@ -1,15 +1,7 @@
 <app-nav-bar></app-nav-bar>
-<app-home-slider></app-home-slider>
+<app-home-slider *ngIf="isSectionVisible('home-slider')" (isDataRetrieved)="showSection($event, 'home-slider')"></app-home-slider>
 <app-quote-of-the-day *ngIf="isSectionVisible('quote-of-the-day')" (isDataRetrieved)="showSection($event, 'quote-of-the-day')"></app-quote-of-the-day>
-<app-intro></app-intro>
-<app-activities></app-activities>
-<app-home-events></app-home-events>
-<app-footer></app-footer>
-<!--
-<app-home-ministries-material
-    *ngIf="isSectionVisible('ministries-material')"
-    (isDataRetrieved)="showSection($event, 'ministries-material')"
-></app-home-ministries-material>
-<br />
-<br />
--->
+<app-intro *ngIf="isSectionVisible('intro')" (isDataRetrieved)="showSection($event, 'intro')"></app-intro>
+<app-activities *ngIf="isSectionVisible('activities')" (isDataRetrieved)="showSection($event, 'activities')"></app-activities>
+<app-home-events *ngIf="isSectionVisible('events')" (isDataRetrieved)="showSection($event, 'events')"></app-home-events>
+<app-footer *ngIf="isSectionVisible('footer')" (isDataRetrieved)="showSection($event, 'footer')"></app-footer>

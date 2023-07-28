@@ -40,6 +40,10 @@ export class HomeComponent implements OnInit {
             isVisible: true,
         },
         {
+            name: 'social-banner',
+            isVisible: true,
+        },
+        {
             name: 'footer',
             isVisible: true,
         },
