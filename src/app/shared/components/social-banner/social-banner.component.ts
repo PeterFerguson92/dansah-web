@@ -34,4 +34,8 @@ export class SocialBannerComponent implements OnInit {
             window.open(result.link, '_blank').focus();
         }
     }
+
+    onDonate() {
+        window.open('https://buy.stripe.com/14k6pW2r95mg2oEaEF', '_blank');
+    }
 }
