@@ -1,17 +1,76 @@
-@import url('../../../../shared/css/ministries.css');
-@import url('../../../../shared/css/ministries_responsive.css');
-
-.responsive-video {
-    position: relative;
-    display: block;
-    width: 100%;
-    height: 0;
-    padding-bottom: 56.25%;
+/* just for codepen display */
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 15px;
+    line-height: 1.5;
+    color: #333;
 }
-
-.responsive-video iframe,
-.responsive-video video {
-    position: absolute;
-    width: 100%;
-    height: 100%;
+h1,
+h2,
+h3,
+h4,
+h5 {
+    line-height: 1.2;
+    font-weight: 300;
+    margin: 1em 0 0.5em 0;
+}
+h1 {
+    font-size: 38px;
+}
+h2 {
+    font-size: 30px;
+}
+h3 {
+    font-size: 26.25px;
+}
+h4 {
+    font-size: 22.5px;
+}
+h5 {
+    font-size: 18.75px;
+}
+p {
+    margin: 0 0 1rem 0;
+}
+ul,
+ol {
+    margin: 0 0 1rem 0;
+    padding: 0 0 0 1rem;
+}
+a:link,
+a:visited {
+    color: cornflowerblue;
+}
+a:hover,
+a:active {
+    color: midnightblue;
+}
+img {
+    max-width: 100%;
+}
+.aks-container {
+    width: 90vw;
+    max-width: 900px;
+    margin: 0 auto;
+}
+.aks-page-description {
+    padding: 20px 0;
+    border-bottom: 1px solid #ddd;
+}
+.aks-page-description h1 {
+    margin: 0 0 5px 0;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+.aks-page-description p {
+    margin-bottom: 0;
+}
+section.aks-container {
+    padding: 40px 0 50px 0;
+}
+section.aks-container h2 {
+    margin-top: 0;
 }

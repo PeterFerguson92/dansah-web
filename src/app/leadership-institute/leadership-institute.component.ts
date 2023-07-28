@@ -18,7 +18,6 @@ export class LeadershipInstituteComponent implements OnInit {
         this.showLoader = true;
         this.service.getLeadershipInstitute().subscribe(
             (data) => {
-                console.log(data);
                 if (data.result && data.result.length === 1) {
                     this.data = data.result[0];
                 } else {

@@ -1,25 +1,19 @@
-<div class="row ministries_row">
-    <div class="col-xl-4 col-md-6" *ngFor="let item of videos">
-        <div class="ministry pointer">
-            <div class="ministry_image">
-                <div class="responsive-video">
-                    <iframe
-                        [src]="getLink(item)"
-                        width="600"
-                        height="338"
-                        frameborder="0"
-                        webkitAllowFullScreen
-                        mozallowfullscreen
-                        allowFullScreen
-                    ></iframe>
-                </div>
-                <div class="ministry_title">{{ item.title }}</div>
-                <div class="ministry_text">
-                    <p>
-                        {{ item.description }}
-                    </p>
-                </div>
+<section class="aks-container">
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); grid-gap: 20px" *ngFor="let item of videos">
+        <div style="background-color: whitesmoke; padding: 15px">
+            <h3 style="border-bottom: 1px solid; margin: 0 0 8px 0; font-size: 18px; font-weight: 600">{{ item.title }}</h3>
+            <div style="position: relative; width: 100%; padding-top: 56.25%">
+                <iframe
+                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%"
+                    [src]="getLink(item)"
+                    frameborder="0"
+                    allow="autoplay; encrypted-media"
+                    allowfullscreen
+                ></iframe>
             </div>
+            <!-- <p style="margin: 12px 0 0 0">
+                <strong>{{ item.title }}</strong>
+            </p> -->
         </div>
     </div>
-</div>
+</section>

@@ -9,6 +9,8 @@ import { CommonService } from 'src/app/shared/service/common.service';
 })
 export class LeadershipCoursesListComponent implements OnInit {
     @Input() courses;
+    path = '../../../assets/images/wallpa.png';
+
     constructor(private router: Router, private commonService: CommonService) {}
 
     ngOnInit() {}

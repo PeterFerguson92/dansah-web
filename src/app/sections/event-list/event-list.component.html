@@ -1,184 +1,30 @@
-<div class="blog">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-9">
-                <div class="blog_content" *ngFor="let event of events">
-                    <div class="blog_post">
-                        <div class="blog_image">
-                            <img src="{{ event.imgPath }}" alt="" />
-                            <div class="news_date d-flex flex-column align-items-center justify-content-center">
-                                <div class="news_day">{{ event.detail1 }}</div>
-                                <div class="news_month">{{ event.detail2 }}</div>
-                            </div>
-                        </div>
-                        <div class="blog_title">{{ event.title }}</div>
-                        <div class="blog_meta">
-                            <ul>
-                                <li>By <a>Details 1</a></li>
-                                <li>In <a>Details 1</a></li>
-                                <li><a>Details 3</a></li>
-                            </ul>
-                        </div>
-                        <div class="blog_text">
-                            <p>
-                                {{ event.description }}
-                            </p>
-                        </div>
-                        <div class="blog_link"><a (click)="onSeeDetail(event.id)">Read More</a></div>
-                    </div>
-                </div>
-
-                <!-- <div class="blog_pages">
-                    <ul>
-                        <li class="active"><a href="#">01.</a></li>
-                        <li><a href="#">02.</a></li>
-                        <li><a href="#">03.</a></li>
-                    </ul>
-                </div> -->
-            </div>
-
-            <!-- <div class="col-lg-3 sidebar_col">
-                <div class="blog_sidebar">
-                    <div class="sidebar_section">
-                        <div class="sidebar_search">
-                            <form action="#">
-                                <input class="sidebar_search_input" type="search" placeholder="Search" required="required" />
-                                <button type="submit" class="sidebar_search_button d-flex flex-column align-items-center justify-content-center">
-                                    <img src="../../../assets/images/" alt="" />
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        xmlns:xlink="http://www.w3.org/1999/xlink"
-                                        version="1.1"
-                                        id="Capa_10"
-                                        x="0px"
-                                        y="0px"
-                                        viewBox="0 0 56.966 56.966"
-                                        style="enable-background: new 0 0 56.966 56.966"
-                                        xml:space="preserve"
-                                        width="13px"
-                                        height="14px"
-                                    >
-                                        <path
-                                            class="search_path"
-                                            d="M55.146,51.887L41.588,37.786c3.486-4.144,5.396-9.358,5.396-14.786c0-12.682-10.318-23-23-23s-23,10.318-23,23  s10.318,23,23,23c4.761,0,9.298-1.436,13.177-4.162l13.661,14.208c0.571,0.593,1.339,0.92,2.162,0.92  c0.779,0,1.518-0.297,2.079-0.837C56.255,54.982,56.293,53.08,55.146,51.887z M23.984,6c9.374,0,17,7.626,17,17s-7.626,17-17,17  s-17-7.626-17-17S14.61,6,23.984,6z"
-                                            fill="#353535"
-                                        />
-                                    </svg>
-                                </button>
-                            </form>
-                        </div>
-                    </div>
-
-                    <div class="sidebar_section">
-                        <div class="sidebar_title">Latest News</div>
-                        <div class="latest_news_container">
-                            <div class="latest_news d-flex flex-row align-items-start justify-content-start">
-                                <div class="latest_news_image_container">
-                                    <div class="latest_news_image"><img src="../../../assets/images/latest_1.jpg" alt="" /></div>
-                                </div>
-                                <div class="latest_news_content">
-                                    <div class="latest_news_date">06 March, 2018</div>
-                                    <div class="latest_news_title"><a href="#">How to pray the right way</a></div>
-                                </div>
-                            </div>
-
-                            <div class="latest_news d-flex flex-row align-items-start justify-content-start">
-                                <div class="latest_news_image_container">
-                                    <div class="latest_news_image"><img src="../../../assets/images/latest_2.jpg" alt="" /></div>
-                                </div>
-                                <div class="latest_news_content">
-                                    <div class="latest_news_date">06 March, 2018</div>
-                                    <div class="latest_news_title"><a href="#">Latest news in the ‘18 community</a></div>
-                                </div>
-                            </div>
-
-                            <div class="latest_news d-flex flex-row align-items-start justify-content-start">
-                                <div class="latest_news_image_container">
-                                    <div class="latest_news_image"><img src="../../../assets/images/latest_3.jpg" alt="" /></div>
-                                </div>
-                                <div class="latest_news_content">
-                                    <div class="latest_news_date">06 March, 2018</div>
-                                    <div class="latest_news_title"><a href="#">Church charities for 2018</a></div>
-                                </div>
-                            </div>
-
-                            <div class="latest_news d-flex flex-row align-items-start justify-content-start">
-                                <div class="latest_news_image_container">
-                                    <div class="latest_news_image"><img src="../../../assets/images/latest_4.jpg" alt="" /></div>
-                                </div>
-                                <div class="latest_news_content">
-                                    <div class="latest_news_date">06 March, 2018</div>
-                                    <div class="latest_news_title"><a href="#">News in the youth community</a></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="sidebar_section">
-                        <div class="sidebar_title">Categories</div>
-                        <div class="sidebar_list">
-                            <ul>
-                                <li>
-                                    <a class="d-flex flex-row align-items-start justify-content-start" href="#"
-                                        >Bible Stories<span class="ml-auto">4</span></a
-                                    >
-                                </li>
-                                <li>
-                                    <a class="d-flex flex-row align-items-start justify-content-start" href="#"
-                                        >Hope & Faithful<span class="ml-auto">5</span></a
-                                    >
-                                </li>
-                                <li>
-                                    <a class="d-flex flex-row align-items-start justify-content-start" href="#"
-                                        >Play & Church<span class="ml-auto">4</span></a
-                                    >
-                                </li>
-                                <li>
-                                    <a class="d-flex flex-row align-items-start justify-content-start" href="#"
-                                        >Community<span class="ml-auto">4</span></a
-                                    >
-                                </li>
-                                <li>
-                                    <a class="d-flex flex-row align-items-start justify-content-start" href="#"
-                                        >Sermon & Pray<span class="ml-auto">6</span></a
-                                    >
-                                </li>
-                                <li>
-                                    <a class="d-flex flex-row align-items-start justify-content-start" href="#"
-                                        >Uncategorized<span class="ml-auto">3</span></a
-                                    >
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-
-                    <div class="sidebar_section">
-                        <div class="sidebar_title">Archives</div>
-                        <div class="sidebar_list">
-                            <ul>
-                                <li><a href="#">November 2017</a></li>
-                                <li><a href="#">December 2017</a></li>
-                                <li><a href="#">January 2018</a></li>
-                                <li><a href="#">February 2018</a></li>
-                                <li><a href="#">March 2018</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="sidebar_section">
-                        <div class="sidebar_quote">
-                            <div class="sidebar_quote_background" style="background-image: url(images/sidebar_quote.jpg)"></div>
-                            <div class="sidebar_quote_char"><img src="../../../assets/images/quote_char.png" alt="" /></div>
-                            <div class="sidebar_quote_text">
-                                4 One thing I ask from the LORD, this only do I seek: that I may dwell in the house of the LORD all the days of my
-                                life, to gaze on the beauty of the LORD and to seek him in his temple.
-                            </div>
-                            <div class="sidebar_quote_source">Psalm 27:4</div>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
+<section
+    class="page-header page-header--events"
+    [ngStyle]="{
+        'background-repeat': 'no-repeat',
+        'background-size': 'cover',
+        'background-image': 'url(' + path + ')'
+    }"
+></section>
+<!-- end page-header -->
+<br />
+<section class="page-content">
+    <div class="row wide block-large-1-2 block-900-full events-list">
+        <div class="column events-list__item" *ngFor="let item of events">
+            <h3 class="display-1 events-list__item-title">
+                <a title="" (click)="onSeeDetail(item.id)">{{ item.title }}</a>
+            </h3>
+            <p>
+                Et consequatur nihil odio odit voluptatem qui. Dolores doloribus cupiditate totam esse dolores quod. Magni aut incidunt fugiat labore
+                est ut non ipsam nihil. Voluptate rerum dolores unde voluptas. Et similique praesentium dolor. Et quod eius sint at quae est dolores.
+                Beatae quo facere hic.
+            </p>
+            <ul class="events-list__meta">
+                <li class="events-list__meta-date">{{ item.date }}</li>
+                <li class="events-list__meta-time">{{ item.time }}</li>
+                <li class="events-list__meta-location">{{ item.location }}</li>
+            </ul>
         </div>
     </div>
-</div>
+    <!-- end events-list -->
+</section>

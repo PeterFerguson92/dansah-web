@@ -1,25 +1,34 @@
-<div class="tabs">
-    <input type="radio" name="tabs" id="tabone" />
-    <label for="tabone">Reading Materials</label>
-    <div class="tab">
+<div class="tab_container">
+    <input id="tab1" type="radio" name="tabs" checked />
+    <label for="tab1"><i class="fa fa-file-pdf-o"></i><span>Readings</span></label>
+
+    <input id="tab2" type="radio" name="tabs" />
+    <label for="tab2"><i class="fa fa-video-camera"></i><span>Video</span></label>
+
+    <input id="tab3" type="radio" name="tabs" />
+    <label for="tab3"><i class="fa fa-pencil-square-o"></i><span>Assesments</span></label>
+
+    <input id="tab4" type="radio" name="tabs" style="width: 100%" />
+    <label for="tab4"><i class="fa fa-book"></i><span>Assigments</span></label>
+
+    <section id="content1" class="tab-content">
+        <h3>READING MATERIALS</h3>
         <app-reading [readings]="materials.readings"></app-reading>
-    </div>
+    </section>
 
-    <input type="radio" name="tabs" id="tabtwo" />
-    <label for="tabtwo">Video Clips</label>
-    <div class="tab">
+    <section id="content2" class="tab-content">
+        <h3>VIDEOCLIPS</h3>
         <app-videoclips [videos]="materials.videos"></app-videoclips>
-    </div>
+    </section>
 
-    <input type="radio" name="tabs" id="tabthree" />
-    <label for="tabthree">Assesments</label>
-    <div class="tab">
+    <section id="content3" class="tab-content">
+        <h3>ASSESMENTS</h3>
         <app-assesment [assesments]="materials.assesments"></app-assesment>
-    </div>
+    </section>
 
-    <input type="radio" name="tabs" id="tabfour" />
-    <label for="tabfour">Assigments</label>
-    <div class="tab">
+    <section id="content4" class="tab-content">
+        <h3>ASSIGNMENTS</h3>
         <app-assignment [assignments]="materials.assignments"></app-assignment>
-    </div>
+    </section>
 </div>
+<br />

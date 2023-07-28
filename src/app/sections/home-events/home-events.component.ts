@@ -40,8 +40,6 @@ export class HomeEventsComponent implements OnInit {
     }
 
     onSeeDetail(id) {
-        this.router.navigate(['/eventDetail', id]).then(() => {
-            window.location.reload();
-        });
+        this.router.navigate(['/eventDetail', id]);
     }
 }

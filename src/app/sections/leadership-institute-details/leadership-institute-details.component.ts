@@ -9,6 +9,8 @@ export class LeadershipInstituteDetailsComponent implements OnInit {
     @Input() data;
     leadershipDetailsDescription;
     leadershipDetailsCategories;
+    path = '../../../assets/images/wallpa.png';
+
     constructor() {}
 
     ngOnInit() {

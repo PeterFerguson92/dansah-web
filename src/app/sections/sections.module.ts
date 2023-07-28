@@ -14,9 +14,6 @@ import { MediaSectionComponent } from './media-section/media-section.component';
 import { ContactUsSectionComponent } from './contact-us-section/contact-us-section.component';
 import { PrayerConnectDetailsComponent } from './prayer-connect-details/prayer-connect-details.component';
 // tslint:disable-next-line:max-line-length
-import { PrayerConnectDescriptionComponent } from './prayer-connect-details/prayer-connect-description/prayer-connect-description.component';
-import { PrayerConnectCentersComponent } from './prayer-connect-details/prayer-connect-centers/prayer-connect-centers.component';
-// tslint:disable-next-line:max-line-length
 import { LeadershipInstituteDescriptionComponent } from './leadership-institute-details/leadership-institute-description/leadership-institute-description.component';
 import { LeadershipInstituteDetailsComponent } from './leadership-institute-details/leadership-institute-details.component';
 // tslint:disable-next-line:max-line-length
@@ -30,6 +27,7 @@ import { ReadingComponent } from './leadership-single-course-details/course-mate
 import { PrayerCityDetailsComponent } from './prayer-city-details/prayer-city-details.component';
 import { AssesmentComponent } from './leadership-single-course-details/course-material/assesment/assesment.component';
 import { AssignmentComponent } from './leadership-single-course-details/course-material/assignment/assignment.component';
+import { ProfileDetailsComponent } from './profile-details/profile-details.component';
 
 @NgModule({
     declarations: [
@@ -46,8 +44,6 @@ import { AssignmentComponent } from './leadership-single-course-details/course-m
         MediaSectionComponent,
         ContactUsSectionComponent,
         PrayerConnectDetailsComponent,
-        PrayerConnectDescriptionComponent,
-        PrayerConnectCentersComponent,
         LeadershipInstituteDetailsComponent,
         LeadershipInstituteDescriptionComponent,
         LeadershipCoursesCategoriesComponent,
@@ -60,6 +56,7 @@ import { AssignmentComponent } from './leadership-single-course-details/course-m
         PrayerCityDetailsComponent,
         AssesmentComponent,
         AssignmentComponent,
+        ProfileDetailsComponent,
     ],
     imports: [CommonModule],
     exports: [
@@ -76,7 +73,6 @@ import { AssignmentComponent } from './leadership-single-course-details/course-m
         MediaSectionComponent,
         ContactUsSectionComponent,
         PrayerConnectDetailsComponent,
-        PrayerConnectCentersComponent,
         LeadershipInstituteDetailsComponent,
         LeadershipInstituteDescriptionComponent,
         LeadershipCoursesListComponent,
@@ -87,6 +83,7 @@ import { AssignmentComponent } from './leadership-single-course-details/course-m
         PrayerCityDetailsComponent,
         AssesmentComponent,
         AssignmentComponent,
+        ProfileDetailsComponent,
     ],
 })
 export class SectionsModule {}

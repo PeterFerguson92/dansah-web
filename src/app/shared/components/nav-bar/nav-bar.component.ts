@@ -39,22 +39,16 @@ export class NavBarComponent implements OnInit {
                 }
             },
             (error) => {
-              console.log(error);
+                console.log(error);
             }
         );
     }
 
-    onRedirect(sectionName) {
-        if (sectionName === '/donate') {
-            window.open('https://buy.stripe.com/14k6pW2r95mg2oEaEF', '_blank');
-        } else {
-            this.router.navigate([sectionName]).then(() => {
-                window.location.reload();
-            });
-        }
-    }
-
     getImgCoverPath(imgCover) {
         return this.commonService.getAssetUrl(imgCover);
+    }
+
+    onSeeDetail(redirectUrl) {
+        this.router.navigate([redirectUrl]);
     }
 }

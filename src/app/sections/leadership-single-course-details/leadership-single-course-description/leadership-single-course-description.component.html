@@ -1,1 +1,25 @@
-<app-activity-detail-section [activity]="data"></app-activity-detail-section>
+<section
+    class="page-header page-header--about"
+    [ngStyle]="{
+        'background-repeat': 'no-repeat',
+        'background-size': 'cover',
+        'background-image': 'url(' + getImgCoverPath(course.cover_image_path) + ')'
+    }"
+>
+    <div class="gradient-overlay"></div>
+    <div class="row page-header__content">
+        <div class="column">
+            <h1>{{ course.name }}</h1>
+        </div>
+    </div>
+</section>
+
+<section class="page-content">
+    <div class="row">
+        <div class="column">
+            <p class="lead drop-cap">{{ course.short_description }}</p>
+            <br />
+            <p>{{ course.full_description }}</p>
+        </div>
+    </div>
+</section>

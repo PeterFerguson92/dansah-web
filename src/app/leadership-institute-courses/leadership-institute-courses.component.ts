@@ -27,7 +27,8 @@ export class LeadershipInstituteCoursesComponent implements OnInit {
                 if (data.result && data.result.length > 0) {
                     this.courses = data.result;
                 } else {
-                    // TODO handle empty
+                    this.message = this.title + ' not available';
+                    this.showNotification = true;
                 }
                 this.showLoader = false;
             },

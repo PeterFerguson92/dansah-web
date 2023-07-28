@@ -1,4 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Router } from '@angular/router';
 import { CommonService } from 'src/app/shared/service/common.service';
 import { DataService } from 'src/app/shared/service/data.service';
 
@@ -16,7 +17,7 @@ export class IntroComponent implements OnInit {
     data;
     @Output() isDataRetrieved = new EventEmitter<boolean>();
 
-    constructor(private commonService: CommonService, private service: DataService) {}
+    constructor(private router: Router, private commonService: CommonService, private service: DataService) {}
 
     ngOnInit() {
         this.service.getAboutMe().subscribe(
@@ -39,5 +40,9 @@ export class IntroComponent implements OnInit {
 
     getImgCoverPath(imgCover) {
         return this.commonService.getAssetUrl(imgCover);
+    }
+
+    onRedirect() {
+        this.router.navigate(['/profile']);
     }
 }

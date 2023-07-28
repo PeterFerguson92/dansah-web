@@ -1,27 +1,18 @@
-<div class="intro">
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <div class="section_title_container">
-                    <div class="section_title">
-                        <h2>{{ title }}</h2>
-                    </div>
-                    <div class="section_subtitle">{{ subTitle }}</div>
-                </div>
-            </div>
+<section id="about" class="s-about">
+    <div class="row row-y-center about-content">
+        <div class="column large-half medium-full">
+            <h3 class="subhead">{{ title }}</h3>
+            <p class="lead">
+                {{ description }}
+            </p>
+            <a (click)="onRedirect()" class="btn btn--primary btn--about">Learn More</a>
         </div>
-        <div class="row intro_content">
-            <div class="col-lg-6">
-                <div class="intro_text">
-                    <p>
-                        {{ description }}
-                    </p>
-                    <div class="button intro_button"><a href="/profile">Read More</a></div>
-                </div>
-            </div>
-            <div class="col-lg-6">
-                <div class="intro_image"><img src="{{ coverImage }}" alt="" /></div>
-            </div>
+
+        <div class="column large-half medium-full">
+            <img src="{{ coverImage }}" alt="Girl in a jacket" width="500" height="600" />
+            <!-- end about-sched-->
         </div>
     </div>
-</div>
+    <!-- end about-content -->
+</section>
+<!-- end s-about -->

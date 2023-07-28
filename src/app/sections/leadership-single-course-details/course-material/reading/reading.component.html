@@ -1,20 +1,7 @@
-<div class="ministries">
-    <div class="container">
-        <div class="row ministries_row">
-            <div class="col-xl-4 col-md-6" *ngFor="let item of readings">
-                <div class="ministry pointer" (click)="open(item.document)">
-                    <div class="ministry_image">
-                        <img src="{{ getImgCoverPath(item.cover_image_path) }}" alt="https://unsplash.com/@davidbeale" />
-                    </div>
-                    <div class="ministry_title">{{ item.title }}</div>
-                    <div class="ministry_text">
-                        <p>
-                            {{ item.description }}
-                        </p>
-                    </div>
-                    <div *ngIf="item.document" class="button ministry_button"><a (click)="open(item.document)">View</a></div>
-                </div>
-            </div>
+<section class="section">
+    <div class="grid">
+        <div (click)="open(item.document)" class="card" *ngFor="let item of readings">
+            <div class="card__details">{{ item.title }}</div>
         </div>
     </div>
-</div>
+</section>

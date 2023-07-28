@@ -7,20 +7,19 @@ import { DataService } from '../shared/service/data.service';
     styleUrls: ['./prayer-city.component.scss'],
 })
 export class PrayerCityComponent implements OnInit {
-    title = 'Prayer City';
     data;
     showLoader = false;
     message: string;
-    showNotification: boolean;
+    showNotification = false;
     constructor(private service: DataService) {}
 
     ngOnInit() {
         this.showLoader = true;
         this.service.getPrayerCity().subscribe(
             (data) => {
-                console.log(data);
                 if (data.result && data.result.length === 1) {
                     this.data = data.result[0];
+                    this.showNotification = false;
                 } else {
                     this.message = 'Prayer city information not available';
                     this.showNotification = true;
@@ -32,9 +31,6 @@ export class PrayerCityComponent implements OnInit {
                 console.log(error);
                 this.message = 'Prayer city information not available';
                 this.showNotification = true;
-                // this.router.navigate(['/error']).then(() => {
-                //     window.location.reload();
-                // });
             }
         );
     }

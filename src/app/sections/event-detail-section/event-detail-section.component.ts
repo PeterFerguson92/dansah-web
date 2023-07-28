@@ -8,6 +8,7 @@ import { CommonService } from 'src/app/shared/service/common.service';
 })
 export class EventDetailSectionComponent implements OnInit {
     @Input() event;
+    path = '../../../assets/images/wallpa.png';
     constructor(private commonService: CommonService) {}
 
     ngOnInit() {

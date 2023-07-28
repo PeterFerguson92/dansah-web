@@ -9,6 +9,7 @@ import { CommonService } from 'src/app/shared/service/common.service';
 export class LeadershipSingleCourseDescriptionComponent implements OnInit {
     @Input() course;
     data;
+
     constructor(private commonService: CommonService) {}
 
     ngOnInit() {
@@ -19,5 +20,9 @@ export class LeadershipSingleCourseDescriptionComponent implements OnInit {
             actionText: null,
             imgPath: this.commonService.getAssetUrl(this.course.cover_image_path),
         };
+    }
+
+    getImgCoverPath(imgCover) {
+        return this.commonService.getAssetUrl(imgCover);
     }
 }

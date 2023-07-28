@@ -8,12 +8,11 @@ import { environment } from 'src/environments/environment';
 })
 export class PowerLivingListComponent implements OnInit {
     @Input() data;
+    path = '../../../assets/images/wallpa.png';
 
     constructor() {}
 
-    ngOnInit() {
-        console.log(this.data);
-    }
+    ngOnInit() {}
 
     open(url) {
         window.open(`${environment.apiUrl}${url}`, '_blank');

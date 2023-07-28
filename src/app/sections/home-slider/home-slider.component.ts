@@ -1,4 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Router } from '@angular/router';
 import { CommonService } from 'src/app/shared/service/common.service';
 import { DataService } from 'src/app/shared/service/data.service';
 
@@ -15,10 +16,7 @@ export class HomeSliderComponent implements OnInit {
 
     @Output()
     isDataRetrieved = new EventEmitter<boolean>();
-    constructor(
-        private service: DataService,
-        private commonService: CommonService,
-    ) {}
+    constructor(private router: Router, private service: DataService, private commonService: CommonService) {}
 
     ngOnInit() {
         this.service.getHomeSlider().subscribe(
@@ -43,5 +41,9 @@ export class HomeSliderComponent implements OnInit {
 
     getImgCoverPath(imgCover) {
         return this.commonService.getAssetUrl(imgCover);
+    }
+
+    onRedirect(url) {
+        this.router.navigate([url]);
     }
 }

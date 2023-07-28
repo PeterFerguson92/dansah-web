@@ -20,8 +20,6 @@ export class LeadershipCoursesCategoriesComponent implements OnInit {
     }
 
     open(level) {
-        this.router.navigate(['course/' + level]).then(() => {
-            window.location.reload();
-        });
+        this.router.navigate(['course/' + level]);
     }
 }

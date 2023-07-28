@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { CommonService } from '../../service/common.service';
 import { DataService } from '../../service/data.service';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-footer',
@@ -15,7 +16,7 @@ export class FooterComponent implements OnInit {
     footerPhone;
     showLoader = false;
 
-    constructor(private service: DataService, private commonService: CommonService) {}
+    constructor(private service: DataService, private commonService: CommonService, private router: Router) {}
 
     ngOnInit() {
         this.showLoader = true;
@@ -38,6 +39,14 @@ export class FooterComponent implements OnInit {
     }
 
     getImgCoverPath(imgCover) {
-        return this.commonService.getAssetUrl(imgCover);
+        if (imgCover) {
+            return this.commonService.getAssetUrl(imgCover);
+        } else {
+            return null;
+        }
+    }
+
+    onSeeDetail(redirectUrl) {
+        this.router.navigate([redirectUrl]);
     }
 }
