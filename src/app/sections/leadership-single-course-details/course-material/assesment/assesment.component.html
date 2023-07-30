@@ -1,4 +1,5 @@
 <section class="section">
+    <p *ngIf="assesments.length == 0">No Assesment found</p>
     <div class="grid">
         <div (click)="open(item.document)" class="card" *ngFor="let item of assesments">
             <div class="card__details">{{ item.title }}</div>

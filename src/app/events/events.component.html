@@ -1,4 +1,5 @@
 <app-nav-bar></app-nav-bar>
 <app-loader *ngIf="showLoader"></app-loader>
+<app-notification [showNotification]="showNotification" [message]="message"></app-notification>
 <app-event-list *ngIf="events" [events]="events"></app-event-list>
 <app-footer></app-footer>

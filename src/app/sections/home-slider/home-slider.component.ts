@@ -10,9 +10,7 @@ import { DataService } from 'src/app/shared/service/data.service';
 })
 export class HomeSliderComponent implements OnInit {
     title;
-    imgPath1;
-    imgPath2;
-    imgPath3;
+    imgPath;
 
     @Output()
     isDataRetrieved = new EventEmitter<boolean>();
@@ -24,10 +22,9 @@ export class HomeSliderComponent implements OnInit {
                 if (data.status === 'success') {
                     this.isDataRetrieved.emit(true);
                     const result = data.result[0];
+                    console.log(result);
                     this.title = result.title;
-                    this.imgPath1 = this.getImgCoverPath(result.image1);
-                    this.imgPath2 = this.getImgCoverPath(result.image2);
-                    this.imgPath3 = this.getImgCoverPath(result.image3);
+                    this.imgPath = this.getImgCoverPath(result.image);
                 } else {
                     this.isDataRetrieved.emit(false);
                 }

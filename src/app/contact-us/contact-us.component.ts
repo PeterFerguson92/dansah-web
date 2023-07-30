@@ -22,7 +22,7 @@ export class ContactUsComponent implements OnInit {
                 if (data.status === 'success') {
                     this.data = data.result[0];
                 } else {
-                    const error = 'Social Media information not found';
+                    const error = 'Contact information not found';
                     this.displayError(error);
                 }
                 this.showLoader = false;
@@ -37,7 +37,7 @@ export class ContactUsComponent implements OnInit {
     displayError(error) {
         this.showLoader = false;
         console.log(error);
-        this.message = 'Social Media information not found';
+        this.message = 'Contact information not found';
         this.showNotification = true;
     }
 }

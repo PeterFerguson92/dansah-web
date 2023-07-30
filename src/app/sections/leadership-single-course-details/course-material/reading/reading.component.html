@@ -1,4 +1,6 @@
 <section class="section">
+    <p *ngIf="readings.length == 0">No readings found</p>
+
     <div class="grid">
         <div (click)="open(item.document)" class="card" *ngFor="let item of readings">
             <div class="card__details">{{ item.title }}</div>

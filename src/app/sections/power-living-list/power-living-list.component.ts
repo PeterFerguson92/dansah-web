@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { environment } from 'src/environments/environment';
+import { CommonService } from 'src/app/shared/service/common.service';
 
 @Component({
     selector: 'app-power-living-list',
@@ -10,15 +10,19 @@ export class PowerLivingListComponent implements OnInit {
     @Input() data;
     path = '../../../assets/images/wallpa.png';
 
-    constructor() {}
+    constructor(private commonService: CommonService) {}
 
     ngOnInit() {}
 
     open(url) {
-        window.open(`${environment.apiUrl}${url}`, '_blank');
+        window.open(this.commonService.getAssetUrl(url), '_blank');
+    }
+
+    getImgCover() {
+        return this.commonService.getAssetUrl(this.data.cover_image_path);
     }
 
     getImgCoverPath(imgCover) {
-        return `${environment.apiUrl}${imgCover}`;
+        return this.commonService.getAssetUrl(imgCover);
     }
 }

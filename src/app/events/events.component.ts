@@ -10,6 +10,8 @@ export class EventsComponent implements OnInit {
     title = 'Events';
     showLoader = false;
     events;
+    message: string;
+    showNotification: boolean;
     constructor(private service: DataService) {}
 
     ngOnInit() {
@@ -20,9 +22,14 @@ export class EventsComponent implements OnInit {
                     this.events = data.result;
                     this.showLoader = false;
                 } else {
+                    this.message = 'events information not available';
+                    this.showNotification = true;
                 }
             },
             (error) => {
+                this.showLoader = false;
+                this.message = 'events information not available';
+                this.showNotification = true;
                 console.log(error);
             }
         );

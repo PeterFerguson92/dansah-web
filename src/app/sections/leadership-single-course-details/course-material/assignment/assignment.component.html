@@ -1,7 +1,8 @@
 <section class="section">
-  <div class="grid">
-      <div (click)="open(item.document)" class="card" *ngFor="let item of assignments">
-          <div class="card__details">{{ item.title }}</div>
-      </div>
-  </div>
+    <p *ngIf="assignments.length == 0">No assignments found</p>
+    <div class="grid">
+        <div (click)="open(item.document)" class="card" *ngFor="let item of assignments">
+            <div class="card__details">{{ item.title }}</div>
+        </div>
+    </div>
 </section>

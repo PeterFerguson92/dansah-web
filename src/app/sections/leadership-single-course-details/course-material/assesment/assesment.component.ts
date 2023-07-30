@@ -13,9 +13,7 @@ export class AssesmentComponent implements OnInit {
 
     constructor(private commonService: CommonService, private service: DataService) {}
 
-    ngOnInit() {
-        console.log(this.assesments);
-    }
+    ngOnInit() {}
 
     open(documentPath) {
         const url = this.commonService.getAssetUrl(documentPath);
