@@ -7,11 +7,13 @@ import { Router } from '@angular/router';
     styleUrls: ['./event-list.component.scss'],
 })
 export class EventListComponent implements OnInit {
-    @Input() events;
+  @Input() events;
     path = '../../../assets/images/wallpa.png';
     constructor(private router: Router) {}
 
-    ngOnInit() {}
+    ngOnInit() {
+        console.log(this.events);
+    }
 
     onSeeDetail(id) {
         this.router.navigate(['/eventDetail', id]);

@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { CommonService } from 'src/app/shared/service/common.service';
 
 @Component({
     selector: 'app-profile-details',
@@ -7,9 +8,12 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class ProfileDetailsComponent implements OnInit {
     @Input() data;
-    path = '../../../assets/images/wallpa.png';
 
-    constructor() {}
+    constructor(private commonService: CommonService) {}
 
     ngOnInit() {}
+
+    getImgCoverPath() {
+        return this.commonService.getAssetUrl(this.data.cover_image_path);
+    }
 }

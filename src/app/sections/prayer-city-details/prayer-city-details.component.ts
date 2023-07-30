@@ -8,12 +8,10 @@ import { CommonService } from 'src/app/shared/service/common.service';
 })
 export class PrayerCityDetailsComponent implements OnInit {
     @Input() data;
-    path = '../../../assets/images/wallpa.png';
 
     constructor(private commonService: CommonService) {}
 
     ngOnInit() {
-        console.log(this.data);
     }
 
     getImgCoverPath() {

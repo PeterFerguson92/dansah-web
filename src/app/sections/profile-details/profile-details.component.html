@@ -3,21 +3,25 @@
     [ngStyle]="{
         'background-repeat': 'no-repeat',
         'background-size': 'cover',
-        'background-image': 'url(' + path + ')'
+        'background-image': 'url(' + getImgCoverPath() + ')'
     }"
 ></section>
 
 <br />
 <section class="page-content">
+    <section class="title-section">
+        <h1>{{ data.title }}</h1>
+    </section>
+    <br />
     <div class="row">
         <div class="column">
             <p class="lead drop-cap">{{ data.text }}</p>
 
             <br />
 
-            <h2>{{ data.title }}</h2>
-            <div class="row block-large-1-2 block-1000-full block-list" *ngFor="let item of data.roles">
-                <div class="column block-list__item">
+            <h2>Roles</h2>
+            <div class="row block-large-1-2 block-1000-full block-list">
+                <div class="column block-list__item" *ngFor="let item of data.roles">
                     <h6>{{ item.type }}</h6>
 
                     <p>
