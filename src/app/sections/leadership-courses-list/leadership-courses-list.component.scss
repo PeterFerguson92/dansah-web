@@ -1,86 +1,114 @@
-@import url(https://fonts.googleapis.com/css?family=Montserrat:500);
-
-:root {
-    /* Base font size */
-    font-size: 10px;
-}
-
-*,
-*::before,
-*::after {
+// --------------------------
+// Set-up styles
+// --------------------------
+* {
     box-sizing: border-box;
 }
-
 body {
-    min-height: 100vh;
-    background-color: #fafafa;
+    background: slategray;
+    margin: 0;
+    padding: 3em 1em;
+}
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+figure {
+    margin: 0;
+}
+figcaption {
+    font-style: italic;
+    font-size: 0.8em;
+    color: grey;
+    line-height: 1.4;
 }
 
-.container {
-    max-width: 100rem;
-    margin: 0 auto;
-    padding: 0 2rem 2rem;
-}
+// --------------------------
+// Grid styles
+// --------------------------
+.grid {
+    display: grid;
+    grid-auto-flow: column; // display the items in columns only, ie horizontal
+    grid-auto-columns: 90%; // create as many columns as there are items. 90% so we can see next item on the right.
+    grid-gap: 1em;
+    overflow-x: scroll; // scroll only within the grid, not entire page
+    -webkit-overflow-scrolling: touch; // better scrolling on touch
+    padding: 2em 1em;
+    background: white;
 
-.heading {
-    font-family: 'Montserrat', Arial, sans-serif;
-    font-size: 4rem;
-    font-weight: 500;
-    line-height: 1.5;
-    text-align: center;
-    padding: 3.5rem 0;
-    color: #1a1a1a;
-}
-
-.heading span {
-    display: block;
-}
-
-.gallery {
-    display: flex;
-    flex-wrap: wrap;
-    /* Compensate for excess margin on outer gallery flex items */
-    margin: -1rem -1rem;
-}
-
-.gallery-item {
-    /* Minimum width of 24rem and grow to fit available space */
-    flex: 1 0 24rem;
-    /* Margin value should be half of grid-gap value as margins on flex items don't collapse */
-    margin: 1rem;
-    box-shadow: 0.3rem 0.4rem 0.4rem rgba(0, 0, 0, 0.4);
-    overflow: hidden;
-}
-
-.gallery-image {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 400ms ease-out;
-}
-
-.gallery-image:hover {
-    transform: scale(1.15);
-}
-
-/*
-
-The following rule will only run if your browser supports CSS grid.
-
-Remove or comment-out the code block below to see how the browser will fall-back to flexbox styling.
-
-*/
-
-@supports (display: grid) {
-    .gallery {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
-        grid-gap: 2rem;
+    @media all and (min-width: 600px) {
+        grid-auto-flow: initial; // default: display items in rows and cols
+        grid-template-columns: repeat(auto-fit, minmax(auto, 20em)); // as many columns with max-width of 20em;
+        justify-content: center; // center the items - this is optional
     }
 
-    .gallery,
-    .gallery-item {
-        margin: 0;
+    &__figure {
+        display: grid;
+        grid-template-rows: 15em 1fr; // 15em high row for image – value could be whatever
+        grid-gap: 1em;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; // crop image within its cell
+        }
+    }
+}
+// --------------------------
+// Set-up styles
+// --------------------------
+* {
+    box-sizing: border-box;
+}
+body {
+    background: slategray;
+    margin: 0;
+    padding: 3em 1em;
+}
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+figure {
+    margin: 0;
+}
+figcaption {
+    font-style: italic;
+    font-size: 0.8em;
+    color: grey;
+    line-height: 1.4;
+}
+
+// --------------------------
+// Grid styles
+// --------------------------
+.grid {
+    display: grid;
+    grid-auto-flow: column; // display the items in columns only, ie horizontal
+    grid-auto-columns: 90%; // create as many columns as there are items. 90% so we can see next item on the right.
+    grid-gap: 1em;
+    overflow-x: scroll; // scroll only within the grid, not entire page
+    -webkit-overflow-scrolling: touch; // better scrolling on touch
+    padding: 2em 1em;
+    background: white;
+
+    @media all and (min-width: 600px) {
+        grid-auto-flow: initial; // default: display items in rows and cols
+        grid-template-columns: repeat(auto-fit, minmax(auto, 20em)); // as many columns with max-width of 20em;
+        justify-content: center; // center the items - this is optional
+    }
+
+    &__figure {
+        display: grid;
+        grid-template-rows: 15em 1fr; // 15em high row for image – value could be whatever
+        grid-gap: 1em;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; // crop image within its cell
+        }
     }
 }
