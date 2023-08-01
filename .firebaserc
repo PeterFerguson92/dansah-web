@@ -1,5 +1,6 @@
 {
-  "projects": {
-    "default": "dansah-65d00"
-  }
+    "projects": {
+        "qa": "dansah-prod",
+        "prod": "dansah-65d00"
+    }
 }
