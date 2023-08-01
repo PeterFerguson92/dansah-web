@@ -18,7 +18,7 @@ export class ActivitiesComponent implements OnInit {
     @Output()
     isDataRetrieved = new EventEmitter<boolean>();
 
-    constructor(private router: Router, private service: DataService, private commonService: CommonService) {}
+    constructor(private router: Router, private service: DataService) {}
 
     ngOnInit() {
         this.service.getHomeActivities().subscribe(
@@ -39,9 +39,6 @@ export class ActivitiesComponent implements OnInit {
         );
     }
 
-    getImgCoverPath(imgCover) {
-        return this.commonService.getAssetUrl(imgCover);
-    }
 
     onRedirect(alias) {
         const url = '/' + alias;

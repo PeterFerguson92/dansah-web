@@ -17,12 +17,4 @@ export class PowerLivingListComponent implements OnInit {
     open(url) {
         window.open(this.commonService.getAssetUrl(url), '_blank');
     }
-
-    getImgCover() {
-        return this.commonService.getAssetUrl(this.data.cover_image_path);
-    }
-
-    getImgCoverPath(imgCover) {
-        return this.commonService.getAssetUrl(imgCover);
-    }
 }

@@ -3,7 +3,7 @@
     [ngStyle]="{
         'background-repeat': 'no-repeat',
         'background-size': 'cover',
-        'background-image': 'url(' + getImgCover() + ')'
+        'background-image': 'url(' + data.cover_image_path + ')'
     }"
 ></section>
 <br /><br />
@@ -25,7 +25,7 @@
 
             <div class="row block-large-1-2 block-1000-full block-list">
                 <div class="column block-list__item" *ngFor="let item of data.monthly_power_living">
-                    <img src="{{ getImgCoverPath(item.cover_image_path) }}" />
+                    <img src="{{ item.cover_image_path }}" />
                     <a (click)="open(item.document)" class="btn btn--primary h-full-width">Read More</a>
                 </div>
             </div>

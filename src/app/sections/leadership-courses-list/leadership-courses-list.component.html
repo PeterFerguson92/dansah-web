@@ -14,7 +14,7 @@
     <ul class="grid">
         <li *ngFor="let item of courses">
             <figure class="grid__figure">
-                <img src="{{ getImgCoverPath(item.cover_image_path) }}" alt="" />
+                <img src="{{ item.cover_image_path }}" alt="" />
                 <figcaption>{{ item.short_description }}</figcaption>
                 <a (click)="viewDetail(item.id)" class="btn btn--primary h-full-width">Learn More</a>
             </figure>

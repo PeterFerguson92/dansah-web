@@ -19,7 +19,7 @@
                             *ngFor="let material of materials"
                             (click)="redirect(material.redirect_link)"
                         >
-                            <div class="causes_item_image"><img src="{{ getImgCoverPath(material.cover_image_path) }}" alt="" /></div>
+                            <div class="causes_item_image"><img src="{{ material.cover_image_path }}" alt="" /></div>
                             <div class="causes_item_title">{{ material.title }}</div>
                             <div class="causes_item_text">
                                 <p>{{ material.description }}</p>

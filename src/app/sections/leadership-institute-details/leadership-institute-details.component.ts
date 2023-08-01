@@ -1,5 +1,4 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { CommonService } from 'src/app/shared/service/common.service';
 
 @Component({
     selector: 'app-leadership-institute-details',
@@ -11,15 +10,11 @@ export class LeadershipInstituteDetailsComponent implements OnInit {
     leadershipDetailsDescription;
     leadershipDetailsCategories;
 
-    constructor(private commonService: CommonService) {}
+    constructor() {}
 
     ngOnInit() {
         this.leadershipDetailsDescription = this.data;
         this.leadershipDetailsCategories = this.data.categories;
         delete this.leadershipDetailsDescription.courses;
-    }
-
-    getImgCoverPath() {
-        return this.commonService.getAssetUrl(this.data.cover_image_path);
     }
 }

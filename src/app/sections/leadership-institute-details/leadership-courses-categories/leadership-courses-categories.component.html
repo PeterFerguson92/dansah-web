@@ -1,16 +1,8 @@
-<!-- <div class="container">
-    <div class="gallery">
-        <div class="gallery-item" *ngFor="let item of categories" (click)="open(item.name)">
-            <img class="gallery-image" src="{{ getImgCoverPath(item.cover_image_path) }}" />
-            <br />
-        </div>
-    </div>
-</div> -->
 <section>
     <div class="box-container">
         <div class="box" *ngFor="let item of categories">
             <div class="image">
-                <img class="gallery-image" src="{{ getImgCoverPath(item.cover_image_path) }}" />
+                <img class="gallery-image" src="{{ item.cover_image_path }}" />
             </div>
             <div class="info">
                 <h3>{{ item.name }}</h3>

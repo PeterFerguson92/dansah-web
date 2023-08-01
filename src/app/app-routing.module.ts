@@ -6,7 +6,6 @@ import { ActivityDetailComponent } from './activity-detail/activity-detail.compo
 import { EventsComponent } from './events/events.component';
 import { EventDetailComponent } from './event-detail/event-detail.component';
 import { PowerLivingComponent } from './power-living/power-living.component';
-import { MediaComponent } from './media/media.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { PrayerConnectComponent } from './prayer-connect/prayer-connect.component';
 import { ErrorPageComponent } from './shared/components/error-page/error-page.component';
@@ -29,7 +28,6 @@ const routes: Routes = [
     { path: 'leadership-institute', component: LeadershipInstituteComponent },
     { path: 'course/:level', component: LeadershipInstituteCoursesComponent },
     { path: 'course-detail/:id', component: LeadershipInstituteSingleCourseComponent },
-    { path: 'media', component: MediaComponent },
     { path: 'contact-us', component: ContactUsComponent },
     { path: 'error', component: ErrorPageComponent },
     { path: '', redirectTo: 'home', pathMatch: 'full' },

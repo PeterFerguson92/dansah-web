@@ -10,7 +10,6 @@ import { HomeMinistriesMaterialComponent } from './home-ministries-material/home
 import { EventListComponent } from './event-list/event-list.component';
 import { EventDetailSectionComponent } from './event-detail-section/event-detail-section.component';
 import { PowerLivingListComponent } from './power-living-list/power-living-list.component';
-import { MediaSectionComponent } from './media-section/media-section.component';
 import { ContactUsSectionComponent } from './contact-us-section/contact-us-section.component';
 import { PrayerConnectDetailsComponent } from './prayer-connect-details/prayer-connect-details.component';
 // tslint:disable-next-line:max-line-length
@@ -41,7 +40,6 @@ import { ProfileDetailsComponent } from './profile-details/profile-details.compo
         EventListComponent,
         EventDetailSectionComponent,
         PowerLivingListComponent,
-        MediaSectionComponent,
         ContactUsSectionComponent,
         PrayerConnectDetailsComponent,
         LeadershipInstituteDetailsComponent,
@@ -70,7 +68,6 @@ import { ProfileDetailsComponent } from './profile-details/profile-details.compo
         EventListComponent,
         EventDetailSectionComponent,
         PowerLivingListComponent,
-        MediaSectionComponent,
         ContactUsSectionComponent,
         PrayerConnectDetailsComponent,
         LeadershipInstituteDetailsComponent,

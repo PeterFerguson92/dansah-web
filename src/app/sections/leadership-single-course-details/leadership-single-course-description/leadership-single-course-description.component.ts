@@ -18,11 +18,7 @@ export class LeadershipSingleCourseDescriptionComponent implements OnInit {
             shortDescription: this.course.short_description,
             fullDescription: this.course.full_description,
             actionText: null,
-            imgPath: this.commonService.getAssetUrl(this.course.cover_image_path),
+            imgPath: this.course.cover_image_path,
         };
-    }
-
-    getImgCoverPath(imgCover) {
-        return this.commonService.getAssetUrl(imgCover);
     }
 }

@@ -1,6 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
-import { CommonService } from 'src/app/shared/service/common.service';
 import { DataService } from 'src/app/shared/service/data.service';
 
 @Component({
@@ -15,7 +14,7 @@ export class HomeEventsComponent implements OnInit {
     @Output()
     isDataRetrieved = new EventEmitter<boolean>();
 
-    constructor(private router: Router, private service: DataService, private commonService: CommonService) {}
+    constructor(private router: Router, private service: DataService) {}
 
     ngOnInit() {
         this.service.getHomeEvents().subscribe(
@@ -33,10 +32,6 @@ export class HomeEventsComponent implements OnInit {
                 this.isDataRetrieved.emit(false);
             }
         );
-    }
-
-    getImgCoverPath(imgCover) {
-        return this.commonService.getAssetUrl(imgCover);
     }
 
     onSeeDetail(id) {

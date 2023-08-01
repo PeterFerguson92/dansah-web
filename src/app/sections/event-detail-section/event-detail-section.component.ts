@@ -9,13 +9,7 @@ import { CommonService } from 'src/app/shared/service/common.service';
 export class EventDetailSectionComponent implements OnInit {
     @Input() event;
     path = '../../../assets/images/wallpa.png';
-    constructor(private commonService: CommonService) {}
+    constructor() {}
 
-    ngOnInit() {
-        console.log(this.event);
-    }
-
-    getImgCoverPath(imgCover) {
-        return this.commonService.getAssetUrl(imgCover);
-    }
+    ngOnInit() {}
 }

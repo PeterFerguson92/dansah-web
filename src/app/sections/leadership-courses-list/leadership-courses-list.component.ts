@@ -1,6 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { CommonService } from 'src/app/shared/service/common.service';
 
 @Component({
     selector: 'app-leadership-courses-list',
@@ -11,13 +10,9 @@ export class LeadershipCoursesListComponent implements OnInit {
     @Input() courses;
     path = '../../../assets/images/wallpa.png';
 
-    constructor(private router: Router, private commonService: CommonService) {}
+    constructor(private router: Router) {}
 
     ngOnInit() {}
-
-    getImgCoverPath(imgCover) {
-        return this.commonService.getAssetUrl(imgCover);
-    }
 
     viewDetail(id) {
         this.router.navigate(['course-detail/' + id]);

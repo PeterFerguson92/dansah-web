@@ -1,5 +1,4 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { CommonService } from 'src/app/shared/service/common.service';
 
 @Component({
     selector: 'app-contact-us-section',
@@ -10,11 +9,8 @@ export class ContactUsSectionComponent implements OnInit {
     @Input() data;
     path = '../../../assets/images/wallpa.png';
 
-    constructor(private commonService: CommonService) {}
+    constructor() {}
 
     ngOnInit() {}
 
-    getImgCoverPath(imgCover) {
-        return this.commonService.getAssetUrl(imgCover);
-    }
 }

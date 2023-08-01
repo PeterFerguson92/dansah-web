@@ -12,10 +12,6 @@ export class ReadingComponent implements OnInit {
 
     ngOnInit() {}
 
-    getImgCoverPath(imgCover) {
-        return this.commonService.getAssetUrl(imgCover);
-    }
-
     open(documentPath) {
         const url = this.commonService.getAssetUrl(documentPath);
         window.open(url, '_blank');
