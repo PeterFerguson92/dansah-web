@@ -1,40 +1,20 @@
-<div class="causes">
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <div class="section_title_container">
-                    <div class="section_title">
-                        <h2>{{ title }}</h2>
-                    </div>
-                </div>
+<section class="info">
+    <h1 style="text-align: center">Learn HTML</h1>
+</section>
+<br />
+<section class="cards-wrapper">
+    <div class="card-grid-space" *ngFor="let material of materials">
+        <a
+            class="card"
+            (click)="redirect(material.redirect_link)"
+            [ngStyle]="{
+                'background-image': 'url(' + material.cover_image_path + ')'
+            }"
+        >
+            <div>
+                <h1>{{ material.title }}</h1>
+                <p>{{ material.description }}</p>
             </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                <div class="causes_slider_container">
-                    <div class="owl-carousel owl-theme causes_slider">
-                        <div
-                            class="owl-item text-center causes_item"
-                            style="cursor: pointer"
-                            *ngFor="let material of materials"
-                            (click)="redirect(material.redirect_link)"
-                        >
-                            <div class="causes_item_image"><img src="{{ material.cover_image_path }}" alt="" /></div>
-                            <div class="causes_item_title">{{ material.title }}</div>
-                            <div class="causes_item_text">
-                                <p>{{ material.description }}</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- <div class="causes_slider_nav causes_slider_prev trans_200 d-flex flex-column align-items-center justify-content-center">
-                      <img src="../../../assets/images/arrow_l.png" alt="" />
-                  </div>
-                  <div class="causes_slider_nav causes_slider_next trans_200 d-flex flex-column align-items-center justify-content-center">
-                      <img src="../../../assets/images/arrow_r.png" alt="" />
-                  </div> -->
-                </div>
-            </div>
-        </div>
+        </a>
     </div>
-</div>
+</section>
