@@ -17,7 +17,7 @@ export class HomeMinistriesMaterialComponent implements OnInit {
     ngOnInit() {
         this.service.getHomeMinistriesMaterial().subscribe(
             (data) => {
-                if (data && data.status === 'success') {
+                if (data && data.status === 'success' && data.result[0].materials.length > 0) {
                     this.isDataRetrieved.emit(true);
                     const result = data.result[0];
                     this.title = result.title;
