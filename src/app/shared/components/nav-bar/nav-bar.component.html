@@ -2,10 +2,7 @@
 <!--The header tag is for the responsive nav bar-->
 <header class="header">
     <a (click)="onSeeDetail('home')" class="logo">
-        <img
-            src="../../../../assets/hesed/images/logo2.png"
-            alt="Almere logo"
-        />
+        <img src="../../../../assets/hesed/images/logo2.png" alt="Almere logo" />
     </a>
     <input class="menu-btn" type="checkbox" id="menu-btn" />
     <label class="menu-lines" for="menu-btn">
@@ -16,6 +13,7 @@
         <li><a (click)="onSeeDetail('profile')" title="About">About</a></li>
         <li><a (click)="onSeeDetail('events')" title="Services">Events</a></li>
         <li><a (click)="onSeeDetail('contact-us')" title="Contact us">Contact</a></li>
+        <li><a (click)="onDonate()" title="Contact us">Donate</a></li>
     </ul>
 </header>
 

@@ -51,4 +51,8 @@ export class NavBarComponent implements OnInit {
     onSeeDetail(redirectUrl) {
         this.router.navigate([redirectUrl]);
     }
+
+    onDonate() {
+        window.open('https://buy.stripe.com/14k6pW2r95mg2oEaEF', '_blank');
+    }
 }
