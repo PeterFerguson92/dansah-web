@@ -20,6 +20,65 @@
             <p class="lead drop-cap">{{ course.short_description }}</p>
             <br />
             <p>{{ course.full_description }}</p>
+
+            <div *ngIf="showRegistrationForm" class="row">
+                <div class="column">
+                    <h2>Your Details.</h2>
+
+                    <form [formGroup]="requestForm">
+                        <fieldset>
+                            <div class="form-field">
+                                <input
+                                    name="cName"
+                                    class="h-full-width h-remove-bottom"
+                                    placeholder="Name"
+                                    value=""
+                                    type="text"
+                                    formControlName="name"
+                                    [ngClass]="getValidationClass('name')"
+                                />
+                            </div>
+
+                            <div class="form-field">
+                                <input
+                                    name="cName"
+                                    id="cName"
+                                    class="h-full-width h-remove-bottom"
+                                    placeholder="Surname"
+                                    value=""
+                                    type="text"
+                                    formControlName="surname"
+                                    [ngClass]="getValidationClass('surname')"
+                                />
+                            </div>
+
+                            <div class="form-field">
+                                <input
+                                    name="cEmail"
+                                    id="cEmail"
+                                    class="h-full-width h-remove-bottom"
+                                    placeholder="Email"
+                                    value=""
+                                    type="text"
+                                    formControlName="email"
+                                    [ngClass]="getValidationClass('email')"
+                                />
+                            </div>
+                            <app-notification-message [showText]="showInfoText" [text]="infoText" [color]="'#00B61C'"></app-notification-message>
+                            <app-notification-message [showText]="showErrorText" [text]="errorText" [color]="'#ff9800'"></app-notification-message>
+                            <app-spinner *ngIf="showSpinner"></app-spinner>
+                            <input
+                                (click)="register()"
+                                [disabled]="isSubmitDisabled()"
+                                id="submit"
+                                class="btn btn--primary btn-wide btn--large h-full-width"
+                                value="Submit"
+                            />
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+            <a *ngIf="!showRegistrationForm" (click)="showRegisterForm()" class="btn btn--primary h-full-width">Register</a>
         </div>
     </div>
 </section>

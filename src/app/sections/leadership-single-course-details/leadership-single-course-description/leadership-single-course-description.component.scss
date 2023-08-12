@@ -1,0 +1,12 @@
+.validInput {
+  /* border-color: green; */
+  background: url('https://assets.digitalocean.com/labs/icons/hand-thumbs-up.svg') no-repeat 95% 50% white;
+  background-size: 25px;
+}
+
+.invalidInput {
+  border-color: red;
+  background: url('https://assets.digitalocean.com/labs/icons/exclamation-triangle-fill.svg') no-repeat 95% 50%
+      white;
+  background-size: 25px;
+}

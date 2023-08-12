@@ -27,6 +27,8 @@ import { PrayerCityDetailsComponent } from './prayer-city-details/prayer-city-de
 import { AssesmentComponent } from './leadership-single-course-details/course-material/assesment/assesment.component';
 import { AssignmentComponent } from './leadership-single-course-details/course-material/assignment/assignment.component';
 import { ProfileDetailsComponent } from './profile-details/profile-details.component';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
     declarations: [
@@ -56,8 +58,10 @@ import { ProfileDetailsComponent } from './profile-details/profile-details.compo
         AssignmentComponent,
         ProfileDetailsComponent,
     ],
-    imports: [CommonModule],
+    imports: [CommonModule, ReactiveFormsModule, FormsModule, SharedModule],
     exports: [
+        ReactiveFormsModule,
+        FormsModule,
         QuoteOfTheDayComponent,
         HomeSliderComponent,
         HomeEventsComponent,

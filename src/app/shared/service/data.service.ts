@@ -91,6 +91,11 @@ export class DataService {
         return this.http.get(url);
     }
 
+    addCourseStudent(details): Observable<any> {
+        const url = `${this.baseUrl}leadershipinstitute/courses/student`;
+        return this.http.post(url, details );
+    }
+
     getLeadershipCoursesByLevel(level): Observable<any> {
         const url = `${this.baseUrl}leadershipinstitute/courses/category?level=${level}`;
         return this.http.get(url);
