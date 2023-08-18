@@ -163,6 +163,11 @@ a {
     font-weight: normal;
 }
 
+.header-section h1 {
+  text-align: center;
+  color: rgb(241, 237, 237);
+}
+
 /* MEDIA QUERIES */
 @media screen and (max-width: 1285px) {
     .cards-wrapper {

@@ -3010,23 +3010,27 @@ html.no-csstransitions .hero-content {
 }
 
 .social-list__icon--facebook::before {
-    background-image: url(../images/icons/social/icon-facebook.svg);
+    background-image: url(../images/icons/social/facebook-icon.svg);
 }
 
 .social-list__icon--twitter::before {
-    background-image: url(../images/icons/social/icon-twitter.svg);
+    background-image: url(../images/icons/social/twitter-icon.svg);
 }
 
 .social-list__icon--instagram::before {
-    background-image: url(../images/icons/social/icon-instagram.svg);
+    background-image: url(../images/icons/social/instagram-icon.svg)
 }
 
 .social-list__icon--email::before {
-    background-image: url(../images/icons/social/icon-email.svg);
+    background-image: url(../images/icons/social/podcast-icon.svg);
 }
 
-.social-list__icon--donate::before {
-    background-image: url(../images/icons/social/icon-email.svg);
+.social-list__icon--podcast::before {
+  background-image: url(../images/icons/social/podcast-icon.svg);
+}
+
+.social-list__icon--youtube::before {
+    background-image: url(../images/icons/social/youtube-icon.svg);
 }
 
 /* -------------------------------------------------------------------
