@@ -15,6 +15,7 @@ import { LeadershipInstituteCoursesComponent } from './leadership-institute-cour
 // tslint:disable-next-line:max-line-length
 import { LeadershipInstituteSingleCourseComponent } from './leadership-institute-single-course/leadership-institute-single-course.component';
 import { PrayerCityComponent } from './prayer-city/prayer-city.component';
+import { DonationComponent } from './donation/donation.component';
 
 const routes: Routes = [
     { path: 'home', component: HomeComponent },
@@ -30,6 +31,7 @@ const routes: Routes = [
     { path: 'course-detail/:id', component: LeadershipInstituteSingleCourseComponent },
     { path: 'contact-us', component: ContactUsComponent },
     { path: 'error', component: ErrorPageComponent },
+    { path: 'donate', component: DonationComponent },
     { path: '', redirectTo: 'home', pathMatch: 'full' },
 ];
 

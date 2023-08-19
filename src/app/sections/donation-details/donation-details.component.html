@@ -1,0 +1,36 @@
+<section
+    class="page-header page-header--about"
+    [ngStyle]="{
+        'background-repeat': 'no-repeat',
+        'background-size': 'cover',
+        'background-image': 'url(' + path + ')'
+    }"
+></section>
+
+<br />
+<section class="page-content">
+    <section class="title-section">
+        <h1>{{ data.title }}</h1>
+    </section>
+    <br />
+    <div class="row">
+        <div class="column">
+            <p class="lead drop-cap">{{ data.description }}</p>
+
+            <br />
+
+            <h2>How to donate</h2>
+            <div class="row block-large-1-2 block-1000-full block-list">
+                <div class="column block-list__item">
+                    <h6>MoMo Number</h6>
+
+                    <p>
+                        {{ data.momo_number }}
+                    </p>
+                </div>
+            </div>
+            <br />
+            <br />
+        </div>
+    </div>
+</section>

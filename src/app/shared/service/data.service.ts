@@ -93,7 +93,7 @@ export class DataService {
 
     addCourseStudent(details): Observable<any> {
         const url = `${this.baseUrl}leadershipinstitute/courses/student`;
-        return this.http.post(url, details );
+        return this.http.post(url, details);
     }
 
     getLeadershipCoursesByLevel(level): Observable<any> {
@@ -108,6 +108,11 @@ export class DataService {
 
     getContacts(): Observable<any> {
         const url = `${this.baseUrl}contact/`;
+        return this.http.get(url);
+    }
+
+    getDonation(): Observable<any> {
+        const url = `${this.baseUrl}donation/`;
         return this.http.get(url);
     }
 

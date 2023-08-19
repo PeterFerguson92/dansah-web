@@ -29,6 +29,7 @@ import { AssignmentComponent } from './leadership-single-course-details/course-m
 import { ProfileDetailsComponent } from './profile-details/profile-details.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { SharedModule } from '../shared/shared.module';
+import { DonationDetailsComponent } from './donation-details/donation-details.component';
 
 @NgModule({
     declarations: [
@@ -57,6 +58,7 @@ import { SharedModule } from '../shared/shared.module';
         AssesmentComponent,
         AssignmentComponent,
         ProfileDetailsComponent,
+        DonationDetailsComponent,
     ],
     imports: [CommonModule, ReactiveFormsModule, FormsModule, SharedModule],
     exports: [
@@ -85,6 +87,7 @@ import { SharedModule } from '../shared/shared.module';
         AssesmentComponent,
         AssignmentComponent,
         ProfileDetailsComponent,
+        DonationDetailsComponent,
     ],
 })
 export class SectionsModule {}

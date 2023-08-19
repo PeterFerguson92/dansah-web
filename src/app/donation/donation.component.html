@@ -1,0 +1,5 @@
+<app-nav-bar></app-nav-bar>
+<app-loader *ngIf="showLoader"></app-loader>
+<app-donation-details *ngIf="donation" [data]="donation"></app-donation-details>
+<app-notification [showNotification]="showNotification" [message]="message"></app-notification>
+<app-footer></app-footer>
