@@ -11,7 +11,9 @@ export class DonationDetailsComponent implements OnInit {
 
     constructor() {}
 
-    ngOnInit() {
-        console.log(this.data);
+    ngOnInit() {}
+
+    onAdditionalLink() {
+        window.open('https://buy.stripe.com/14k6pW2r95mg2oEaEF', '_blank');
     }
 }
