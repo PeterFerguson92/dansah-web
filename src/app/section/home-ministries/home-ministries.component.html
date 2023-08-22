@@ -1,0 +1,15 @@
+<section class="header-section">
+  <h1>{{ title }}</h1>
+</section>
+<section class="cards-wrapper">
+  <div class="card-grid-space" *ngFor="let material of ministries">
+      <a
+          class="card"
+          (click)="redirect(material.redirect_link)"
+          [ngStyle]="{
+              'background-image': 'url(' + material.cover_image_path + ')'
+          }"
+      >
+      </a>
+  </div>
+</section>

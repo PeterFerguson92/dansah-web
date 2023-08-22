@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { DataService } from '../shared/service/data.service';
-import { CommonService } from '../shared/service/common.service';
 
 @Component({
     selector: 'app-home',

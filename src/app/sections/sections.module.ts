@@ -30,6 +30,7 @@ import { ProfileDetailsComponent } from './profile-details/profile-details.compo
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { SharedModule } from '../shared/shared.module';
 import { DonationDetailsComponent } from './donation-details/donation-details.component';
+import { HomeMinistriesComponent } from '../section/home-ministries/home-ministries.component';
 
 @NgModule({
     declarations: [
@@ -59,6 +60,7 @@ import { DonationDetailsComponent } from './donation-details/donation-details.co
         AssignmentComponent,
         ProfileDetailsComponent,
         DonationDetailsComponent,
+        HomeMinistriesComponent,
     ],
     imports: [CommonModule, ReactiveFormsModule, FormsModule, SharedModule],
     exports: [
@@ -88,6 +90,7 @@ import { DonationDetailsComponent } from './donation-details/donation-details.co
         AssignmentComponent,
         ProfileDetailsComponent,
         DonationDetailsComponent,
+        HomeMinistriesComponent,
     ],
 })
 export class SectionsModule {}
