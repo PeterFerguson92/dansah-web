@@ -18,7 +18,6 @@ export class HomeMinistriesComponent implements OnInit {
     ngOnInit() {
         this.service.getHomeMinistries().subscribe(
             (data) => {
-                console.log(data);
                 if (data && data.status === 'success' && data.result[0].ministries.length > 0) {
                     this.isDataRetrieved.emit(true);
                     const result = data.result[0];

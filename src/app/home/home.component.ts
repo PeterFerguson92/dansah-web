@@ -24,7 +24,10 @@ export class HomeComponent implements OnInit {
             name: 'activities',
             isVisible: true,
         },
-
+        {
+            name: 'ministries',
+            isVisible: true,
+        },
         {
             name: 'ministries-material',
             isVisible: true,
