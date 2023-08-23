@@ -20,6 +20,7 @@ import { LeadershipInstituteCoursesComponent } from './leadership-institute-cour
 import { LeadershipInstituteSingleCourseComponent } from './leadership-institute-single-course/leadership-institute-single-course.component';
 import { PrayerCityComponent } from './prayer-city/prayer-city.component';
 import { DonationComponent } from './donation/donation.component';
+import { MinistryDetailComponent } from './ministry-detail/ministry-detail.component';
 
 @NgModule({
     declarations: [
@@ -37,6 +38,7 @@ import { DonationComponent } from './donation/donation.component';
         LeadershipInstituteSingleCourseComponent,
         PrayerCityComponent,
         DonationComponent,
+        MinistryDetailComponent,
     ],
     imports: [BrowserModule, AppRoutingModule, SectionsModule, SharedModule, HttpClientModule],
     providers: [HttpClientModule],

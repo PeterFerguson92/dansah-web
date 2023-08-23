@@ -46,6 +46,11 @@ export class DataService {
         return this.http.get(url);
     }
 
+    getMinistry(id): Observable<any> {
+        const url = `${this.baseUrl}homeministries/ministry/${id}`;
+        return this.http.get(url);
+    }
+
     getHomeActivities(): Observable<any> {
         const url = `${this.baseUrl}homeactivities/`;
         return this.http.get(url);

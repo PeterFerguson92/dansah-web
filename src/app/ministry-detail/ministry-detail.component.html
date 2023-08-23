@@ -1,0 +1,5 @@
+<app-nav-bar></app-nav-bar>
+<app-loader *ngIf="showLoader"></app-loader>
+<app-ministries-detail-section *ngIf="ministry" [ministry]="ministry"></app-ministries-detail-section>
+<app-notification [showNotification]="showNotification" [message]="message"></app-notification>
+<app-footer></app-footer>

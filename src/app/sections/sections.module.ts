@@ -31,6 +31,7 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { SharedModule } from '../shared/shared.module';
 import { DonationDetailsComponent } from './donation-details/donation-details.component';
 import { HomeMinistriesComponent } from '../section/home-ministries/home-ministries.component';
+import { MinistriesDetailSectionComponent } from './ministries-detail-section/ministries-detail-section.component';
 
 @NgModule({
     declarations: [
@@ -61,6 +62,7 @@ import { HomeMinistriesComponent } from '../section/home-ministries/home-ministr
         ProfileDetailsComponent,
         DonationDetailsComponent,
         HomeMinistriesComponent,
+        MinistriesDetailSectionComponent,
     ],
     imports: [CommonModule, ReactiveFormsModule, FormsModule, SharedModule],
     exports: [
@@ -91,6 +93,7 @@ import { HomeMinistriesComponent } from '../section/home-ministries/home-ministr
         ProfileDetailsComponent,
         DonationDetailsComponent,
         HomeMinistriesComponent,
+        MinistriesDetailSectionComponent,
     ],
 })
 export class SectionsModule {}

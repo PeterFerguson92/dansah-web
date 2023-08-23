@@ -1,4 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Router } from '@angular/router';
 import { DataService } from 'src/app/shared/service/data.service';
 
 @Component({
@@ -12,7 +13,7 @@ export class HomeMinistriesComponent implements OnInit {
     @Output()
     isDataRetrieved = new EventEmitter<boolean>();
 
-    constructor(private service: DataService) {}
+    constructor(private router: Router, private service: DataService) {}
 
     ngOnInit() {
         this.service.getHomeMinistries().subscribe(
@@ -34,7 +35,7 @@ export class HomeMinistriesComponent implements OnInit {
         );
     }
 
-    onRedirect(name) {
-        console.log(name);
+    onSeeDetail(id) {
+        this.router.navigate(['/ministry', id]);
     }
 }
