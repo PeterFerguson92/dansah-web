@@ -17,6 +17,7 @@ import { LeadershipInstituteSingleCourseComponent } from './leadership-institute
 import { PrayerCityComponent } from './prayer-city/prayer-city.component';
 import { DonationComponent } from './donation/donation.component';
 import { MinistryDetailComponent } from './ministry-detail/ministry-detail.component';
+import { HomeMinistriesComponent } from './home-ministries/home-ministries.component';
 
 const routes: Routes = [
     { path: 'home', component: HomeComponent },
@@ -30,6 +31,7 @@ const routes: Routes = [
     { path: 'leadership-institute', component: LeadershipInstituteComponent },
     { path: 'course/:level', component: LeadershipInstituteCoursesComponent },
     { path: 'course-detail/:id', component: LeadershipInstituteSingleCourseComponent },
+    { path: 'ministry', component: HomeMinistriesComponent },
     { path: 'ministry/:id', component: MinistryDetailComponent },
     { path: 'contact-us', component: ContactUsComponent },
     { path: 'error', component: ErrorPageComponent },

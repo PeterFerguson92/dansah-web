@@ -30,8 +30,8 @@ import { ProfileDetailsComponent } from './profile-details/profile-details.compo
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { SharedModule } from '../shared/shared.module';
 import { DonationDetailsComponent } from './donation-details/donation-details.component';
-import { HomeMinistriesComponent } from './home-ministries/home-ministries.component';
 import { MinistriesDetailSectionComponent } from './ministries-detail-section/ministries-detail-section.component';
+import { MinistriesSectionComponent } from './ministries-section/ministries-section.component';
 
 @NgModule({
     declarations: [
@@ -61,7 +61,7 @@ import { MinistriesDetailSectionComponent } from './ministries-detail-section/mi
         AssignmentComponent,
         ProfileDetailsComponent,
         DonationDetailsComponent,
-        HomeMinistriesComponent,
+        MinistriesSectionComponent,
         MinistriesDetailSectionComponent,
     ],
     imports: [CommonModule, ReactiveFormsModule, FormsModule, SharedModule],
@@ -92,7 +92,7 @@ import { MinistriesDetailSectionComponent } from './ministries-detail-section/mi
         AssignmentComponent,
         ProfileDetailsComponent,
         DonationDetailsComponent,
-        HomeMinistriesComponent,
+        MinistriesSectionComponent,
         MinistriesDetailSectionComponent,
     ],
 })

@@ -9,32 +9,38 @@ import { DataService } from 'src/app/shared/service/data.service';
 })
 export class HomeMinistriesComponent implements OnInit {
     title;
+    message;
     ministries;
-    @Output()
-    isDataRetrieved = new EventEmitter<boolean>();
+    showLoader = false;
+    showNotification = false;
 
-    constructor(private router: Router, private service: DataService) {}
+    constructor(private service: DataService) {}
 
     ngOnInit() {
+        this.showLoader = true;
         this.service.getHomeMinistries().subscribe(
             (data) => {
+                this.showLoader = false;
                 if (data && data.status === 'success' && data.result[0].ministries.length > 0) {
-                    this.isDataRetrieved.emit(true);
                     const result = data.result[0];
                     this.title = result.title;
                     this.ministries = result.ministries;
                 } else {
-                    this.isDataRetrieved.emit(false);
+                    const error = 'Ministries information not found';
+                    this.displayError(error);
                 }
             },
             (error) => {
                 console.log(error);
-                this.isDataRetrieved.emit(false);
+                this.displayError(error);
             }
         );
     }
 
-    onSeeDetail(id) {
-        this.router.navigate(['/ministry', id]);
+    displayError(error) {
+        this.showLoader = false;
+        console.log(error);
+        this.message = 'Ministries information not found';
+        this.showNotification = true;
     }
 }
