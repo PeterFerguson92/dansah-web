@@ -3033,6 +3033,11 @@ html.no-csstransitions .hero-content {
     background-image: url(../images/icons/social/youtube-icon.svg);
 }
 
+.social-list__icon--telegram::before {
+  background-image: url(../images/icons/social/telegram-icon.svg);
+}
+
+
 /* -------------------------------------------------------------------
  * responsive:
  * social
