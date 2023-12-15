@@ -9,6 +9,7 @@ import { NotificationComponent } from './components/notification/notification.co
 import { SocialBannerComponent } from './components/social-banner/social-banner.component';
 import { NotificationMessageComponent } from './components/notification-message/notification-message.component';
 import { SpinnerComponent } from './components/spinner/spinner.component';
+import { GalleryComponent } from './components/gallery/gallery.component';
 
 @NgModule({
     declarations: [
@@ -21,6 +22,7 @@ import { SpinnerComponent } from './components/spinner/spinner.component';
         SocialBannerComponent,
         NotificationMessageComponent,
         SpinnerComponent,
+        GalleryComponent,
     ],
     imports: [CommonModule],
     exports: [
@@ -32,6 +34,7 @@ import { SpinnerComponent } from './components/spinner/spinner.component';
         SocialBannerComponent,
         NotificationMessageComponent,
         SpinnerComponent,
+        GalleryComponent,
     ],
 })
 export class SharedModule {}

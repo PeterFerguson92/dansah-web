@@ -1,0 +1,53 @@
+// Grid System
+@mixin grid($cols, $mgn) {
+    float: left;
+    margin-right: $mgn;
+    margin-bottom: $mgn;
+    width: ((100% - (($cols - 1) * $mgn)) / $cols);
+    &:nth-child(#{$cols}n) {
+        margin-right: 0;
+    }
+}
+// Clear Fix
+@mixin clearFix {
+    &:after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+}
+
+.warpper {
+    padding: 20px 20px 0;
+    // background-color: #ff037e;
+    @include clearFix;
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        li {
+            @include grid(4, 2%);
+            img {
+                width: 100%;
+            }
+            @media (max-width: 768px) {
+                @include grid(2, 2%);
+            }
+            @media (max-width: 425px) {
+                @include grid(1, 2%);
+            }
+        }
+    }
+}

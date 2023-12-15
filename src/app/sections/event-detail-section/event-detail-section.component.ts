@@ -8,8 +8,14 @@ import { CommonService } from 'src/app/shared/service/common.service';
 })
 export class EventDetailSectionComponent implements OnInit {
     @Input() event;
+    gallery = [];
     path = '../../../assets/images/wallpa.png';
     constructor() {}
 
-    ngOnInit() {}
+    ngOnInit() {
+        this.gallery.push(this.event.gallery_image_path_1);
+        this.gallery.push(this.event.gallery_image_path_2);
+        this.gallery.push(this.event.gallery_image_path_3);
+        this.gallery.push(this.event.gallery_image_path_4);
+    }
 }
