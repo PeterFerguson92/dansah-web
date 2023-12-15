@@ -31,7 +31,8 @@
                             "src/assets/hesed/js/jquery-3.2.1.min.js",
                             "src/assets/hesed/js/main.js",
                             "src/assets/hesed/js/modernizr.js",
-                            "src/assets/hesed/js/plugins.js"
+                            "src/assets/hesed/js/plugins.js",
+                            "src/assets/hesed/js/video.js"
                         ],
                         "es5BrowserSupport": true
                     },

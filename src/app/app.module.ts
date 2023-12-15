@@ -22,6 +22,7 @@ import { PrayerCityComponent } from './prayer-city/prayer-city.component';
 import { DonationComponent } from './donation/donation.component';
 import { HomeMinistriesComponent } from './home-ministries/home-ministries.component';
 import { MinistryDetailComponent } from './ministry-detail/ministry-detail.component';
+import { StreamingAreaComponent } from './streaming-area/streaming-area.component';
 
 @NgModule({
     declarations: [
@@ -41,6 +42,7 @@ import { MinistryDetailComponent } from './ministry-detail/ministry-detail.compo
         LeadershipInstituteSingleCourseComponent,
         PrayerCityComponent,
         DonationComponent,
+        StreamingAreaComponent,
     ],
     imports: [BrowserModule, AppRoutingModule, SectionsModule, SharedModule, HttpClientModule],
     providers: [HttpClientModule],

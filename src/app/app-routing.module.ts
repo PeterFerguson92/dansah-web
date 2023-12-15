@@ -18,10 +18,12 @@ import { PrayerCityComponent } from './prayer-city/prayer-city.component';
 import { DonationComponent } from './donation/donation.component';
 import { MinistryDetailComponent } from './ministry-detail/ministry-detail.component';
 import { HomeMinistriesComponent } from './home-ministries/home-ministries.component';
+import { StreamingAreaComponent } from './streaming-area/streaming-area.component';
 
 const routes: Routes = [
     { path: 'home', component: HomeComponent },
     { path: 'profile', component: ProfileComponent },
+    { path: 'live', component: StreamingAreaComponent },
     { path: 'events', component: EventsComponent },
     { path: 'detail/:activityName', component: ActivityDetailComponent },
     { path: 'eventDetail/:eventId', component: EventDetailComponent },
