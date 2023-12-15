@@ -7,9 +7,14 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class PrayerCityDetailsComponent implements OnInit {
     @Input() data;
+    gallery = [];
 
     constructor() {}
 
     ngOnInit() {
+        this.gallery.push(this.data.gallery_image_path_1);
+        this.gallery.push(this.data.gallery_image_path_2);
+        this.gallery.push(this.data.gallery_image_path_3);
+        this.gallery.push(this.data.gallery_image_path_4);
     }
 }

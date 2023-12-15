@@ -9,6 +9,7 @@ export class PrayerConnectDetailsComponent implements OnInit {
     @Input() data;
     prayerConnectDescription;
     prayerConnectCenters;
+    gallery = [];
 
     constructor() {}
 
@@ -16,5 +17,9 @@ export class PrayerConnectDetailsComponent implements OnInit {
         this.prayerConnectCenters = this.data.centers;
         this.prayerConnectDescription = this.data;
         delete this.prayerConnectDescription.centers;
+        this.gallery.push(this.data.gallery_image_path_1);
+        this.gallery.push(this.data.gallery_image_path_2);
+        this.gallery.push(this.data.gallery_image_path_3);
+        this.gallery.push(this.data.gallery_image_path_4);
     }
 }
