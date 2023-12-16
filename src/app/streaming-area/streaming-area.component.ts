@@ -8,6 +8,7 @@ import { DataService } from '../shared/service/data.service';
 })
 export class StreamingAreaComponent implements OnInit {
     url;
+    name;
     showLoader = false;
 
     constructor(private service: DataService) {}
@@ -17,7 +18,8 @@ export class StreamingAreaComponent implements OnInit {
         this.service.getHome().subscribe(
             (data) => {
                 if (data.status === 'success') {
-                    this.url = data.result[0].url;
+                    this.name = data.result[0].live_event_name;
+                    this.url = 'https://www.youtube.com/embed/' + data.result[0].url;
                     this.showLoader = false;
                 }
             },
