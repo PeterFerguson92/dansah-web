@@ -39,7 +39,7 @@ const routes: Routes = [
     { path: 'error', component: ErrorPageComponent },
     { path: 'donate', component: DonationComponent },
     { path: '', redirectTo: 'home', pathMatch: 'full' },
-    { path: '*', redirectTo: 'home', pathMatch: 'full' },
+    { path: '**', redirectTo: 'home', pathMatch: 'full' },
 ];
 
 @NgModule({
