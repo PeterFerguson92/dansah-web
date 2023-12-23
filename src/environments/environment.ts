@@ -4,7 +4,7 @@
 
 export const environment = {
     production: false,
-    apiUrl: 'http://localhost:8000',
+    apiUrl: 'https://dansah-rest-production.up.railway.app',
 };
 /*
  * For easier debugging in development mode, you can import the following file
