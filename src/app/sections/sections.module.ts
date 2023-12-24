@@ -33,6 +33,7 @@ import { DonationDetailsComponent } from './donation-details/donation-details.co
 import { MinistriesDetailSectionComponent } from './ministries-detail-section/ministries-detail-section.component';
 import { MinistriesSectionComponent } from './ministries-section/ministries-section.component';
 import { StreamingAreaDetailsComponent } from './streaming-area-details/streaming-area-details.component';
+import { Angular4PaystackModule } from 'angular4-paystack';
 
 @NgModule({
     declarations: [
@@ -66,7 +67,13 @@ import { StreamingAreaDetailsComponent } from './streaming-area-details/streamin
         MinistriesDetailSectionComponent,
         StreamingAreaDetailsComponent,
     ],
-    imports: [CommonModule, ReactiveFormsModule, FormsModule, SharedModule],
+    imports: [
+        Angular4PaystackModule.forRoot('pk_test_beaf8a50a1e76261f013e0201f1fa63e8b67d353'),
+        CommonModule,
+        ReactiveFormsModule,
+        FormsModule,
+        SharedModule,
+    ],
     exports: [
         ReactiveFormsModule,
         FormsModule,

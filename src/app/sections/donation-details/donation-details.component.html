@@ -29,6 +29,15 @@
                     </p>
                 </div>
             </div>
+            <button
+                angular4-paystack
+                [paystackOptions]="options"
+                (paymentInit)="paymentInit()"
+                (onClose)="paymentCancel()"
+                (callback)="paymentDone($event)"
+            >
+                Pay with Paystack
+            </button>
             <input (click)="onAdditionalLink()" id="submit" class="btn btn--primary btn-wide btn--large h-full-width" value="Alternative methods" />
             <br />
             <br />
