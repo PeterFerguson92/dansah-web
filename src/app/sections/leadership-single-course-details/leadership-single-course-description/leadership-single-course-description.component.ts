@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { UntypedFormBuilder, UntypedFormGroup, Validators } from '@angular/forms';
 import { DataService } from 'src/app/shared/service/data.service';
 
 @Component({
@@ -14,9 +14,9 @@ export class LeadershipSingleCourseDescriptionComponent implements OnInit {
     showInfoText: boolean;
     showErrorText: boolean;
     showSpinner = false;
-    requestForm: FormGroup;
+    requestForm: UntypedFormGroup;
     showRegistrationForm = false;
-    constructor(private formBuilder: FormBuilder, private service: DataService) {}
+    constructor(private formBuilder: UntypedFormBuilder, private service: DataService) {}
 
     ngOnInit() {
         this.requestForm = this.formBuilder.group({
