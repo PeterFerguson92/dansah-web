@@ -29,18 +29,30 @@
                     </p>
                 </div>
             </div>
+            <!-- <input (click)="onAdditionalLink()" id="submit" class="btn btn--primary btn-wide btn--large h-full-width" value="Alternative methods" /> -->
+            <h6>Bank Transfer</h6>
+
+            <form name="contactForm" id="contactForm" method="post" action="" autocomplete="off">
+                <fieldset>
+                    <div class="form-field">
+                        <input name="cEmail" id="cEmail" class="h-full-width h-remove-bottom" placeholder="Your Email" value="" type="text" />
+                    </div>
+
+                    <div class="form-field">
+                        <input name="cWebsite" id="cWebsite" class="h-full-width h-remove-bottom" placeholder="Amount" value="" type="number" />
+                    </div>
+                </fieldset>
+            </form>
             <button
                 angular4-paystack
                 [paystackOptions]="options"
                 (paymentInit)="paymentInit()"
                 (onClose)="paymentCancel()"
                 (callback)="paymentDone($event)"
+                class="btn btn--primary btn-wide btn--large h-full-width"
             >
                 Pay with Paystack
             </button>
-            <input (click)="onAdditionalLink()" id="submit" class="btn btn--primary btn-wide btn--large h-full-width" value="Alternative methods" />
-            <br />
-            <br />
         </div>
     </div>
 </section>
