@@ -33,7 +33,7 @@ const routes: Routes = [
     { path: 'leadership-institute', component: LeadershipInstituteComponent },
     { path: 'course/:level', component: LeadershipInstituteCoursesComponent },
     { path: 'course-detail/:id', component: LeadershipInstituteSingleCourseComponent },
-    { path: 'ministry', component: HomeMinistriesComponent },
+    { path: 'ministries', component: HomeMinistriesComponent },
     { path: 'ministry/:id', component: MinistryDetailComponent },
     { path: 'contact-us', component: ContactUsComponent },
     { path: 'error', component: ErrorPageComponent },

@@ -1,13 +1,15 @@
-<section
-    class="page-header page-header--volunteer"
-></section>
+<section class="page-header page-header--volunteer"></section>
 
 <br /><br />
 <section class="header-section">
-    <h1 style="color: white;">{{ title }}</h1>
+    <h1 style="color: white">{{ title }}</h1>
 </section>
+<br />
+
 <section class="cards-wrapper">
     <div class="card-grid-space" *ngFor="let material of ministries">
+        <p style="color: white; font-size: medium; font-weight: bolder; text-align: center;">{{ material.name }}</p>
+
         <a
             class="card"
             (click)="onSeeDetail(material.id)"
