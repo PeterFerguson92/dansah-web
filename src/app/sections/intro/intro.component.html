@@ -1,16 +1,15 @@
 <section id="about" class="s-about">
     <div class="row row-y-center about-content">
         <div class="column large-half medium-full">
+            <img src="{{ coverImage }}" alt="Not found" width="500" height="600" />
+            <!-- end about-sched-->
+        </div>
+        <div class="column large-half medium-full">
             <h3 class="subhead">{{ title }}</h3>
             <p class="lead">
                 {{ description }}
             </p>
             <a (click)="onRedirect()" class="btn btn--primary btn--about">Learn More</a>
-        </div>
-
-        <div class="column large-half medium-full">
-            <img src="{{ coverImage }}" alt="Not found" width="500" height="600" />
-            <!-- end about-sched-->
         </div>
     </div>
     <!-- end about-content -->
