@@ -1,143 +1,154 @@
 :host {
-  display: block;
-  background-color: #fff;
-  font-family: 'Segoe UI', Roboto, sans-serif;
-  color: #111;
+    display: block;
+    background-color: #fff;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    color: #111;
 }
 
 .contact-us {
-  max-width: 1000px;
-  margin: 4rem auto;
-  padding: 2rem;
-
-  h2 {
-    font-size: 2rem;
-    margin-bottom: 2rem;
-    text-align: center;
-  }
-
-  form {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    width: 100%;
-
-    .form-row {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-      width: 100%;
-
-      &.two-columns {
-        flex-direction: row;
-        gap: 2rem;
-
-        input {
-          flex: 1;
-        }
-      }
-
-      input {
-        width: 100%;
-        padding: 1rem;
-        border: none;
-        background: #eee;
-        border-radius: 0;
-        font-size: 1rem;
-        font-style: italic;
-        color: #333;
-        transition: background-color 0.2s ease, outline 0.2s ease;
-
-        &:focus {
-          outline: 2px solid #e53935;
-          background-color: #fefefe;
-        }
-
-        &[readonly] {
-          background-color: #e0e0e0;
-          cursor: not-allowed;
-        }
-      }
-    }
-
-    .form-actions {
-      display: flex;
-      justify-content: flex-start;
-
-      button {
-        background-color: #e53935;
-        color: #fff;
-        padding: 1rem 2rem;
-        font-size: 1rem;
-        font-weight: bold;
-        text-transform: uppercase;
-        border: none;
-        cursor: pointer;
-        position: relative;
-        transition: background-color 0.3s ease;
-
-        &::after {
-          content: '';
-          display: block;
-          height: 4px;
-          background: gold;
-          position: absolute;
-          left: 0;
-          bottom: 0;
-          width: 100%;
-        }
-
-        &:disabled {
-          opacity: 0.6;
-          cursor: not-allowed;
-        }
-      }
-    }
-  }
-}
-
-// Responsive design
-@media (max-width: 768px) {
-  .contact-us {
-    padding: 1rem;
+    max-width: 1000px;
+    margin: 5rem auto;
+    padding: 2rem;
 
     h2 {
-      font-size: 1.6rem;
+        font-size: 3rem;
+        margin-bottom: 3rem;
+        text-align: center;
     }
 
     form {
-      .form-row {
-        &.two-columns {
-          flex-direction: column;
-        }
-      }
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        width: 100%;
 
-      .form-actions {
-        justify-content: center;
+        .form-row {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            width: 100%;
 
-        button {
-          width: 100%;
-          text-align: center;
+            &.two-columns {
+                flex-direction: row;
+                gap: 2.5rem;
+
+                input {
+                    flex: 1;
+                }
+            }
+
+            input {
+                width: 100%;
+                padding: 1.5rem;
+                border: none;
+                background: #eee;
+                border-radius: 0;
+                font-size: 1.75rem;
+                font-style: italic;
+                color: #333;
+                transition: background-color 0.2s ease, outline 0.2s ease;
+
+                &::placeholder {
+                    font-size: 1.75rem;
+                }
+
+                &:focus {
+                    outline: 3px solid #e53935;
+                    background-color: #fefefe;
+                }
+
+                &[readonly] {
+                    background-color: #e0e0e0;
+                    cursor: not-allowed;
+                }
+            }
         }
-      }
+
+        .form-actions {
+            display: flex;
+            justify-content: flex-start;
+
+            button {
+                background-color: #e53935;
+                color: #fff;
+                padding: 1.5rem 3rem;
+                font-size: 1.75rem;
+                font-weight: bold;
+                text-transform: uppercase;
+                border: none;
+                cursor: pointer;
+                position: relative;
+                transition: background-color 0.3s ease;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                line-height: 1; // ensures vertical centering
+
+                &::after {
+                    content: '';
+                    display: block;
+                    height: 4px;
+                    background: gold;
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    width: 100%;
+                }
+
+                &:disabled {
+                    opacity: 0.6;
+                    cursor: not-allowed;
+                }
+            }
+        }
     }
-  }
+}
+
+// Responsive overrides
+@media (max-width: 768px) {
+    .contact-us {
+        padding: 2rem 1rem;
+        border-left: 2px solid #ddd;
+        border-right: 2px solid #ddd;
+
+        h2 {
+            font-size: 2.25rem;
+        }
+
+        form {
+            .form-row.two-columns {
+                flex-direction: column;
+            }
+
+            .form-actions {
+                justify-content: center;
+
+                button {
+                    width: 100%;
+                    text-align: center;
+                }
+            }
+        }
+    }
 }
 
 @media (max-width: 480px) {
-  .contact-us {
-    padding: 0.75rem;
+    .contact-us {
+        padding: 2rem 1rem;
+        border-left: 2px solid #ccc;
+        border-right: 2px solid #ccc;
 
-    form {
-      .form-row input {
-        font-size: 0.95rem;
-        padding: 0.85rem;
-      }
+        form {
+            .form-row input {
+                font-size: 1.5rem;
+                padding: 1.25rem;
+            }
 
-      .form-actions button {
-        font-size: 0.95rem;
-        padding: 0.85rem;
-      }
+            .form-actions button {
+                font-size: 1.5rem;
+                padding: 1.25rem;
+            }
+        }
     }
-  }
 }
