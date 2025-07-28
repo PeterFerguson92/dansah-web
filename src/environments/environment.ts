@@ -4,7 +4,7 @@
 
 export const environment = {
     production: false,
-    apiUrl: 'http://localhost:8000',
+    apiUrl: 'https://dansah-admin-151e283e1381.herokuapp.com',
 };
 /*
  * For easier debugging in development mode, you can import the following file

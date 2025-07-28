@@ -1,0 +1,127 @@
+.s-hero-overlay-layout {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+
+  .hero-bg-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: 1;
+    background-color: #000;
+  }
+
+  .hero-overlay-panel {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    width: 100%;
+    height: 100%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.6);
+
+    .hero-content__text {
+      width: 100%;
+      padding: 0 2rem; // ✅ Fixes spacing for all children inside
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      flex-grow: 1;
+
+      h1 {
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+      }
+
+      .hero-content__buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        margin-top: 1rem;
+
+        a {
+          min-width: 200px;
+          padding: 0.75rem 1.5rem;
+          border: 2px solid #fff;
+          color: #fff;
+          text-transform: uppercase;
+          text-decoration: none;
+          transition: all 0.3s ease;
+          text-align: center;
+
+          &:hover {
+            background-color: #fff;
+            color: #000;
+          }
+        }
+      }
+
+      .hero-scroll {
+        margin-top: 2rem;
+        font-size: 0.875rem;
+        color: #fff;
+      }
+    }
+  }
+
+  // Desktop
+  @media (min-width: 992px) {
+    flex-direction: row;
+
+    .hero-bg-image {
+      object-fit: contain;
+      object-position: center;
+    }
+
+    .hero-overlay-panel {
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 35%;
+      padding: 4rem 2rem; // general padding for layout
+
+      align-items: stretch; // ⬅️ allow content to respect padding inside
+    }
+
+    .hero-content__text {
+      align-items: flex-start;
+      text-align: left;
+      padding: 0 2rem; // ✅ This is what pushes the buttons/text away from the edge
+
+      h1 {
+        font-size: 3.5rem;
+      }
+
+      .hero-content__buttons {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 1.5rem;
+        gap: 1rem;
+
+        a {
+          min-width: 180px;
+          padding-left: 1.25rem;
+          padding-right: 1.25rem;
+        }
+      }
+
+      .hero-scroll {
+        margin-top: 2rem;
+      }
+    }
+  }
+}
