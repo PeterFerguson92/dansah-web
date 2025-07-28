@@ -1,0 +1,27 @@
+<section class="contact-us">
+  <h2>Contact Us</h2>
+
+  <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+    <!-- Name + Surname -->
+    <div class="form-row two-columns">
+      <input formControlName="name" type="text" placeholder="Your Name" />
+      <input formControlName="surname" type="text" placeholder="Your Surname" />
+    </div>
+
+    <!-- Phone + Email -->
+    <div class="form-row two-columns">
+      <input formControlName="phone" type="tel" placeholder="Your Phone" />
+      <input formControlName="email" type="email" placeholder="Your Email" />
+    </div>
+
+    <!-- Event (read-only) -->
+    <div class="form-row">
+      <input formControlName="event" type="text" placeholder="Event" readonly />
+    </div>
+
+    <!-- Submit Button -->
+    <div class="form-actions">
+      <button type="submit" [disabled]="contactForm.invalid">Submit</button>
+    </div>
+  </form>
+</section>

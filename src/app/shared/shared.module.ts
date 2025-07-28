@@ -10,6 +10,8 @@ import { SocialBannerComponent } from './components/social-banner/social-banner.
 import { NotificationMessageComponent } from './components/notification-message/notification-message.component';
 import { SpinnerComponent } from './components/spinner/spinner.component';
 import { GalleryComponent } from './components/gallery/gallery.component';
+import { ContactRegistrationComponent } from './components/contact-registration/contact-registration.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
     declarations: [
@@ -23,8 +25,9 @@ import { GalleryComponent } from './components/gallery/gallery.component';
         NotificationMessageComponent,
         SpinnerComponent,
         GalleryComponent,
+        ContactRegistrationComponent,
     ],
-    imports: [CommonModule],
+    imports: [CommonModule, ReactiveFormsModule],
     exports: [
         NavBarComponent,
         FooterComponent,
@@ -35,6 +38,8 @@ import { GalleryComponent } from './components/gallery/gallery.component';
         NotificationMessageComponent,
         SpinnerComponent,
         GalleryComponent,
+        ContactRegistrationComponent,
+        ReactiveFormsModule,
     ],
 })
 export class SharedModule {}

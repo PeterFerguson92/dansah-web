@@ -1,0 +1,143 @@
+:host {
+  display: block;
+  background-color: #fff;
+  font-family: 'Segoe UI', Roboto, sans-serif;
+  color: #111;
+}
+
+.contact-us {
+  max-width: 1000px;
+  margin: 4rem auto;
+  padding: 2rem;
+
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+
+    .form-row {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      width: 100%;
+
+      &.two-columns {
+        flex-direction: row;
+        gap: 2rem;
+
+        input {
+          flex: 1;
+        }
+      }
+
+      input {
+        width: 100%;
+        padding: 1rem;
+        border: none;
+        background: #eee;
+        border-radius: 0;
+        font-size: 1rem;
+        font-style: italic;
+        color: #333;
+        transition: background-color 0.2s ease, outline 0.2s ease;
+
+        &:focus {
+          outline: 2px solid #e53935;
+          background-color: #fefefe;
+        }
+
+        &[readonly] {
+          background-color: #e0e0e0;
+          cursor: not-allowed;
+        }
+      }
+    }
+
+    .form-actions {
+      display: flex;
+      justify-content: flex-start;
+
+      button {
+        background-color: #e53935;
+        color: #fff;
+        padding: 1rem 2rem;
+        font-size: 1rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        border: none;
+        cursor: pointer;
+        position: relative;
+        transition: background-color 0.3s ease;
+
+        &::after {
+          content: '';
+          display: block;
+          height: 4px;
+          background: gold;
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          width: 100%;
+        }
+
+        &:disabled {
+          opacity: 0.6;
+          cursor: not-allowed;
+        }
+      }
+    }
+  }
+}
+
+// Responsive design
+@media (max-width: 768px) {
+  .contact-us {
+    padding: 1rem;
+
+    h2 {
+      font-size: 1.6rem;
+    }
+
+    form {
+      .form-row {
+        &.two-columns {
+          flex-direction: column;
+        }
+      }
+
+      .form-actions {
+        justify-content: center;
+
+        button {
+          width: 100%;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-us {
+    padding: 0.75rem;
+
+    form {
+      .form-row input {
+        font-size: 0.95rem;
+        padding: 0.85rem;
+      }
+
+      .form-actions button {
+        font-size: 0.95rem;
+        padding: 0.85rem;
+      }
+    }
+  }
+}
