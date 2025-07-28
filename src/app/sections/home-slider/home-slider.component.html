@@ -1,21 +1,22 @@
 <section class="s-hero-overlay-layout">
-  <img [src]="imgPath" alt="Hero Image" class="hero-bg-image" />
+    <img [src]="imgPath" alt="Hero Image" class="hero-bg-image" />
 
-  <div class="hero-overlay-panel">
-    <div class="hero-left-bar"></div>
+    <div class="hero-overlay-panel">
+        <div class="hero-left-bar"></div>
 
-    <div class="hero-content__text">
-      <h1>{{ title }}</h1>
+        <div class="hero-content__text">
+            <!-- <h1>{{ title }}</h1> -->
 
-      <div class="hero-content__buttons">
-        <a (click)="onRedirect('/events')" class="btn btn--stroke">Upcoming Events</a>
-        <a (click)="onRedirect('/profile')" class="btn btn--stroke">About Us</a>
-        <a (click)="onRedirect('/live')" class="btn btn--stroke">Live Event</a>
-      </div>
+            <div class="hero-content__buttons">
+                <a (click)="onRedirect('/profile')" class="btn btn--stroke">About Me</a>
 
-      <div class="hero-scroll">
-        <a href="#about" class="scroll-link smoothscroll">Scroll For More</a>
-      </div>
+                <a (click)="onRedirect('/events')" class="btn btn--stroke">Upcoming Events</a>
+                <a (click)="onRedirect('/live')" class="btn btn--stroke">Live Event</a>
+            </div>
+
+            <div class="hero-scroll">
+                <a href="#about" class="scroll-link smoothscroll">Scroll For More</a>
+            </div>
+        </div>
     </div>
-  </div>
 </section>
