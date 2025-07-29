@@ -2,14 +2,15 @@
     <h1>{{ title }}</h1>
 </section>
 <section class="cards-wrapper">
-    <div class="card-grid-space" *ngFor="let material of materials">
+    <div class="card-grid-space" *ngFor="let item of materials">
         <a
             class="card"
             (click)="redirect(material.redirect_link)"
             [ngStyle]="{
-                'background-image': 'url(' + material.cover_image_path + ')'
+                'background-image': 'linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(' + item.cover_image_path + ')'
             }"
         >
+            <!-- <div class="card-title">{{ item.name }}</div> -->
         </a>
     </div>
 </section>

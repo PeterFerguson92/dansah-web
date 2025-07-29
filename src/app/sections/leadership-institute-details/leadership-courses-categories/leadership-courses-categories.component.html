@@ -1,5 +1,4 @@
-<link href="https://fonts.googleapis.com/css?family=Poppins:400,700" rel="stylesheet" />
-<div class="container">
+<!-- <div class="container">
     <div class="card" *ngFor="let item of categories" (click)="open(item.name)" style="cursor: pointer">
         <img src="{{ item.cover_image_path }}" />
         <h3>{{ item.name }}</h3>
@@ -8,4 +7,17 @@
             <a (click)="open(item.name)" style="color: white">Read More</a>
         </div>
     </div>
-</div>
+</div> -->
+<section class="cards-wrapper">
+    <div class="card-grid-space" *ngFor="let item of categories">
+        <a
+            class="card"
+            (click)="open(item.name)"
+            [ngStyle]="{
+                'background-image': 'linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(' + item.cover_image_path + ')'
+            }"
+        >
+            <div class="card-title">{{ item.name }}</div>
+        </a>
+    </div>
+</section>

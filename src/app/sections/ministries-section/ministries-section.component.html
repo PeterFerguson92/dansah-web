@@ -7,15 +7,15 @@
 <br />
 
 <section class="cards-wrapper">
-  <div class="card-grid-space" *ngFor="let item of ministries">
-    <a
-      class="card"
-      (click)="onSeeDetail(item.id)"
-      [ngStyle]="{
-        'background-image': 'linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(' + item.cover_image_path + ')'
-      }"
-    >
-      <div class="card-title">{{ item.name }}</div>
-    </a>
-  </div>
+    <div class="card-grid-space" *ngFor="let item of ministries">
+        <a
+            class="card"
+            (click)="onSeeDetail(item.id)"
+            [ngStyle]="{
+                'background-image': 'linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(' + item.cover_image_path + ')'
+            }"
+        >
+            <div class="card-title">{{ item.name }}</div>
+        </a>
+    </div>
 </section>
