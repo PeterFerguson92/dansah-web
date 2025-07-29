@@ -12,6 +12,7 @@ import { SpinnerComponent } from './components/spinner/spinner.component';
 import { GalleryComponent } from './components/gallery/gallery.component';
 import { ContactRegistrationComponent } from './components/contact-registration/contact-registration.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ContactMeComponent } from './components/contact-me/contact-me.component';
 
 @NgModule({
     declarations: [
@@ -26,6 +27,7 @@ import { ReactiveFormsModule } from '@angular/forms';
         SpinnerComponent,
         GalleryComponent,
         ContactRegistrationComponent,
+        ContactMeComponent,
     ],
     imports: [CommonModule, ReactiveFormsModule],
     exports: [
@@ -40,6 +42,7 @@ import { ReactiveFormsModule } from '@angular/forms';
         GalleryComponent,
         ContactRegistrationComponent,
         ReactiveFormsModule,
+        ContactMeComponent,
     ],
 })
 export class SharedModule {}

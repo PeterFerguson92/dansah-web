@@ -20,18 +20,7 @@
             <p>{{ data.full_description }}</p>
             <br />
 
-            <div class="row">
-                <div class="column large-6 tab-full" *ngFor="let item of data.locations">
-                    <h3>{{ item.name }}</h3>
-                    <p>
-                        {{ item.address }}<br />
-                        {{ item.phone_number }}<br />
-                    </p>
-                </div>
-            </div>
-
-            <br />
-            <br />
+            <app-contact-me></app-contact-me>
         </div>
     </div>
 </section>
