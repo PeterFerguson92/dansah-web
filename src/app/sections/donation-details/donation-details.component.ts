@@ -30,7 +30,7 @@ export class DonationDetailsComponent implements OnInit {
         });
     }
 
-    onAdditionalLink() {
+    donate() {
         window.open('https://paystack.com/pay/lu3t5nwy6k', '_blank');
     }
 

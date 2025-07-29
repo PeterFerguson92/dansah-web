@@ -17,4 +17,7 @@ export class PrayerCityDetailsComponent implements OnInit {
         this.gallery.push(this.data.gallery_image_path_3);
         this.gallery.push(this.data.gallery_image_path_4);
     }
+    donate() {
+        window.open('https://paystack.com/pay/lu3t5nwy6k', '_blank');
+    }
 }

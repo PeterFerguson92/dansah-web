@@ -16,74 +16,9 @@
     <div class="row">
         <div class="column">
             <p class="lead drop-cap">{{ data.description }}</p>
-
             <br />
+            <input (click)="donate()" id="submit" class="btn btn--primary btn-wide btn--large h-full-width" value="Click To Donate" />
 
-            <!-- <h2>How to donate</h2> -->
-            <!-- <div class="row block-large-1-2 block-1000-full block-list">
-                <div class="column block-list__item">
-                    <h6>MoMo Number</h6>
-
-                    <p>
-                        {{ data.momo_number }}
-                    </p>
-                </div>
-            </div> -->
-            <input (click)="onAdditionalLink()" id="submit" class="btn btn--primary btn-wide btn--large h-full-width" value="Click To Donate" />
-            <!-- <h6>Bank Transfer</h6>
-
-            <form [formGroup]="donateForm" name="contactForm" id="contactForm" method="post" action="" autocomplete="off">
-                <fieldset>
-                  <div class="form-field">
-                    <input
-                        formControlName="fullname"
-                        name="cEmail"
-                        id="cEmail"
-                        class="h-full-width h-remove-bottom"
-                        placeholder="Your Full Name"
-                        value=""
-                        type="text"
-                    />
-                </div>
-                    <div class="form-field">
-                        <input
-                            formControlName="email"
-                            name="cEmail"
-                            id="cEmail"
-                            class="h-full-width h-remove-bottom"
-                            placeholder="Your Email"
-                            value=""
-                            type="text"
-                        />
-                    </div>
-
-                    <div class="form-field">
-                        <input
-                            formControlName="amount"
-                            name="cWebsite"
-                            id="cWebsite"
-                            class="h-full-width h-remove-bottom"
-                            placeholder="Amount"
-                            value=""
-                            type="number"
-                        />
-                    </div>
-                </fieldset>
-            </form>
-            <button
-                angular4-paystack
-                [email]="donateForm.controls.email.value"
-                [amount]="donateForm.controls.amount.value"
-                [ref]="donateForm.controls.fullname.value"
-                [currency]="options.currency"
-                [disabled]="donateForm.invalid"
-                (paymentInit)="paymentInit()"
-                (onClose)="paymentCancel()"
-                (callback)="paymentDone($event)"
-                class="btn btn--primary btn-wide btn--large h-full-width"
-            >
-                Pay with Paystack
-            </button> -->
         </div>
     </div>
 </section>
