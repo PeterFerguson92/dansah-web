@@ -2,5 +2,5 @@
 <app-loader *ngIf="showLoader"></app-loader>
 <app-notification [showNotification]="showNotification" [message]="message"></app-notification>
 <app-event-detail-section *ngIf="event" [event]="event"></app-event-detail-section>
-<app-contact-registration></app-contact-registration>
+<app-contact-registration [event]="event.title"></app-contact-registration>
 <app-footer></app-footer>
