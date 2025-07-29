@@ -19,6 +19,7 @@ import { DonationComponent } from './donation/donation.component';
 import { MinistryDetailComponent } from './ministry-detail/ministry-detail.component';
 import { HomeMinistriesComponent } from './home-ministries/home-ministries.component';
 import { StreamingAreaComponent } from './streaming-area/streaming-area.component';
+import { MessagesComponent } from './messages/messages.component';
 
 const routes: Routes = [
     { path: 'home', component: HomeComponent },
@@ -38,12 +39,13 @@ const routes: Routes = [
     { path: 'contact-us', component: ContactUsComponent },
     { path: 'error', component: ErrorPageComponent },
     { path: 'donate', component: DonationComponent },
+    { path: 'messages', component: MessagesComponent },
     { path: '', redirectTo: 'home', pathMatch: 'full' },
     { path: '**', redirectTo: 'home', pathMatch: 'full' },
 ];
 
 @NgModule({
-    imports: [RouterModule.forRoot(routes, { scrollPositionRestoration: 'enabled' })],
+    imports: [RouterModule.forRoot(routes, { anchorScrolling: 'enabled', scrollPositionRestoration: 'enabled' })],
     exports: [RouterModule],
 })
 export class AppRoutingModule {}

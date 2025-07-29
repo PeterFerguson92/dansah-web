@@ -34,6 +34,7 @@ import { MinistriesDetailSectionComponent } from './ministries-detail-section/mi
 import { MinistriesSectionComponent } from './ministries-section/ministries-section.component';
 import { StreamingAreaDetailsComponent } from './streaming-area-details/streaming-area-details.component';
 import { Angular4PaystackModule } from 'angular4-paystack';
+import { MessagesContentComponent } from './messages-content/messages-content.component';
 
 @NgModule({
     declarations: [
@@ -66,6 +67,7 @@ import { Angular4PaystackModule } from 'angular4-paystack';
         MinistriesSectionComponent,
         MinistriesDetailSectionComponent,
         StreamingAreaDetailsComponent,
+        MessagesContentComponent,
     ],
     imports: [
         Angular4PaystackModule.forRoot('pk_test_beaf8a50a1e76261f013e0201f1fa63e8b67d353'),
@@ -104,6 +106,7 @@ import { Angular4PaystackModule } from 'angular4-paystack';
         MinistriesSectionComponent,
         MinistriesDetailSectionComponent,
         StreamingAreaDetailsComponent,
+        MessagesContentComponent,
     ],
 })
 export class SectionsModule {}

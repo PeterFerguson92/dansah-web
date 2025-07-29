@@ -24,6 +24,7 @@ import { DonationComponent } from './donation/donation.component';
 import { HomeMinistriesComponent } from './home-ministries/home-ministries.component';
 import { MinistryDetailComponent } from './ministry-detail/ministry-detail.component';
 import { StreamingAreaComponent } from './streaming-area/streaming-area.component';
+import { MessagesComponent } from './messages/messages.component';
 
 @NgModule({
     declarations: [
@@ -44,6 +45,7 @@ import { StreamingAreaComponent } from './streaming-area/streaming-area.componen
         PrayerCityComponent,
         DonationComponent,
         StreamingAreaComponent,
+        MessagesComponent,
     ],
     imports: [BrowserModule, AppRoutingModule, SectionsModule, SharedModule, HttpClientModule],
     providers: [HttpClientModule],

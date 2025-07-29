@@ -1,0 +1,21 @@
+<section class="page-header page-header--volunteer"></section>
+
+<br /><br />
+<section class="header-section">
+  <h1 style="color: white">Explore Messages</h1>
+</section>
+<br />
+
+<section class="cards-wrapper">
+  <div class="card-grid-space" *ngFor="let item of categories">
+    <a
+      class="card"
+      (click)="onSeeDetail(item.name)"
+      [ngStyle]="{
+        'background-image': 'linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(' + item.image + ')'
+      }"
+    >
+      <div class="card-title">{{ item.name }}</div>
+    </a>
+  </div>
+</section>
