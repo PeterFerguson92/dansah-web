@@ -3029,6 +3029,13 @@ html.no-csstransitions .hero-content {
   background-image: url(../images/icons/social/podcast-icon.svg);
 }
 
+.social-list__icon--spotify::before {
+  background-image: url(../images/icons/podcast/icon-spotify.svg);
+}
+
+.social-list__icon--apple::before {
+  background-image: url(../images/icons/podcast/icon-apple.svg);
+}
 .social-list__icon--youtube::before {
     background-image: url(../images/icons/social/youtube-icon.svg);
 }

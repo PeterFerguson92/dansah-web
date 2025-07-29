@@ -28,7 +28,8 @@ export class SocialBannerComponent implements OnInit {
         );
     }
 
-    redirectSocialMediaLink(social) {
+  redirectSocialMediaLink(social) {
+      console.log(this.data.social_media);
         const result = this.data.social_media.find((x) => x.title.toUpperCase() === social.toUpperCase());
         if (result) {
             window.open(result.link, '_blank').focus();
