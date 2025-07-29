@@ -16,6 +16,8 @@ export class MinistriesSectionComponent implements OnInit {
     ngOnInit() {}
 
     onSeeDetail(id) {
+        console.log(this.ministries);
+        console.log('Navigating to ministry detail with ID:', id);
         this.router.navigate(['/ministry', id]);
     }
 }
