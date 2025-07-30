@@ -1,29 +1,37 @@
 <section
-    class="page-header page-header--volunteer"
-    [ngStyle]="{
-        'background-repeat': 'no-repeat',
-        'background-size': 'cover',
-        'background-image': 'url(' + data.cover_image_path + ')'
-    }"
+  class="page-header page-header--volunteer"
+  [ngStyle]="{
+    'background-repeat': 'no-repeat',
+    'background-size': 'cover',
+    'background-image': 'url(' + data.cover_image_path + ')'
+  }"
 ></section>
+
 <br /><br />
+
 <section class="page-content">
+  <div class="content-wrapper">
     <section class="title-section">
-        <h1>{{ data.title }}</h1>
+      <h1>{{ data.title }}</h1>
     </section>
+
     <br />
+
     <div class="row">
-        <div class="column">
-            <p class="lead drop-cap">
-                {{ data.short_description }}
-            </p>
+      <div class="column">
+        <p class="lead drop-cap">
+          {{ data.short_description }}
+        </p>
 
-            <p>
-                {{ data.full_description }}
-            </p>
+        <p>
+          {{ data.full_description }}
+        </p>
 
-            <br />
-            <app-leadership-courses-categories [categories]="leadershipDetailsCategories"></app-leadership-courses-categories>
-        </div>
+        <br />
+        <app-leadership-courses-categories
+          [categories]="leadershipDetailsCategories"
+        ></app-leadership-courses-categories>
+      </div>
     </div>
+  </div>
 </section>
