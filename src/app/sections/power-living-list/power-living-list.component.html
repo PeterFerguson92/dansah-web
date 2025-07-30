@@ -26,7 +26,7 @@
             <div class="row block-large-1-2 block-1000-full block-list">
                 <div class="column block-list__item" *ngFor="let item of data.monthly_power_living">
                     <img src="{{ item.cover_image_path }}" />
-                    <a (click)="open(item.id)" class="btn btn--primary h-full-width">Read More</a>
+                    <!-- <a (click)="open(item.id)" class="btn btn--primary h-full-width">Read More</a> -->
                     <a (click)="download(item.document)" class="btn btn--primary h-full-width">Download</a>
                 </div>
             </div>
