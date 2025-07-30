@@ -81,6 +81,11 @@ export class DataService {
         return this.http.get(url);
     }
 
+    getPowerLivingDetail(id): Observable<any> {
+        const url = `${this.baseUrl}powerliving/${id}`;
+        return this.http.get(url);
+    }
+
     getPrayerCity(): Observable<any> {
         const url = `${this.baseUrl}prayercity/`;
         return this.http.get(url);

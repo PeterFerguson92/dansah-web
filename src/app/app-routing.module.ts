@@ -20,6 +20,7 @@ import { MinistryDetailComponent } from './ministry-detail/ministry-detail.compo
 import { HomeMinistriesComponent } from './home-ministries/home-ministries.component';
 import { StreamingAreaComponent } from './streaming-area/streaming-area.component';
 import { MessagesComponent } from './messages/messages.component';
+import { PowerLivingDetailComponent } from './power-living-detail/power-living-detail.component';
 
 const routes: Routes = [
     { path: 'home', component: HomeComponent },
@@ -31,6 +32,7 @@ const routes: Routes = [
     { path: 'prayer-city', component: PrayerCityComponent },
     { path: 'prayer-connect', component: PrayerConnectComponent },
     { path: 'power-living', component: PowerLivingComponent },
+    { path: 'power-living-detail/:id', component: PowerLivingDetailComponent },
     { path: 'leadership-institute', component: LeadershipInstituteComponent },
     { path: 'course/:level', component: LeadershipInstituteCoursesComponent },
     { path: 'course-detail/:id', component: LeadershipInstituteSingleCourseComponent },

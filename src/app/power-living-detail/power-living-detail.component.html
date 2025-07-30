@@ -1,0 +1,5 @@
+<app-nav-bar></app-nav-bar>
+<app-loader *ngIf="showLoader"></app-loader>
+<app-power-living-detail-section *ngIf="powerLiving" [powerLiving]="powerLiving"></app-power-living-detail-section>
+<app-notification [showNotification]="showNotification" [message]="message"></app-notification>
+<app-footer></app-footer>
