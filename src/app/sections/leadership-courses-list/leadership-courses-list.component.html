@@ -11,13 +11,14 @@
     <section class="title-section">
         <h1>Courses</h1>
     </section>
-    <ul class="grid">
-        <li *ngFor="let item of courses">
-            <figure class="grid__figure">
-                <img src="{{ item.cover_image_path }}" alt="" />
-                <figcaption>{{ item.short_description }}</figcaption>
+    <div class="course-grid">
+        <div class="course-card" *ngFor="let item of courses">
+            <img [src]="item.cover_image_path" alt="Course cover" class="course-image" />
+
+            <div class="course-content">
+                <!-- <figcaption class="course-description">{{ item.short_description }}</figcaption> -->
                 <a (click)="viewDetail(item.id)" class="btn btn--primary h-full-width">Learn More</a>
-            </figure>
-        </li>
-    </ul>
+            </div>
+        </div>
+    </div>
 </section>

@@ -112,3 +112,64 @@ figcaption {
         }
     }
 }
+
+
+.course-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.course-card {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.course-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+.course-image {
+  width: 100%;
+  height: auto; /* Allow natural height */
+  object-fit: contain; /* Show the full image without cropping */
+  background-color: #f8f8f8; /* Optional: add a background if images don't fill the space */
+  padding: 1rem; /* Optional: space around image */
+}
+
+.course-content {
+  padding: 1.2rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.course-description {
+  font-size: 2.1rem; /* Slightly larger */
+  font-weight: 500; /* Medium weight */
+  color: #1f2937; /* Darker for contrast */
+  line-height: 1.6;
+  margin: 0;
+}
+
+.btn.btn-primary {
+  background-color: #2563eb;
+  color: #fff;
+  border: none;
+  padding: 0.7rem 1.2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn.btn-primary:hover {
+  background-color: #1e3a8a;
+}
