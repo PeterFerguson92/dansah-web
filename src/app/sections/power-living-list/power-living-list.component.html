@@ -11,22 +11,22 @@
 <section class="page-content">
     <div class="row">
         <div class="column">
-            <p class="lead drop-cap" style="font-size: larger;">
+            <p class="lead drop-cap" style="font-size: larger">
                 {{ data.short_description }}
             </p>
 
-            <p style="font-size: larger;">
+            <p style="font-size: larger">
                 {{ data.full_description }}
             </p>
+            <a href="https://whatsapp.com/channel/0029Vae98CRKbYMTN6KOac0y" target="_blank" class="btn btn--primary h-full-width">Join Our channel</a>
 
             <br />
-
             <h2>Monthly Power Living</h2>
 
             <div class="row block-large-1-2 block-1000-full block-list">
                 <div class="column block-list__item" *ngFor="let item of data.monthly_power_living">
                     <img src="{{ item.cover_image_path }}" />
-                    <!-- <a (click)="open(item.id)" class="btn btn--primary h-full-width">Read More</a> -->
+                    <a (click)="open(item.id)" class="btn btn--primary h-full-width">Read More</a>
                     <a (click)="download(item.document)" class="btn btn--primary h-full-width">Download</a>
                 </div>
             </div>

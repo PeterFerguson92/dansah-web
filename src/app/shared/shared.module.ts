@@ -13,6 +13,7 @@ import { GalleryComponent } from './components/gallery/gallery.component';
 import { ContactRegistrationComponent } from './components/contact-registration/contact-registration.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ContactMeComponent } from './components/contact-me/contact-me.component';
+import { ArticleComponent } from './components/article/article.component';
 
 @NgModule({
     declarations: [
@@ -28,6 +29,7 @@ import { ContactMeComponent } from './components/contact-me/contact-me.component
         GalleryComponent,
         ContactRegistrationComponent,
         ContactMeComponent,
+        ArticleComponent,
     ],
     imports: [CommonModule, ReactiveFormsModule],
     exports: [
@@ -43,6 +45,7 @@ import { ContactMeComponent } from './components/contact-me/contact-me.component
         ContactRegistrationComponent,
         ReactiveFormsModule,
         ContactMeComponent,
+        ArticleComponent,
     ],
 })
 export class SharedModule {}

@@ -1,0 +1,17 @@
+<section class="devotional-wrapper">
+  <div class="devotional-container">
+    <h2 class="title">{{ devotional.title }}</h2>
+    <p class="published-date">Published {{ devotional.date | date: 'longDate' }}</p>
+
+    <div class="devotional-content" [class.expanded]="isExpanded" [style.maxHeight]="isExpanded ? '2000px' : '300px'">
+      <p [innerHTML]="visibleText"></p>
+    </div>
+
+    <a (click)="toggleSeeMore()" class="btn btn--primary h-full-width">{{isExpanded ? 'See less ▲' : 'See more ▼' }}</a>
+
+
+    <div class="share-buttons">
+      <a class="whatsapp" [href]="whatsappShareUrl" target="_blank">Share on WhatsApp</a>
+    </div>
+  </div>
+</section>

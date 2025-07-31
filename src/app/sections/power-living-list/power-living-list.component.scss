@@ -1,2 +1,41 @@
 @import url('../../shared/css/ministries.css');
 @import url('../../shared/css/ministries_responsive.css');
+.whatsapp-channel-cta {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+}
+
+.btn-whatsapp-channel {
+    background-color: #25d366;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    border: none;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+    text-align: center;
+    width: auto; /* ❗ Shrinks to fit content */
+    max-width: 90vw;
+    white-space: nowrap; /* Prevents line break */
+}
+
+.btn-whatsapp-channel:hover {
+    background-color: #1ebe57;
+}
+.short-label {
+    display: none;
+}
+
+@media (max-width: 400px) {
+    .full-label {
+        display: none;
+    }
+
+    .short-label {
+        display: inline;
+    }
+}

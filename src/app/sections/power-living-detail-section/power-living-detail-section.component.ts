@@ -7,7 +7,6 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class PowerLivingDetailSectionComponent implements OnInit {
     @Input() powerLiving;
-    constructor() {}
 
     ngOnInit(): void {}
 }
