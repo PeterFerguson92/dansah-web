@@ -10,8 +10,40 @@
     gap: 2rem;
     box-sizing: border-box;
     max-width: 1200px;
+    overflow: hidden;
+}
+.devotional-quotation {
+    font-size: 2.4rem;
+    font-style: italic;
+    font-weight: 400;
+    color: #444;
+    text-align: center;
+    margin: 1rem auto;
+    padding: 1.5rem 2rem;
+    border-left: 5px solid #c0c0c0;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    max-width: 800px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    position: relative;
 }
 
+.devotional-quotation::before {
+    content: '“';
+    font-size: 4rem;
+    color: #aaa;
+    position: absolute;
+    left: 20px;
+    top: 10px;
+}
+
+.devotional-date {
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: #777;
+    text-align: center;
+    margin: 0.5rem 0 1rem;
+}
 .title {
     font-size: 4.25rem;
     font-weight: 700;
@@ -28,15 +60,32 @@
 }
 
 .devotional-content {
+    position: relative;
+    max-height: 300px;
     overflow: hidden;
     transition: max-height 0.4s ease;
-    line-height: 1.9;
-    font-size: 2.25rem;
-    color: #333;
-    text-align: justify;
 
     &.expanded {
-        overflow: visible;
+        max-height: none;
+        overflow-y: auto;
+    }
+
+    // Optional: fade effect when collapsed
+    &::after {
+        content: '';
+        display: block;
+        height: 80px;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background: linear-gradient(to top, white, transparent);
+        pointer-events: none;
+        transition: opacity 0.3s ease;
+    }
+
+    &.expanded::after {
+        opacity: 0;
     }
 
     p {
@@ -95,6 +144,7 @@
 
         &.facebook {
             background-color: #4267b2;
+
             &:hover {
                 background-color: #365899;
             }
@@ -115,6 +165,7 @@
 
         &.instagram {
             background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
+
             &:hover {
                 opacity: 0.9;
             }
@@ -122,6 +173,7 @@
 
         &.channel {
             background-color: #128c7e;
+
             &:hover {
                 background-color: #0e705e;
             }
@@ -129,7 +181,7 @@
     }
 }
 
-/* 📱 Responsive Design: Mobile Improvements */
+/* 📱 Responsive Design */
 @media (max-width: 768px) {
     .devotional-container {
         padding: 1.5rem;
@@ -161,6 +213,7 @@
 
     .share-buttons {
         justify-content: center;
+
         a {
             font-size: 0.95rem;
             padding: 0.7rem 1.25rem;

@@ -7,8 +7,5 @@
     }"
 ></section>
 <div class="article-grid">
-  <app-article
-    *ngFor="let article of powerLiving.articles"
-    [devotional]="article">
-  </app-article>
+    <app-article *ngFor="let article of sortedArticles" [devotional]="article"> </app-article>
 </div>
