@@ -3,11 +3,14 @@
     [ngStyle]="{
         'background-repeat': 'no-repeat',
         'background-size': 'cover',
-        'background-image': 'url(' + path + ')'
+        'background-image': 'url(' + article.cover_image_path + ')'
     }"
 ></section>
 
 <br /><br />
+  <!-- <div class="banner-image">
+    <img [src]="article.cover_image_path" alt="Banner image for article" />
+  </div> -->
 <section class="page-content">
     <section class="title-section">
         <h1>{{ article.title }}</h1>

@@ -15,7 +15,7 @@ export class PowerLivingDetailSectionComponent implements OnInit, OnChanges {
         if (changes['powerLiving'] && this.powerLiving?.articles?.length) {
             // Sort articles by date (newest first)
             this.sortedArticles = this.powerLiving.articles.sort((a, b) => {
-                return new Date(b.date).getTime() - new Date(a.date).getTime();
+                return new Date(a.date).getTime() - new Date(b.date).getTime();
             });
         }
     }
