@@ -36,6 +36,7 @@ import { StreamingAreaDetailsComponent } from './streaming-area-details/streamin
 import { Angular4PaystackModule } from 'angular4-paystack';
 import { MessagesContentComponent } from './messages-content/messages-content.component';
 import { PowerLivingDetailSectionComponent } from './power-living-detail-section/power-living-detail-section.component';
+import { ArticleDetailSectionComponent } from './article-detail-section/article-detail-section.component';
 
 @NgModule({
     declarations: [
@@ -70,6 +71,7 @@ import { PowerLivingDetailSectionComponent } from './power-living-detail-section
         StreamingAreaDetailsComponent,
         MessagesContentComponent,
         PowerLivingDetailSectionComponent,
+        ArticleDetailSectionComponent,
     ],
     imports: [
         Angular4PaystackModule.forRoot('pk_test_beaf8a50a1e76261f013e0201f1fa63e8b67d353'),
@@ -110,6 +112,7 @@ import { PowerLivingDetailSectionComponent } from './power-living-detail-section
         StreamingAreaDetailsComponent,
         MessagesContentComponent,
         PowerLivingDetailSectionComponent,
+        ArticleDetailSectionComponent,
     ],
 })
 export class SectionsModule {}

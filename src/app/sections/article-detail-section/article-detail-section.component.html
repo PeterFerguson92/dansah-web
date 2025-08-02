@@ -1,0 +1,32 @@
+<section
+    class="page-header page-header--volunteer"
+    [ngStyle]="{
+        'background-repeat': 'no-repeat',
+        'background-size': 'cover',
+        'background-image': 'url(' + path + ')'
+    }"
+></section>
+
+<br /><br />
+<section class="page-content">
+    <section class="title-section">
+        <h1>{{ article.title }}</h1>
+    </section>
+    <br />
+    <blockquote class="quotation-alt">
+        <p>{{ article.quotation }}</p>
+    </blockquote>
+    <br />
+    <div class="row">
+        <div class="column">
+            <p class="lead drop-cap">
+                {{ article.content }}
+            </p>
+
+            <br />
+        </div>
+    </div>
+      <div class="share-buttons">
+            <a class="whatsapp" [href]="whatsappShareUrl" target="_blank">Share on WhatsApp</a>
+        </div>
+</section>

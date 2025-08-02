@@ -17,3 +17,103 @@ a {
 }
 @import url('../src/assets/hesed/css/base.css');
 @import url('../src/assets/hesed/css/main.css');
+
+
+.quotation-alt {
+  position: relative;
+  padding: 2rem 2.5rem;
+  margin: 2.5rem auto;
+  text-align: center;
+  font-style: italic;
+  font-size: 1.75rem;
+  color: #333;
+  background-color: #f0f2f5;
+  border-radius: 12px;
+  max-width: 800px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+  line-height: 1.6;
+}
+
+.quotation-alt p {
+  margin: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.quotation-alt::before,
+.quotation-alt::after {
+  content: '"';
+  font-size: 5rem;
+  color: #d0d0d0;
+  position: absolute;
+  font-family: Georgia, serif;
+  z-index: 0;
+  opacity: 0.2;
+}
+
+.quotation-alt::before {
+  top: -20px;
+  left: 20px;
+}
+
+.quotation-alt::after {
+  bottom: -20px;
+  right: 20px;
+  transform: rotate(180deg);
+}
+
+
+.share-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1rem;
+
+    a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.85rem 1.5rem;
+        border-radius: 8px;
+        font-size: 4rem;
+        font-weight: 600;
+        text-decoration: none;
+        color: black;
+        transition: all 0.3s ease;
+        min-width: 240px;
+        text-align: center;
+
+
+        &.whatsapp {
+            background-color: #25d366;
+            font-size: 1.85rem;
+            font-weight: 700;
+            padding: 1.2rem 2rem;
+            min-width: 260px;
+            width: auto;
+
+            &:hover {
+                background-color: #1ebe57;
+            }
+        }
+
+
+
+    }
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 768px) {
+
+
+    .share-buttons {
+        justify-content: center;
+
+        a {
+            font-size: 0.95rem;
+            padding: 0.7rem 1.25rem;
+            min-width: 120px;
+        }
+    }
+}

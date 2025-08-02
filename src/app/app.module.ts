@@ -26,6 +26,7 @@ import { MinistryDetailComponent } from './ministry-detail/ministry-detail.compo
 import { StreamingAreaComponent } from './streaming-area/streaming-area.component';
 import { MessagesComponent } from './messages/messages.component';
 import { PowerLivingDetailComponent } from './power-living-detail/power-living-detail.component';
+import { ArticleDetailComponent } from './article-detail/article-detail.component';
 
 @NgModule({
     declarations: [
@@ -48,6 +49,7 @@ import { PowerLivingDetailComponent } from './power-living-detail/power-living-d
         StreamingAreaComponent,
         MessagesComponent,
         PowerLivingDetailComponent,
+        ArticleDetailComponent,
     ],
     imports: [BrowserModule, AppRoutingModule, SectionsModule, SharedModule, HttpClientModule],
     providers: [HttpClientModule],

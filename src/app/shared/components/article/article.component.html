@@ -2,15 +2,16 @@
     <div class="devotional-container">
         <h2 class="title">{{ devotional.title }}</h2>
 
-        <blockquote class="devotional-quotation">“{{ devotional.quotation }}”</blockquote>
-
+        <blockquote class="quotation-alt">
+            <p>{{ devotional.quotation }}</p>
+        </blockquote>
         <p class="devotional-date">Published on {{ devotional.date | date : 'longDate' }}</p>
 
         <div class="devotional-content" [class.expanded]="isExpanded">
             <p [innerHTML]="visibleText"></p>
         </div>
 
-           <a (click)="toggleSeeMore()" class="btn btn--primary h-full-width">{{isExpanded ? 'See less ▲' : 'See more ▼' }}</a>
+        <a (click)="open(devotional.id)" class="btn btn--primary h-full-width">{{ isExpanded ? 'See less ▲' : 'See more ▼' }}</a>
 
         <div class="share-buttons">
             <a class="whatsapp" [href]="whatsappShareUrl" target="_blank">Share on WhatsApp</a>

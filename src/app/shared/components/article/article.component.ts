@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-article',
@@ -9,7 +10,9 @@ export class ArticleComponent implements OnInit {
     @Input() devotional;
 
     isExpanded = false;
-    visibleText: string = '';
+    visibleText = '';
+
+    constructor(private router: Router) {}
 
     ngOnInit(): void {
         this.visibleText = this.getTruncatedText();
@@ -20,6 +23,10 @@ export class ArticleComponent implements OnInit {
         this.visibleText = this.isExpanded ? this.devotional.content : this.getTruncatedText();
     }
 
+    open(id) {
+        console.log(id);
+        this.router.navigate(['article-detail/' + id]);
+    }
     getTruncatedText(): string {
         const text = this.devotional.content || '';
         return text.length > 600 ? text.substring(0, 600) + '...' : text;
