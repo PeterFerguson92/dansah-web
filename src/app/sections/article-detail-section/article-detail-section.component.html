@@ -22,11 +22,23 @@
             <p class="lead drop-cap">
                 {{ article.content }}
             </p>
-
+            <div class="devotional-section">
+                <h3>Scripture Reference</h3>
+                <p>{{ article.confession }}</p>
+            </div>
+            <div class="devotional-section">
+                <h3>Confession</h3>
+                <p>{{ article.references }}</p>
+            </div>
+            <div class="devotional-section">
+                <h3>Prayer Point</h3>
+                <p>{{ article.prayer_point }}</p>
+            </div>
             <br />
         </div>
     </div>
-      <div class="share-buttons">
-            <a class="whatsapp" [href]="whatsappShareUrl" target="_blank">Share on WhatsApp</a>
-        </div>
+
+    <div class="share-buttons">
+        <a class="whatsapp" [href]="whatsappShareUrl" target="_blank">Share on WhatsApp</a>
+    </div>
 </section>
